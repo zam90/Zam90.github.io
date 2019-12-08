@@ -372,11 +372,11 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> Linux指令 </tag>
             
             <tag> 服务器 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> Linux环境配置 </tag>
             
@@ -432,6 +432,8 @@
       
         <tags>
             
+            <tag> MarkDown </tag>
+            
             <tag> GitHub </tag>
             
             <tag> Hexo </tag>
@@ -439,8 +441,6 @@
             <tag> Web </tag>
             
             <tag> 教程 </tag>
-            
-            <tag> MarkDown </tag>
             
         </tags>
       
@@ -490,6 +490,8 @@
       
         <tags>
             
+            <tag> MarkDown </tag>
+            
             <tag> GitHub </tag>
             
             <tag> Hexo </tag>
@@ -497,8 +499,6 @@
             <tag> Web </tag>
             
             <tag> 教程 </tag>
-            
-            <tag> MarkDown </tag>
             
         </tags>
       
