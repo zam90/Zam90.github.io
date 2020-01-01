@@ -4348,13 +4348,13 @@ $ hexo init  #在此文件内创建Hexo工作区</code></pre><p><img src="/img/p
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>分类Categories|Zam9036博客</title>
-    <url>/categories/index.html</url>
+    <title>时间轴Archives|Zam9036博客</title>
+    <url>/archives/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>时间轴Archives|Zam9036博客</title>
-    <url>/archives/index.html</url>
+    <title>分类Categories|Zam9036博客</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
