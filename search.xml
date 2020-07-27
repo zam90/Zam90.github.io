@@ -4,16 +4,18 @@
     <title>笔记本拆机初体验|Zam9036博客</title>
     <url>/2020/07/01/34-First-experience-of-laptop-disassembly/</url>
     <content><![CDATA[<p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/wordCloud.png" alt="文章词云"></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这学期学习了计算机组成原理，但是这门课太过于理论了啊，完全就是纸上谈兵。身为计算机专业的人r，我也就在计算机导论课上拆过一次台式电脑，实在不太行。刚好手边有台很古董的笔记本电脑，性能就不谈了，起码能用就行了，不如拆机来看看。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这学期学习了计算机组成原理，但是这门课太过于理论了啊，完全就是纸上谈兵。身为计算机专业的人r，我也就在计算机导论课上拆过一次台式电脑，实在不太行。刚好手边有台很古董的笔记本电脑（十几年前），性能就不谈了，起码能用就行了，不如拆机来看看。</p>
+<blockquote>
+<p>前方多图预警</p>
+</blockquote>
 <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>首先准备好必备的物品：电脑、鼠标、电源线、螺丝刀套装（专业拆机工具包）</p>
 <p>这里螺丝刀套装选用米家的产品，不仅好用而且颜值在线！</p>
 <blockquote>
 <p>各有喜好，选用其他工具也可以</p>
 </blockquote>
-<img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/1.jpg" style="zoom:50%">
-
+<p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/1.jpg" alt="准备物品"></p>
 <p>然后来验证一下它是不是还能正常工作吧！开机！</p>
-<p>？？？？古董XP系统？？？？</p>
+<p>久违的古董XP系统？？？？</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/2.jpg" alt="验证开机"></p>
 <p>来看一下参数配置</p>
 <table>
@@ -24,47 +26,48 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">CPU</td>
+<td align="center">Intel 凌动N270（1.6GHz）</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">屏幕</td>
+<td align="center">LED高亮屏（1024*600）、可顺时针180度旋转折叠、支持触屏</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">硬盘</td>
+<td align="center">SATA硬盘160GB</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">内存</td>
+<td align="center">DDR2内存1G</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">显卡</td>
+<td align="center">Intel GMA950</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">摄像头</td>
+<td align="center">支持夜视</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">触摸板</td>
+<td align="center">支持手写</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">读卡器</td>
+<td align="center">Memory Card Read</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">连接功能</td>
+<td align="center">支持蓝牙、WIFI 802.11b/g</td>
 </tr>
 </tbody></table>
-]]></content>
+<p>来看看背面</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/3.jpg" alt="主机背面"></p>
+<blockquote>
+<p>不得不说，这台笔记本在设计上在当时算比较先进的（尤其是屏幕：180度旋转折叠还支持触屏！（就变成了平板）试问现在有几台笔记本能做到），而且还在背面单独提供了内存条和硬盘的面板，极大的方便了更换内存条和硬盘，可拓展性很强。当然它也暴露了一定的设计缺陷：就拿屏幕来说，频繁的开合和旋转对屏幕连接处造成了很严重的破坏，导致显示器部分脱离了笔记本外壳，产生的突起还把键盘翘起来了。</p>
+</blockquote>
+<h1 id="开始拆机"><a href="#开始拆机" class="headerlink" title="开始拆机"></a>开始拆机</h1>]]></content>
       <categories>
         <category>极客玩法</category>
       </categories>
@@ -6684,8 +6687,8 @@ $ hexo init  #在此文件内创建Hexo工作区</code></pre><p><img src="https:
       </categories>
   </entry>
   <entry>
-    <title>标签Tags|Zam9036的博客</title>
-    <url>/tags/index.html</url>
+    <title>分类Categories|Zam9036博客</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -6716,13 +6719,13 @@ $ hexo init  #在此文件内创建Hexo工作区</code></pre><p><img src="https:
 ]]></content>
   </entry>
   <entry>
-    <title>时间轴Archives|Zam9036博客</title>
-    <url>/archives/index.html</url>
+    <title>标签Tags|Zam9036的博客</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>分类Categories|Zam9036博客</title>
-    <url>/categories/index.html</url>
+    <title>时间轴Archives|Zam9036博客</title>
+    <url>/archives/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
