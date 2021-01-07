@@ -10,11 +10,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Zam9036,ZamCenter,博客,Blog,技术,生活,介绍,关于,分类,时间轴,相册,音乐,GitHub,Hexo,Code,"> 
-    <meta name="description" content="ZamCenter官方技术博客,云原生应用设计与开发云原生的演进过程
+    <meta name="description" content="ZamCenter官方技术博客,[TOC]
+云原生应用设计与开发云原生的演进过程
 
 云原生计算基金会CNCF
 什么是云原生云原生是一种文化，是云计算的一个必然导向，其意义在于让云成为云化战略成功的基石
-云原生的概念可以总结为“适合云的应用”和,"> 
+云原生的概念可以总结为“适合,"> 
     <meta name="author" content="ZamCenter"> 
     <link rel="alternative" href="atom.xml" title="Zam9036博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -91,13 +92,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    4.4k
+                    9.2k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    4 mins.
+                    8 mins.
                 </span>
                 
                 
@@ -131,7 +132,8 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="云原生应用设计与开发"><a href="#云原生应用设计与开发" class="headerlink" title="云原生应用设计与开发"></a>云原生应用设计与开发</h1><h2 id="云原生的演进过程"><a href="#云原生的演进过程" class="headerlink" title="云原生的演进过程"></a>云原生的演进过程</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/1.png" alt="应用的三个维度"></p>
+            <p>[TOC]</p>
+<h1 id="云原生应用设计与开发"><a href="#云原生应用设计与开发" class="headerlink" title="云原生应用设计与开发"></a>云原生应用设计与开发</h1><h2 id="云原生的演进过程"><a href="#云原生的演进过程" class="headerlink" title="云原生的演进过程"></a>云原生的演进过程</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/1.png" alt="应用的三个维度"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/2.png" alt="云原生的演进过程"></p>
 <h3 id="云原生计算基金会CNCF"><a href="#云原生计算基金会CNCF" class="headerlink" title="云原生计算基金会CNCF"></a>云原生计算基金会CNCF</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/3.png" alt="云原生计算基金会CNCF"></p>
 <h2 id="什么是云原生"><a href="#什么是云原生" class="headerlink" title="什么是云原生"></a>什么是云原生</h2><p>云原生是一种文化，是云计算的一个必然导向，其意义在于让云成为云化战略成功的基石</p>
@@ -165,6 +167,57 @@
 <h3 id="采用最佳语言进行开发"><a href="#采用最佳语言进行开发" class="headerlink" title="采用最佳语言进行开发"></a>采用最佳语言进行开发</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/19.png" alt="采用最佳语言进行开发"></p>
 <h3 id="通过DevOps流程进行管理"><a href="#通过DevOps流程进行管理" class="headerlink" title="通过DevOps流程进行管理"></a>通过DevOps流程进行管理</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/20.png" alt="通过DevOps流程进行管理"></p>
 <h3 id="云原生应用的实现"><a href="#云原生应用的实现" class="headerlink" title="云原生应用的实现"></a>云原生应用的实现</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/21.png" alt="云原生应用的实现"></p>
+<h1 id="TSF与容器化"><a href="#TSF与容器化" class="headerlink" title="TSF与容器化"></a>TSF与容器化</h1><h2 id="TSF概念"><a href="#TSF概念" class="headerlink" title="TSF概念"></a>TSF概念</h2><h3 id="微服务带来的问题"><a href="#微服务带来的问题" class="headerlink" title="微服务带来的问题"></a>微服务带来的问题</h3><ul>
+<li>运维复杂</li>
+<li>代码改造复杂</li>
+<li>架构复杂度高</li>
+<li>定位问题困难</li>
+</ul>
+<p>微服务<strong>有利于开发</strong>，<strong>不利于运维</strong>，需要一个微服务平台来辅助运维</p>
+<h3 id="TSF腾讯微服务平台"><a href="#TSF腾讯微服务平台" class="headerlink" title="TSF腾讯微服务平台"></a>TSF腾讯微服务平台</h3><p>TSF腾讯微服务平台是一个围绕应用和微服务的PaaS平台</p>
+<ul>
+<li>提供服务全生命周期管理能力和数据化运营支持</li>
+<li>提供多维度应用、服务、机器的监控数据，助力服务性能优化</li>
+<li>拥抱SpringCloud、ServiceMesh微服务框架</li>
+<li>让企业轻松构建大型分布式系统</li>
+</ul>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/22.png" alt="TSF优势"></p>
+<h2 id="TSF功能及整体框架"><a href="#TSF功能及整体框架" class="headerlink" title="TSF功能及整体框架"></a>TSF功能及整体框架</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/23.png" alt="TSF功能"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/24.png" alt="TSF整体框架"></p>
+<h3 id="利用TSF打造企业技术中台"><a href="#利用TSF打造企业技术中台" class="headerlink" title="利用TSF打造企业技术中台"></a>利用TSF打造企业技术中台</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/25.png" alt="利用TSF打造企业技术中台"></p>
+<h3 id="TSF资源介绍"><a href="#TSF资源介绍" class="headerlink" title="TSF资源介绍"></a>TSF资源介绍</h3><p>容器部署组之间可以相互访问、虚拟机部署组之间可以相互访问</p>
+<p>容器部署组和虚拟机部署组之间相互访问需要用到<strong>命名空间</strong></p>
+<p>命名空间就是将容器集群和虚拟机集群在逻辑上划分为一个整体，使其整体内部可以相互访问</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/26.png" alt="TSF资源介绍"></p>
+<h2 id="Docker基本使用"><a href="#Docker基本使用" class="headerlink" title="Docker基本使用"></a>Docker基本使用</h2><h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/29.png" alt="Docker安装"></p>
+<h3 id="Docker基本命令"><a href="#Docker基本命令" class="headerlink" title="Docker基本命令"></a>Docker基本命令</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/30.png" alt="Docker基本命令1"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/31.png" alt="Docker基本命令2"></p>
+<h2 id="Dockerfile基本使用"><a href="#Dockerfile基本使用" class="headerlink" title="Dockerfile基本使用"></a>Dockerfile基本使用</h2><h3 id="Dockerfile的使用流程"><a href="#Dockerfile的使用流程" class="headerlink" title="Dockerfile的使用流程"></a>Dockerfile的使用流程</h3><p>Dockerfile自定义镜像内容、软件包、版本</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/32.png" alt="Dockerfile的使用流程"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/33.png" alt="Dockerfile基本使用"></p>
+<blockquote>
+<p>From：以该镜像系统作为基础</p>
+<p>Run：运行该镜像系统内的指令</p>
+<p>COPY：将数据配置文件拷贝至镜像中</p>
+<p>CMD：当启动该容器时，CMD命令会将容器初始化（CMD命令仅会运行一次）</p>
+</blockquote>
+<h2 id="利用Dockerfile构建镜像"><a href="#利用Dockerfile构建镜像" class="headerlink" title="利用Dockerfile构建镜像"></a>利用Dockerfile构建镜像</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/34.png" alt="步骤1"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/35.png" alt="步骤2"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/36.png" alt="步骤3&amp;4"></p>
+<h2 id="云容器TKE"><a href="#云容器TKE" class="headerlink" title="云容器TKE"></a>云容器TKE</h2><p>TSF的容器资源基于<strong>腾讯云容器服务TKE</strong></p>
+<p>TKE是高度可扩展的高性能<strong>容器管理服务</strong>，用户可以在托管的云服务器实例集群上轻松运行应用程序</p>
+<h3 id="TKE和Kubernetes"><a href="#TKE和Kubernetes" class="headerlink" title="TKE和Kubernetes"></a>TKE和Kubernetes</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/27.png" alt="TKE和Kubernetes"></p>
+<h3 id="TKE总体架构"><a href="#TKE总体架构" class="headerlink" title="TKE总体架构"></a>TKE总体架构</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/28.png" alt="TKE总体架构"></p>
+<h3 id="TKE应用场景"><a href="#TKE应用场景" class="headerlink" title="TKE应用场景"></a>TKE应用场景</h3><ul>
+<li>微服务架构</li>
+<li>持续集成与交付</li>
+<li>弹性伸缩</li>
+</ul>
+<h2 id="利用云容器部署TSF"><a href="#利用云容器部署TSF" class="headerlink" title="利用云容器部署TSF"></a>利用云容器部署TSF</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/37.png" alt="利用云容器部署TSF步骤"></p>
+<h1 id="原创声明"><a href="#原创声明" class="headerlink" title="原创声明"></a>原创声明</h1><p>文章作者：Zam9036</p>
+<p>课程链接：<a href="https://cloud.tencent.com/edu/learning/course-2216-31477" target="_blank" rel="noopener">腾讯云开发工程师认证课程</a></p>
+<p>文章链接：<a href="https://zam9036.gitee.io/2021/01/04/39-TCA-study-notes-3">https://zam9036.gitee.io/2021/01/04/39-TCA-study-notes-3</a></p>
+<p>版权声明: 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0 许可协议</a>。转载请保留文章链接并注明来自<a href="https://zam9036.gitee.io/">Zam9036博客</a>！</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -199,7 +252,7 @@
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">39 <p>文章</p></a></li>
+                    <li><a href="/">40 <p>文章</p></a></li>
                     <li><a href="/categories">7 <p>分类</p></a></li>
                     <li><a href="/tags">30 <p>标签</p></a></li>
                 </ul>
@@ -210,7 +263,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#云原生应用设计与开发"><span class="toc-number">1.</span> <span class="toc-text">云原生应用设计与开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#云原生的演进过程"><span class="toc-number">1.1.</span> <span class="toc-text">云原生的演进过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#云原生计算基金会CNCF"><span class="toc-number">1.1.1.</span> <span class="toc-text">云原生计算基金会CNCF</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是云原生"><span class="toc-number">1.2.</span> <span class="toc-text">什么是云原生</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#云时代业务与云原生应用"><span class="toc-number">1.2.1.</span> <span class="toc-text">云时代业务与云原生应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云原生架构的关键技术"><span class="toc-number">1.3.</span> <span class="toc-text">云原生架构的关键技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#微服务"><span class="toc-number">1.3.1.</span> <span class="toc-text">微服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微服务常见架构-Spring-Cloud"><span class="toc-number">1.3.2.</span> <span class="toc-text">微服务常见架构-Spring Cloud</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微服务常见架构-ServiceMesh"><span class="toc-number">1.3.3.</span> <span class="toc-text">微服务常见架构-ServiceMesh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#容器化"><span class="toc-number">1.3.4.</span> <span class="toc-text">容器化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DevOps"><span class="toc-number">1.3.5.</span> <span class="toc-text">DevOps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#持续交付"><span class="toc-number">1.3.6.</span> <span class="toc-text">持续交付</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云原生架构的技术特征"><span class="toc-number">1.4.</span> <span class="toc-text">云原生架构的技术特征</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#采用轻量级容器"><span class="toc-number">1.4.1.</span> <span class="toc-text">采用轻量级容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#采用松散耦合的微服务"><span class="toc-number">1.4.2.</span> <span class="toc-text">采用松散耦合的微服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#采用最佳语言进行开发"><span class="toc-number">1.4.3.</span> <span class="toc-text">采用最佳语言进行开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过DevOps流程进行管理"><span class="toc-number">1.4.4.</span> <span class="toc-text">通过DevOps流程进行管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#云原生应用的实现"><span class="toc-number">1.4.5.</span> <span class="toc-text">云原生应用的实现</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#云原生应用设计与开发"><span class="toc-number">1.</span> <span class="toc-text">云原生应用设计与开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#云原生的演进过程"><span class="toc-number">1.1.</span> <span class="toc-text">云原生的演进过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#云原生计算基金会CNCF"><span class="toc-number">1.1.1.</span> <span class="toc-text">云原生计算基金会CNCF</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是云原生"><span class="toc-number">1.2.</span> <span class="toc-text">什么是云原生</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#云时代业务与云原生应用"><span class="toc-number">1.2.1.</span> <span class="toc-text">云时代业务与云原生应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云原生架构的关键技术"><span class="toc-number">1.3.</span> <span class="toc-text">云原生架构的关键技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#微服务"><span class="toc-number">1.3.1.</span> <span class="toc-text">微服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微服务常见架构-Spring-Cloud"><span class="toc-number">1.3.2.</span> <span class="toc-text">微服务常见架构-Spring Cloud</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微服务常见架构-ServiceMesh"><span class="toc-number">1.3.3.</span> <span class="toc-text">微服务常见架构-ServiceMesh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#容器化"><span class="toc-number">1.3.4.</span> <span class="toc-text">容器化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DevOps"><span class="toc-number">1.3.5.</span> <span class="toc-text">DevOps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#持续交付"><span class="toc-number">1.3.6.</span> <span class="toc-text">持续交付</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云原生架构的技术特征"><span class="toc-number">1.4.</span> <span class="toc-text">云原生架构的技术特征</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#采用轻量级容器"><span class="toc-number">1.4.1.</span> <span class="toc-text">采用轻量级容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#采用松散耦合的微服务"><span class="toc-number">1.4.2.</span> <span class="toc-text">采用松散耦合的微服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#采用最佳语言进行开发"><span class="toc-number">1.4.3.</span> <span class="toc-text">采用最佳语言进行开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过DevOps流程进行管理"><span class="toc-number">1.4.4.</span> <span class="toc-text">通过DevOps流程进行管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#云原生应用的实现"><span class="toc-number">1.4.5.</span> <span class="toc-text">云原生应用的实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TSF与容器化"><span class="toc-number">2.</span> <span class="toc-text">TSF与容器化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TSF概念"><span class="toc-number">2.1.</span> <span class="toc-text">TSF概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#微服务带来的问题"><span class="toc-number">2.1.1.</span> <span class="toc-text">微服务带来的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TSF腾讯微服务平台"><span class="toc-number">2.1.2.</span> <span class="toc-text">TSF腾讯微服务平台</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TSF功能及整体框架"><span class="toc-number">2.2.</span> <span class="toc-text">TSF功能及整体框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用TSF打造企业技术中台"><span class="toc-number">2.2.1.</span> <span class="toc-text">利用TSF打造企业技术中台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TSF资源介绍"><span class="toc-number">2.2.2.</span> <span class="toc-text">TSF资源介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker基本使用"><span class="toc-number">2.3.</span> <span class="toc-text">Docker基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker安装"><span class="toc-number">2.3.1.</span> <span class="toc-text">Docker安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker基本命令"><span class="toc-number">2.3.2.</span> <span class="toc-text">Docker基本命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dockerfile基本使用"><span class="toc-number">2.4.</span> <span class="toc-text">Dockerfile基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Dockerfile的使用流程"><span class="toc-number">2.4.1.</span> <span class="toc-text">Dockerfile的使用流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用Dockerfile构建镜像"><span class="toc-number">2.5.</span> <span class="toc-text">利用Dockerfile构建镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云容器TKE"><span class="toc-number">2.6.</span> <span class="toc-text">云容器TKE</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TKE和Kubernetes"><span class="toc-number">2.6.1.</span> <span class="toc-text">TKE和Kubernetes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TKE总体架构"><span class="toc-number">2.6.2.</span> <span class="toc-text">TKE总体架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TKE应用场景"><span class="toc-number">2.6.3.</span> <span class="toc-text">TKE应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用云容器部署TSF"><span class="toc-number">2.7.</span> <span class="toc-text">利用云容器部署TSF</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#原创声明"><span class="toc-number">3.</span> <span class="toc-text">原创声明</span></a></li></ol>
                 </div>
             </div>
             
