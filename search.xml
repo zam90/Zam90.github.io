@@ -7790,34 +7790,34 @@ $ hexo init  #在此文件内创建Hexo工作区</code></pre><p><img src="https:
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>分类Categories|Zam9036博客</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>标签Tags|Zam9036的博客</title>
     <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>分类Categories|Zam9036博客</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>SW智能库存管理系统项目介绍|Zam9036博客</title>
     <url>/prishow/SWLogisticsSystem/index.html</url>
-    <content><![CDATA[<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><h3 id="项目名称"><a href="#项目名称" class="headerlink" title="项目名称"></a>项目名称</h3><p>SW智能库存管理系统</p>
-<h3 id="团队成员"><a href="#团队成员" class="headerlink" title="团队成员"></a>团队成员</h3><p>张京宇 温蟾圆 吴彩元 张广浩 武文斌</p>
-<h3 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a>硬件环境</h3><p>开发：CPU：Intel i7 主频2.8Ghz 运行内存：16GB 硬盘内存：1.5TB<br>运行：CPU主频1GHz以上 运行内存：1GB以上 硬盘内存：150MB以上 客户端iPhone4以上机型</p>
-<h3 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h3><p>开发：服务端开发操作系统：Windows 10 客户端开发操作系统：macOS Catalin; 服务端：Dreamweaver+WAMP环境 客户端：Xcode<br>运行：服务端：Linux 客户端：iOS8.0; 服务端：Apache服务器、MySQL数据库</p>
-<h3 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h3><p>HTML ; JavaScript ; PHP ; SQL ; Swift</p>
-<h3 id="开发目的"><a href="#开发目的" class="headerlink" title="开发目的"></a>开发目的</h3><p>为了更好服务于企业的业务运营，供相应领域人员使用</p>
-<h3 id="面向领域／行业"><a href="#面向领域／行业" class="headerlink" title="面向领域／行业"></a>面向领域／行业</h3><p>为电子商务、物流快递、零售服务等行业提供自动化、便捷化服务</p>
-<h3 id="主要功能-1"><a href="#主要功能-1" class="headerlink" title="主要功能"></a>主要功能</h3><p>服务端：<br><strong>登录注册：</strong>团队注册、团队登录、个人注册、个人登录<br><strong>库存管理：</strong>产品库存及信息展示、添加产品、手动入库、手动出库、入库记录查看、出库记录查看、数据统计、数据更正、数据删除<br><strong>员工管理：</strong>个人信息管理、人员信息管理、人员权限管理<br><strong>通知公告：</strong>通知展示、通知发布</p>
+    <content><![CDATA[<h2 id="SW智能库存管理系统项目介绍"><a href="#SW智能库存管理系统项目介绍" class="headerlink" title="SW智能库存管理系统项目介绍"></a><b style="color: #42d2ca">SW智能库存管理系统项目介绍</b></h2><h3 id="项目名称"><a href="#项目名称" class="headerlink" title="项目名称"></a><b style="color: #42d2ca">项目名称</b></h3><p>SW智能库存管理系统</p>
+<h3 id="团队成员"><a href="#团队成员" class="headerlink" title="团队成员"></a><b style="color: #42d2ca">团队成员</b></h3><p>张京宇 温蟾圆 吴彩元 张广浩 武文斌</p>
+<h3 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a><b style="color: #42d2ca">硬件环境</b></h3><p>开发：CPU：Intel i7 主频2.8Ghz 运行内存：16GB 硬盘内存：1.5TB<br>运行：CPU主频1GHz以上 运行内存：1GB以上 硬盘内存：150MB以上 客户端iPhone4以上机型</p>
+<h3 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a><b style="color: #42d2ca">软件环境</b></h3><p>开发：服务端开发操作系统：Windows 10 客户端开发操作系统：macOS Catalin; 服务端：Dreamweaver+WAMP环境 客户端：Xcode<br>运行：服务端：Linux 客户端：iOS8.0; 服务端：Apache服务器、MySQL数据库</p>
+<h3 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a><b style="color: #42d2ca">编程语言</b></h3><p>HTML ; JavaScript ; PHP ; SQL ; Swift</p>
+<h3 id="开发目的"><a href="#开发目的" class="headerlink" title="开发目的"></a><b style="color: #42d2ca">开发目的</b></h3><p>为了更好服务于企业的业务运营，供相应领域人员使用</p>
+<h3 id="面向领域／行业"><a href="#面向领域／行业" class="headerlink" title="面向领域／行业"></a><b style="color: #42d2ca">面向领域／行业</b></h3><p>为电子商务、物流快递、零售服务等行业提供自动化、便捷化服务</p>
+<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a><b style="color: #42d2ca">主要功能</b></h3><p>服务端：<br><strong>登录注册：</strong>团队注册、团队登录、个人注册、个人登录<br><strong>库存管理：</strong>产品库存及信息展示、添加产品、手动入库、手动出库、入库记录查看、出库记录查看、数据统计、数据更正、数据删除<br><strong>员工管理：</strong>个人信息管理、人员信息管理、人员权限管理<br><strong>通知公告：</strong>通知展示、通知发布</p>
 <p>客户端：<br><strong>出入库操作：</strong>扫码入库、扫码出库</p>
-<h2 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a>项目展示</h2><p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/1.png" alt="项目展示1"></p>
+<h2 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a><b style="color: #42d2ca">项目展示</b></h2><p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/1.png" alt="项目展示1"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/2.png" alt="项目展示2"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/3.png" alt="项目展示3"></p>
-<h2 id="软件著作权"><a href="#软件著作权" class="headerlink" title="软件著作权"></a>软件著作权</h2><p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/4.png" alt="软件著作权"></p>
-<h2 id="项目论文"><a href="#项目论文" class="headerlink" title="项目论文"></a>项目论文</h2><p>基于二维码技术的库存管理系统设计与实现  <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=DZRU202017097&v=vwj5CCu%25mmd2FUCAKB%25mmd2Bsi7loMuo77hzIz5Q682jwgs6k4ZJvjkgfSJtHC3YrK6NlD2IWJ" target="_blank" rel="noopener">知网链接</a></p>
+<h2 id="软件著作权"><a href="#软件著作权" class="headerlink" title="软件著作权"></a><b style="color: #42d2ca">软件著作权</b></h2><p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/4.png" alt="软件著作权"></p>
+<h2 id="项目论文"><a href="#项目论文" class="headerlink" title="项目论文"></a><b style="color: #42d2ca">项目论文</b></h2><p>基于二维码技术的库存管理系统设计与实现  <b style="color: #42d2ca"><a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=DZRU202017097&v=vwj5CCu%25mmd2FUCAKB%25mmd2Bsi7loMuo77hzIz5Q682jwgs6k4ZJvjkgfSJtHC3YrK6NlD2IWJ" target="_blank" rel="noopener">知网链接</a></b></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/5.png" alt="论文1"></p>
-<p>面向用户的密码设置规则——分级可变规则  <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=WLAQ202101015&v=uhpJZzBKs4mjq%25mmd2B3%25mmd2FcOS1HOolJrN5P4H%25mmd2BeBBiFFOEmht0oP3Uoc7jg8Meqk6mpIly" target="_blank" rel="noopener">知网链接</a></p>
+<p>面向用户的密码设置规则——分级可变规则  <b style="color: #42d2ca"><a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=WLAQ202101015&v=uhpJZzBKs4mjq%25mmd2B3%25mmd2FcOS1HOolJrN5P4H%25mmd2BeBBiFFOEmht0oP3Uoc7jg8Meqk6mpIly" target="_blank" rel="noopener">知网链接</a></b></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/6.png" alt="论文2"></p>
 ]]></content>
   </entry>
