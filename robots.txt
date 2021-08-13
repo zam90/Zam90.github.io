@@ -1,7 +1,7 @@
 
 User-agent: Baiduspider
-Disallow: 
+Disallow: /prishow
 User-agent: *
-Disallow: 
+Disallow: /prishow
 Sitemap: https://zam9036.gitee.io/sitemap.xml
 Sitemap: https://zam9036.gitee.io/baidusitemap.xml
