@@ -7757,16 +7757,6 @@ $ hexo init  #在此文件内创建Hexo工作区</code></pre><p><img src="https:
       </categories>
   </entry>
   <entry>
-    <title>时间轴Archives|Zam9036博客</title>
-    <url>/archives/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签Tags|Zam9036的博客</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>关于About|Zam9036博客</title>
     <url>/about/index.html</url>
     <content><![CDATA[<img src="https://zam9036.gitee.io/img/avatar.png" style="height: 100px; width: 100px; border-radius: 50%; margin-bottom: 15px" />
@@ -7794,9 +7784,137 @@ $ hexo init  #在此文件内创建Hexo工作区</code></pre><p><img src="https:
 ]]></content>
   </entry>
   <entry>
+    <title>时间轴Archives|Zam9036博客</title>
+    <url>/archives/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>分类Categories|Zam9036博客</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签Tags|Zam9036的博客</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>证书奖项|Zam9036博客</title>
+    <url>/prishow/CertificateAward/index.html</url>
+    <content><![CDATA[<h2 id="证书奖项"><a href="#证书奖项" class="headerlink" title="证书奖项"></a><b style="color: #42d2ca">证书奖项</b></h2><table>
+<thead>
+<tr>
+<th align="center">证书奖项</th>
+<th align="center">等级类别</th>
+<th align="center">获得时间</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">腾讯云TCA云开发工程师认证</td>
+<td align="center">认证证书</td>
+<td align="center">2021.1</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">学习优秀奖学金</td>
+<td align="center">二等奖</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">学习优秀奖学金</td>
+<td align="center">三等奖</td>
+<td align="center">2020.1</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">社会贡献奖学金</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">社会贡献奖学金</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">科技创新奖学金</td>
+<td align="center">二等奖</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">优秀学生干部</td>
+<td align="center">荣誉称号</td>
+<td align="center">2019.12</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">优秀学生干部</td>
+<td align="center">荣誉称号</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">优秀共青团员</td>
+<td align="center">荣誉称号</td>
+<td align="center">2020.9</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">优秀志愿者</td>
+<td align="center">荣誉称号</td>
+<td align="center">2020.11</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">学院辩论赛</td>
+<td align="center">第三名</td>
+<td align="center">2018</td>
+<td align="center">团体</td>
+</tr>
+<tr>
+<td align="center">”党史青年说“作品比赛</td>
+<td align="center">一等奖</td>
+<td align="center">2021</td>
+<td align="center">协助学院获得</td>
+</tr>
+<tr>
+<td align="center">”读懂中国“作品比赛</td>
+<td align="center">二等奖</td>
+<td align="center">2021</td>
+<td align="center">协助学院获得</td>
+</tr>
+<tr>
+<td align="center">先进班集体</td>
+<td align="center">市级、校级</td>
+<td align="center">2019</td>
+<td align="center">协助班级获得</td>
+</tr>
+<tr>
+<td align="center">主题团日活动</td>
+<td align="center">三等奖</td>
+<td align="center">2019</td>
+<td align="center">协助班级获得</td>
+</tr>
+<tr>
+<td align="center">学院摄影大赛</td>
+<td align="center">第四名</td>
+<td align="center">2019</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">中新金桥PS挑战赛</td>
+<td align="center">最佳挑战者</td>
+<td align="center">2021.5</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><img src="https://zam9036.gitee.io/img/postimg/CertificateAward/1.jpg" alt="项目展示1"></p>
+]]></content>
   </entry>
   <entry>
     <title>SW智能库存管理系统项目|Zam9036博客</title>
