@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
+
+
+
+  <meta name="keywords" content="云计算,课程：TCA认证课程," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] 云原生应用设计与开发云原生的演进过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TCA腾讯云开发工程师课程学习笔记（三）">
+<meta property="og:url" content="https://zam9036.gitee.io/2021/01/04/39-TCA-study-notes-3/index.html">
+<meta property="og:site_name" content="Zam9036博客">
+<meta property="og:description" content="[TOC] 云原生应用设计与开发云原生的演进过程">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/1.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/2.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/3.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/4.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/5.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/6.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/7.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/8.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/9.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/10.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/11.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/12.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/13.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/14.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/15.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/16.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/17.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/18.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/19.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/20.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/21.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/22.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/23.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/24.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/25.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/26.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/29.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/30.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/31.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/32.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/33.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/34.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/35.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/36.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/27.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/28.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/37.png">
+<meta property="article:published_time" content="2021-01-04T08:03:16.000Z">
+<meta property="article:modified_time" content="2021-08-16T16:21:19.037Z">
+<meta property="article:author" content="Zam9036">
+<meta property="article:tag" content="云计算">
+<meta property="article:tag" content="课程：TCA认证课程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://zam9036.gitee.io/2021/01/04/39-TCA-study-notes-3/"/>
+
+
+
+
+
+  <title>TCA腾讯云开发工程师课程学习笔记（三） | Zam9036博客</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?19d3e3b95e9483cad1ea17ab0d349f8e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zam9036博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zam9036.gitee.io/2021/01/04/39-TCA-study-notes-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zam9036">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zam9036博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">TCA腾讯云开发工程师课程学习笔记（三）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-04T16:03:16+08:00">
+                2021-01-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  962
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h1 id="云原生应用设计与开发"><a href="#云原生应用设计与开发" class="headerlink" title="云原生应用设计与开发"></a>云原生应用设计与开发</h1><h2 id="云原生的演进过程"><a href="#云原生的演进过程" class="headerlink" title="云原生的演进过程"></a>云原生的演进过程</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/1.png" alt="应用的三个维度"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/2.png" alt="云原生的演进过程"></p>
+<a id="more"></a>
+
+<h3 id="云原生计算基金会CNCF"><a href="#云原生计算基金会CNCF" class="headerlink" title="云原生计算基金会CNCF"></a>云原生计算基金会CNCF</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/3.png" alt="云原生计算基金会CNCF"></p>
+<h2 id="什么是云原生"><a href="#什么是云原生" class="headerlink" title="什么是云原生"></a>什么是云原生</h2><p>云原生是一种文化，是云计算的一个必然导向，其意义在于让云成为云化战略成功的基石</p>
+<p>云原生的概念可以总结为“适合云的应用”和“好用的云架构”</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/4.png" alt="云原生相关概念"></p>
+<h3 id="云时代业务与云原生应用"><a href="#云时代业务与云原生应用" class="headerlink" title="云时代业务与云原生应用"></a>云时代业务与云原生应用</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/5.png" alt="云时代业务与云原生应用"></p>
+<h2 id="云原生架构的关键技术"><a href="#云原生架构的关键技术" class="headerlink" title="云原生架构的关键技术"></a>云原生架构的关键技术</h2><h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><p>把一个庞大的项目<strong>拆分成几个小的独立的服务</strong>，再把独立的服务串起来的架构设计：<strong>内聚更强、更加敏捷</strong></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/6.png" alt="微服务与传统架构"></p>
+<h3 id="微服务常见架构-Spring-Cloud"><a href="#微服务常见架构-Spring-Cloud" class="headerlink" title="微服务常见架构-Spring Cloud"></a>微服务常见架构-Spring Cloud</h3><p>仅支持使用Java语言进行开发</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/7.png" alt="Spring Cloud"></p>
+<h3 id="微服务常见架构-ServiceMesh"><a href="#微服务常见架构-ServiceMesh" class="headerlink" title="微服务常见架构-ServiceMesh"></a>微服务常见架构-ServiceMesh</h3><p>支持异构语言（多语言混写），适合单体架构到微服务架构的过渡</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/8.png" alt="ServiceMesh"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/9.png" alt="ServiceMesh架构"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/10.png" alt="Sidecar模式"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/11.png" alt="ServiceMesh应用场景"></p>
+<h3 id="容器化"><a href="#容器化" class="headerlink" title="容器化"></a>容器化</h3><p>容器技术——资源调度、微服务更容易</p>
+<p>容器是一种轻量级虚拟化技术，能够在单一主机上提供多个隔离的操作系统环境，通过Namespace进行进程隔离，每个容器都有唯一的可写文件系统和资源配额</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/12.png" alt="Kubernetes"></p>
+<h3 id="DevOps"><a href="#DevOps" class="headerlink" title="DevOps"></a>DevOps</h3><p>传统瀑布模型开发：开发、测试、部署运维团队相互隔离</p>
+<p>敏捷开发：开发测试、部署运维团队相互隔离（合并开发和测试团队）</p>
+<p>DevOps：合并开发测试部署运维，整体一个团队</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/13.png" alt="DevOps1"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/14.png" alt="DevOps2"></p>
+<h3 id="持续交付"><a href="#持续交付" class="headerlink" title="持续交付"></a>持续交付</h3><p>持续交付——缩小开发者认知，灵活开发方向</p>
+<p>开发—测试—部署—交付—反馈—根据反馈继续开发—测试—部署—交付……</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/15.png" alt="持续交付"></p>
+<h2 id="云原生架构的技术特征"><a href="#云原生架构的技术特征" class="headerlink" title="云原生架构的技术特征"></a>云原生架构的技术特征</h2><h3 id="采用轻量级容器"><a href="#采用轻量级容器" class="headerlink" title="采用轻量级容器"></a>采用轻量级容器</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/16.png" alt="采用轻量级容器"></p>
+<h3 id="采用松散耦合的微服务"><a href="#采用松散耦合的微服务" class="headerlink" title="采用松散耦合的微服务"></a>采用松散耦合的微服务</h3><p>每个服务可以<strong>独立部署</strong>，通过<strong>API方式进行交互</strong>协作</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/17.png" alt="采用松散耦合的微服务"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/18.png" alt="微服务API方式进行交互"></p>
+<h3 id="采用最佳语言进行开发"><a href="#采用最佳语言进行开发" class="headerlink" title="采用最佳语言进行开发"></a>采用最佳语言进行开发</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/19.png" alt="采用最佳语言进行开发"></p>
+<h3 id="通过DevOps流程进行管理"><a href="#通过DevOps流程进行管理" class="headerlink" title="通过DevOps流程进行管理"></a>通过DevOps流程进行管理</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/20.png" alt="通过DevOps流程进行管理"></p>
+<h3 id="云原生应用的实现"><a href="#云原生应用的实现" class="headerlink" title="云原生应用的实现"></a>云原生应用的实现</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/21.png" alt="云原生应用的实现"></p>
+<h1 id="TSF与容器化"><a href="#TSF与容器化" class="headerlink" title="TSF与容器化"></a>TSF与容器化</h1><h2 id="TSF概念"><a href="#TSF概念" class="headerlink" title="TSF概念"></a>TSF概念</h2><h3 id="微服务带来的问题"><a href="#微服务带来的问题" class="headerlink" title="微服务带来的问题"></a>微服务带来的问题</h3><ul>
+<li>运维复杂</li>
+<li>代码改造复杂</li>
+<li>架构复杂度高</li>
+<li>定位问题困难</li>
+</ul>
+<p>微服务<strong>有利于开发</strong>，<strong>不利于运维</strong>，需要一个微服务平台来辅助运维</p>
+<h3 id="TSF腾讯微服务平台"><a href="#TSF腾讯微服务平台" class="headerlink" title="TSF腾讯微服务平台"></a>TSF腾讯微服务平台</h3><p>TSF腾讯微服务平台是一个围绕应用和微服务的PaaS平台</p>
+<ul>
+<li>提供服务全生命周期管理能力和数据化运营支持</li>
+<li>提供多维度应用、服务、机器的监控数据，助力服务性能优化</li>
+<li>拥抱SpringCloud、ServiceMesh微服务框架</li>
+<li>让企业轻松构建大型分布式系统</li>
+</ul>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/22.png" alt="TSF优势"></p>
+<h2 id="TSF功能及整体框架"><a href="#TSF功能及整体框架" class="headerlink" title="TSF功能及整体框架"></a>TSF功能及整体框架</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/23.png" alt="TSF功能"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/24.png" alt="TSF整体框架"></p>
+<h3 id="利用TSF打造企业技术中台"><a href="#利用TSF打造企业技术中台" class="headerlink" title="利用TSF打造企业技术中台"></a>利用TSF打造企业技术中台</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/25.png" alt="利用TSF打造企业技术中台"></p>
+<h3 id="TSF资源介绍"><a href="#TSF资源介绍" class="headerlink" title="TSF资源介绍"></a>TSF资源介绍</h3><p>容器部署组之间可以相互访问、虚拟机部署组之间可以相互访问</p>
+<p>容器部署组和虚拟机部署组之间相互访问需要用到<strong>命名空间</strong></p>
+<p>命名空间就是将容器集群和虚拟机集群在逻辑上划分为一个整体，使其整体内部可以相互访问</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/26.png" alt="TSF资源介绍"></p>
+<h2 id="Docker基本使用"><a href="#Docker基本使用" class="headerlink" title="Docker基本使用"></a>Docker基本使用</h2><h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/29.png" alt="Docker安装"></p>
+<h3 id="Docker基本命令"><a href="#Docker基本命令" class="headerlink" title="Docker基本命令"></a>Docker基本命令</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/30.png" alt="Docker基本命令1"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/31.png" alt="Docker基本命令2"></p>
+<h2 id="Dockerfile基本使用"><a href="#Dockerfile基本使用" class="headerlink" title="Dockerfile基本使用"></a>Dockerfile基本使用</h2><h3 id="Dockerfile的使用流程"><a href="#Dockerfile的使用流程" class="headerlink" title="Dockerfile的使用流程"></a>Dockerfile的使用流程</h3><p>Dockerfile自定义镜像内容、软件包、版本</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/32.png" alt="Dockerfile的使用流程"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/33.png" alt="Dockerfile基本使用"></p>
+<blockquote>
+<p>From：以该镜像系统作为基础</p>
+<p>Run：运行该镜像系统内的指令</p>
+<p>COPY：将数据配置文件拷贝至镜像中</p>
+<p>CMD：当启动该容器时，CMD命令会将容器初始化（CMD命令仅会运行一次）</p>
+</blockquote>
+<h2 id="利用Dockerfile构建镜像"><a href="#利用Dockerfile构建镜像" class="headerlink" title="利用Dockerfile构建镜像"></a>利用Dockerfile构建镜像</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/34.png" alt="步骤1"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/35.png" alt="步骤2"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/36.png" alt="步骤3&amp;4"></p>
+<h2 id="云容器TKE"><a href="#云容器TKE" class="headerlink" title="云容器TKE"></a>云容器TKE</h2><p>TSF的容器资源基于<strong>腾讯云容器服务TKE</strong></p>
+<p>TKE是高度可扩展的高性能<strong>容器管理服务</strong>，用户可以在托管的云服务器实例集群上轻松运行应用程序</p>
+<h3 id="TKE和Kubernetes"><a href="#TKE和Kubernetes" class="headerlink" title="TKE和Kubernetes"></a>TKE和Kubernetes</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/27.png" alt="TKE和Kubernetes"></p>
+<h3 id="TKE总体架构"><a href="#TKE总体架构" class="headerlink" title="TKE总体架构"></a>TKE总体架构</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/28.png" alt="TKE总体架构"></p>
+<h3 id="TKE应用场景"><a href="#TKE应用场景" class="headerlink" title="TKE应用场景"></a>TKE应用场景</h3><ul>
+<li>微服务架构</li>
+<li>持续集成与交付</li>
+<li>弹性伸缩</li>
+</ul>
+<h2 id="利用云容器部署TSF"><a href="#利用云容器部署TSF" class="headerlink" title="利用云容器部署TSF"></a>利用云容器部署TSF</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/37.png" alt="利用云容器部署TSF步骤"></p>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat_channel.png" alt="Zam9036 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎关注我的微信公众号~</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>心之所向 素履以往</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatReceivecollection.png" alt="Zam9036 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipayReceivecollection.jpg" alt="Zam9036 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Zam9036
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zam9036.gitee.io/2021/01/04/39-TCA-study-notes-3/" title="TCA腾讯云开发工程师课程学习笔记（三）">https://zam9036.gitee.io/2021/01/04/39-TCA-study-notes-3/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/" rel="tag"><i class="fa fa-tag"></i> 云计算</a>
+          
+            <a href="/tags/%E8%AF%BE%E7%A8%8B%EF%BC%9ATCA%E8%AE%A4%E8%AF%81%E8%AF%BE%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 课程：TCA认证课程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/01/03/38-TCA-study-notes-2/" rel="next" title="TCA腾讯云开发工程师课程学习笔记（二）">
+                <i class="fa fa-chevron-left"></i> TCA腾讯云开发工程师课程学习笔记（二）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/01/07/40-TCA-study-notes-4/" rel="prev" title="TCA腾讯云开发工程师课程学习笔记（四）">
+                TCA腾讯云开发工程师课程学习笔记（四） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Zam9036</p>
+              <p class="site-description motion-element" itemprop="description">心之所向 素履以往</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/zam90" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/weixin_44381143" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-code"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:zam9036@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/images/wechat_channel.png" target="_blank" title="公众号">
+                      
+                        <i class="fa fa-fw fa-wechat"></i>公众号</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#云原生应用设计与开发"><span class="nav-number">1.</span> <span class="nav-text">云原生应用设计与开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#云原生的演进过程"><span class="nav-number">1.1.</span> <span class="nav-text">云原生的演进过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生计算基金会CNCF"><span class="nav-number">1.1.1.</span> <span class="nav-text">云原生计算基金会CNCF</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是云原生"><span class="nav-number">1.2.</span> <span class="nav-text">什么是云原生</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#云时代业务与云原生应用"><span class="nav-number">1.2.1.</span> <span class="nav-text">云时代业务与云原生应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#云原生架构的关键技术"><span class="nav-number">1.3.</span> <span class="nav-text">云原生架构的关键技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#微服务"><span class="nav-number">1.3.1.</span> <span class="nav-text">微服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微服务常见架构-Spring-Cloud"><span class="nav-number">1.3.2.</span> <span class="nav-text">微服务常见架构-Spring Cloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微服务常见架构-ServiceMesh"><span class="nav-number">1.3.3.</span> <span class="nav-text">微服务常见架构-ServiceMesh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器化"><span class="nav-number">1.3.4.</span> <span class="nav-text">容器化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DevOps"><span class="nav-number">1.3.5.</span> <span class="nav-text">DevOps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#持续交付"><span class="nav-number">1.3.6.</span> <span class="nav-text">持续交付</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#云原生架构的技术特征"><span class="nav-number">1.4.</span> <span class="nav-text">云原生架构的技术特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#采用轻量级容器"><span class="nav-number">1.4.1.</span> <span class="nav-text">采用轻量级容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#采用松散耦合的微服务"><span class="nav-number">1.4.2.</span> <span class="nav-text">采用松散耦合的微服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#采用最佳语言进行开发"><span class="nav-number">1.4.3.</span> <span class="nav-text">采用最佳语言进行开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过DevOps流程进行管理"><span class="nav-number">1.4.4.</span> <span class="nav-text">通过DevOps流程进行管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#云原生应用的实现"><span class="nav-number">1.4.5.</span> <span class="nav-text">云原生应用的实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TSF与容器化"><span class="nav-number">2.</span> <span class="nav-text">TSF与容器化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TSF概念"><span class="nav-number">2.1.</span> <span class="nav-text">TSF概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#微服务带来的问题"><span class="nav-number">2.1.1.</span> <span class="nav-text">微服务带来的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TSF腾讯微服务平台"><span class="nav-number">2.1.2.</span> <span class="nav-text">TSF腾讯微服务平台</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TSF功能及整体框架"><span class="nav-number">2.2.</span> <span class="nav-text">TSF功能及整体框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用TSF打造企业技术中台"><span class="nav-number">2.2.1.</span> <span class="nav-text">利用TSF打造企业技术中台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TSF资源介绍"><span class="nav-number">2.2.2.</span> <span class="nav-text">TSF资源介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker基本使用"><span class="nav-number">2.3.</span> <span class="nav-text">Docker基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker安装"><span class="nav-number">2.3.1.</span> <span class="nav-text">Docker安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker基本命令"><span class="nav-number">2.3.2.</span> <span class="nav-text">Docker基本命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile基本使用"><span class="nav-number">2.4.</span> <span class="nav-text">Dockerfile基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dockerfile的使用流程"><span class="nav-number">2.4.1.</span> <span class="nav-text">Dockerfile的使用流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用Dockerfile构建镜像"><span class="nav-number">2.5.</span> <span class="nav-text">利用Dockerfile构建镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#云容器TKE"><span class="nav-number">2.6.</span> <span class="nav-text">云容器TKE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TKE和Kubernetes"><span class="nav-number">2.6.1.</span> <span class="nav-text">TKE和Kubernetes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TKE总体架构"><span class="nav-number">2.6.2.</span> <span class="nav-text">TKE总体架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TKE应用场景"><span class="nav-number">2.6.3.</span> <span class="nav-text">TKE应用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用云容器部署TSF"><span class="nav-number">2.7.</span> <span class="nav-text">利用云容器部署TSF</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zam9036</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">博客总字数&#58;</span>
+    
+    <span title="博客总字数">65.1k</span>
+  
+</div>
+
+
+  <div class="powered-by"> <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 框架支持</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+
+</body>
+</html>
