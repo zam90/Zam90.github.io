@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zam9036.gitee.io/2019/11/16/16-GitHubPages-personal-blog-migrates-to-mayun-to-speed-blog-access/</loc>
+    
+    <lastmod>2021-08-19T07:33:45.466Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zam9036.gitee.io/2019/10/23/2-A-detailed-tutorial-on-building-a-personal-blog-with-GitHub-Hexo/</loc>
+    
+    <lastmod>2021-08-19T07:31:36.394Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zam9036.gitee.io/lib/canvas-ribbon/README.html</loc>
     
     <lastmod>2021-08-17T07:45:15.747Z</lastmod>
@@ -233,13 +247,6 @@
   </url>
   
   <url>
-    <loc>https://zam9036.gitee.io/2019/11/16/16-GitHubPages-personal-blog-migrates-to-mayun-to-speed-blog-access/</loc>
-    
-    <lastmod>2021-08-16T16:13:27.236Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zam9036.gitee.io/2019/11/13/15-Record-the-problems-encountered-by-Hexo-blog-installation-hexo-generator-search/</loc>
     
     <lastmod>2021-08-16T16:13:11.150Z</lastmod>
@@ -320,13 +327,6 @@
     <loc>https://zam9036.gitee.io/2019/10/24/3-Change-the-theme-of-the-Hexo-blog/</loc>
     
     <lastmod>2021-08-16T16:08:58.033Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zam9036.gitee.io/2019/10/23/2-A-detailed-tutorial-on-building-a-personal-blog-with-GitHub-Hexo/</loc>
-    
-    <lastmod>2021-08-16T16:08:14.792Z</lastmod>
     
   </url>
   

@@ -2911,7 +2911,7 @@ $ hexo init  #在此文件内创建Hexo工作区</code></pre><p><img src="https:
 <p><img src="https://zam9036.gitee.io/img/postimg/%E5%88%A9%E7%94%A8GitHub+Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/6.png" alt="GitHub Desktop端"></p>
 <p>​    然后输入Summary，点击Fetch origin就可以直接上传。</p>
 <p>​    当然你也可以选择不把仓库clone到public文件夹内。clone时选择其他文件夹，然后把public内的文件复制到那个clone的文件夹，然后依然可以用GitHub Desktop上传。</p>
-<h3 id="检测连接"><a href="#检测连接" class="headerlink" title="检测连接"></a>检测连接</h3><p>​    尝试访问<a href="https://username.github.io，如果成功显示和本地预览相同的界面说明博客搭建成功！" target="_blank" rel="noopener">https://username.github.io，如果成功显示和本地预览相同的界面说明博客搭建成功！</a></p>
+<h3 id="检测连接"><a href="#检测连接" class="headerlink" title="检测连接"></a>检测连接</h3><p>​    尝试访问<a href="https://username.github.io" target="_blank" rel="noopener">https://username.github.io</a> ，如果成功显示和本地预览相同的界面说明博客搭建成功！</p>
 <h2 id="疑难杂症"><a href="#疑难杂症" class="headerlink" title="疑难杂症"></a>疑难杂症</h2><h3 id="在启动本地预览界面后访问localhost-4000显示空白界面"><a href="#在启动本地预览界面后访问localhost-4000显示空白界面" class="headerlink" title="在启动本地预览界面后访问localhost:4000显示空白界面"></a>在启动本地预览界面后访问localhost:4000显示空白界面</h3><p>​    如打开页面显示为空白界面，大概率因为4000端口被占用，执行<code>$ hexo server -p 5000</code>，然后访问localhost:5000。</p>
 <h3 id="Git上传失败"><a href="#Git上传失败" class="headerlink" title="Git上传失败"></a>Git上传失败</h3><p>​    请检查SSH Key的配置是否生效。同时注意修改Hexo工作区内的配置文件 <code>_config.yml</code> 。</p>
 <p>​    修改<code>deploy</code>部分时：</p>
@@ -5004,7 +5004,7 @@ root: /blog</code></pre></li>
 <li>当不符合上述1和2条件的时候，就默认使用Jekyll编译。</li>
 </ol>
 </blockquote>
-<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>与GitHub配置SSH一致，遇有疑问请访问<a href="https://zam9036.gitee.io/2019/10/23/利用GitHub+Hexo搭建个人博客详细教程">利用GitHub+Hexo搭建个人博客详细教程</a>。当然，使用当时GitHub建立的SSH就可以。</p>
+<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>与GitHub配置SSH一致，遇有疑问请访问<a href="https://zam9036.gitee.io/2019/10/23/2-A-detailed-tutorial-on-building-a-personal-blog-with-GitHub-Hexo/">利用GitHub+Hexo搭建个人博客详细教程</a>。当然，使用当时GitHub建立的SSH就可以。</p>
 <h3 id="修改Hexo配置"><a href="#修改Hexo配置" class="headerlink" title="修改Hexo配置"></a>修改Hexo配置</h3><p>找到Hexo配置文件_config.yml，注意不是主题配置文件。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/GitHubPages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E7%A0%81%E4%BA%91%E4%BB%8E%E8%80%8C%E5%8A%A0%E5%BF%AB%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/2.jpg" alt="Hexo配置文件"></p>
 <p>找到以下语句</p>
