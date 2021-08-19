@@ -7739,7 +7739,7 @@ int main()
   <entry>
     <title>证书奖项</title>
     <url>/prishow/CertificateAward/index.html</url>
-    <content><![CDATA[<h2 id="证书奖项"><a href="#证书奖项" class="headerlink" title="证书奖项"></a><b style="color: #42d2ca">证书奖项</b></h2><table>
+    <content><![CDATA[<table>
 <thead>
 <tr>
 <th align="center">证书奖项</th>
@@ -7857,7 +7857,7 @@ int main()
   <entry>
     <title>SW智能库存管理系统项目</title>
     <url>/prishow/SWLogisticsSystem/index.html</url>
-    <content><![CDATA[<h2 id="SW智能库存管理系统项目"><a href="#SW智能库存管理系统项目" class="headerlink" title="SW智能库存管理系统项目"></a><b style="color: #42d2ca">SW智能库存管理系统项目</b></h2><h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a><b style="color: #42d2ca">项目介绍</b></h3><p>本项目采用云服务混合架构（B/S+C/S），用户可以通过浏览器访问系统进行库存、人员、通知等相关操作，也可以通过客户端扫描货物二维码快速出入库。</p>
+    <content><![CDATA[<h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a><b style="color: #42d2ca">项目介绍</b></h3><p>本项目采用云服务混合架构（B/S+C/S），用户可以通过浏览器访问系统进行库存、人员、通知等相关操作，也可以通过客户端扫描货物二维码快速出入库。</p>
 <h3 id="团队成员"><a href="#团队成员" class="headerlink" title="团队成员"></a><b style="color: #42d2ca">团队成员</b></h3><p>张京宇 温蟾圆 吴彩元 张广浩 武文斌</p>
 <h3 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a><b style="color: #42d2ca">编程语言</b></h3><p>HTML ; JavaScript ; PHP ; SQL ; Swift</p>
 <h3 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a><b style="color: #42d2ca">硬件环境</b></h3><p>开发：CPU：Intel i7 主频2.8Ghz 运行内存：16GB 硬盘内存：1.5TB<br>运行：CPU主频1GHz以上 运行内存：1GB以上 硬盘内存：150MB以上 客户端iPhone4以上机型</p>
@@ -7873,113 +7873,6 @@ int main()
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/6.png" alt="论文1"></p>
 <p>面向用户的密码设置规则——分级可变规则  <b style="color: #000000"><a href = "https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=WLAQ202101015&v=uhpJZzBKs4mjq%25mmd2B3%25mmd2FcOS1HOolJrN5P4H%25mmd2BeBBiFFOEmht0oP3Uoc7jg8Meqk6mpIly">知网链接</a></b></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/7.png" alt="论文2"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/canvas-ribbon/README.html</url>
-    <content><![CDATA[<h1 align="center"><a href="https://github.com/hustcc/ribbon.js" target="_blank" rel="noopener">canvas-ribbon.js</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
-
-<h1 align="center">Installation</h1>
-
-<h2>If you want to use the CDN instead of clone this repo, please jump to the Step 3.</h2>
-
-<h2 align="center">Step 1 &rarr; Go to NexT dir</h2>
-
-<p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p>
-<pre><code class="sh">$ cd themes/next
-$ ls
-_config.yml  crowdin.yml  docs  gulpfile.js  languages  layout  LICENSE.md  package.json  README.md  scripts  source</code></pre>
-<h2 align="center">Step 2 &rarr; Get module</h2>
-
-<p>Install module to <code>source/lib</code> directory:</p>
-<pre><code class="sh">$ git clone https://github.com/theme-next/theme-next-canvas-ribbon source/lib/canvas-ribbon</code></pre>
-<h2 align="center">Step 3 &rarr; Set it up</h2>
-
-<p>Enable module in <strong>NexT</strong> <code>_config.yml</code> file:</p>
-<pre><code class="yml">canvas_ribbon:
-  enable: true</code></pre>
-<p><strong>And, if you wants to use the CDN, then need to set:</strong></p>
-<pre><code class="yml">vendors:
-  ...
-  canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js</code></pre>
-<h1 align="center">Update</h1>
-
-<pre><code class="sh">$ cd themes/next/source/lib/canvas-ribbon
-$ git pull</code></pre>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/lib/canvas-ribbon/canvas-ribbon.js</url>
-    <content><![CDATA[/**
- * Copyright (c) 2016 hustcc
- * License: MIT
- * Version: v1.0.1
- * GitHub: https://github.com/hustcc/ribbon.js
-**/
-/*jshint -W030 */
-! function() {
-  function attr(node, attr, default_value) {
-    return Number(node.getAttribute(attr)) || default_value;
-  }
-
-  // get user config
-  var scripts = document.getElementsByTagName('script'),
-    script = scripts[scripts.length - 1]; // 当前加载的script
-  config = {
-    z: attr(script, "zIndex", -1), // z-index
-    a: attr(script, "alpha", 0.6), // alpha
-    s: attr(script, "size", 90), // size
-  };
-
-  var canvas = document.createElement('canvas'),
-    g2d = canvas.getContext('2d'),
-    pr = window.devicePixelRatio || 1,
-    width = window.innerWidth,
-    height = window.innerHeight,
-    f = config.s,
-    q, t,
-    m = Math,
-    r = 0,
-    pi = m.PI*2,
-    cos = m.cos,
-    random = m.random;
-  canvas.width = width * pr;
-  canvas.height = height * pr;
-  g2d.scale(pr, pr);
-  g2d.globalAlpha = config.a;
-  canvas.style.cssText = 'opacity: ' + config.a + ';position:fixed;top:0;left:0;z-index: ' + config.z + ';width:100%;height:100%;pointer-events:none;';
-  // create canvas
-  document.getElementsByTagName('body')[0].appendChild(canvas);
-
-  function redraw() {
-    g2d.clearRect(0, 0, width, height);
-    q = [{x: 0, y: height * 0.7 + f}, {x: 0, y: height * 0.7 - f}];
-    while(q[1].x < width + f) draw(q[0], q[1]);
-  }
-  function draw(i, j) {
-    g2d.beginPath();
-    g2d.moveTo(i.x, i.y);
-    g2d.lineTo(j.x, j.y);
-    var k = j.x + (random()*2-0.25)*f, n = line(j.y);
-    g2d.lineTo(k, n);
-    g2d.closePath();
-    r -= pi / -50;
-    g2d.fillStyle = '#'+(cos(r)*127+128<<16 | cos(r+pi/3)*127+128<<8 | cos(r+pi/3*2)*127+128).toString(16);
-    g2d.fill();
-    q[0] = q[1];
-    q[1] = {x: k, y: n};
-  }
-  function line(p){
-    t = p + (random() * 2 - 1.1) * f;
-    return (t > height || t < 0) ? line(p) : t;
-  }
-
-  document.onclick = redraw;
-  document.ontouchstart = redraw;
-  redraw();
-}();
 ]]></content>
   </entry>
 </search>
