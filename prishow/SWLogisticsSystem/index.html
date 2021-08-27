@@ -88,12 +88,12 @@
 
 
 
-<meta name="description" content="项目介绍本项目采用云服务混合架构（B&#x2F;S+C&#x2F;S），用户可以通过浏览器访问系统进行库存、人员、通知等相关操作，也可以通过客户端扫描货物二维码快速出入库。 团队成员张京宇 温蟾圆 吴彩元 张广浩 武文斌 编程语言HTML ; JavaScript ; PHP ; SQL ; Swift 硬件环境开发：CPU：Intel i7 主频2.8Ghz 运行内存：16GB 硬盘内存：1.5TB运行：CPU主频">
+<meta name="description" content="项目介绍本项目采用云服务混合架构（B&#x2F;S+C&#x2F;S），用户可以通过浏览器访问系统查看库存统计、库存记录，并进行出入库、人员信息管理与权限分配、发布或查看通知等相关操作，也可以通过移动端扫描货物二维码快速出入库。主要功能如下  服务端：   登录注册：团队注册、团队登录、个人注册、个人登录 库存管理：产品库存及信息展示、添加产品、手动入库、手动出库、入库记录查看、出库记录查看、数据统计、数据更正、数据">
 <meta property="og:type" content="website">
 <meta property="og:title" content="SW智能库存管理系统项目">
 <meta property="og:url" content="https://zam9036.gitee.io/prishow/SWLogisticsSystem/index.html">
 <meta property="og:site_name" content="Zam9036博客">
-<meta property="og:description" content="项目介绍本项目采用云服务混合架构（B&#x2F;S+C&#x2F;S），用户可以通过浏览器访问系统进行库存、人员、通知等相关操作，也可以通过客户端扫描货物二维码快速出入库。 团队成员张京宇 温蟾圆 吴彩元 张广浩 武文斌 编程语言HTML ; JavaScript ; PHP ; SQL ; Swift 硬件环境开发：CPU：Intel i7 主频2.8Ghz 运行内存：16GB 硬盘内存：1.5TB运行：CPU主频">
+<meta property="og:description" content="项目介绍本项目采用云服务混合架构（B&#x2F;S+C&#x2F;S），用户可以通过浏览器访问系统查看库存统计、库存记录，并进行出入库、人员信息管理与权限分配、发布或查看通知等相关操作，也可以通过移动端扫描货物二维码快速出入库。主要功能如下  服务端：   登录注册：团队注册、团队登录、个人注册、个人登录 库存管理：产品库存及信息展示、添加产品、手动入库、手动出库、入库记录查看、出库记录查看、数据统计、数据更正、数据">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/1.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/2.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/3.png">
@@ -102,7 +102,7 @@
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/6.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/7.png">
 <meta property="article:published_time" content="2021-08-13T14:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-19T08:04:39.404Z">
+<meta property="article:modified_time" content="2021-08-27T16:31:10.944Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="Zam9036">
 <meta property="article:tag" content="ZamCenter">
@@ -342,19 +342,96 @@
       <div class="post-body">
         
         
-          <h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a><b style="color: #42d2ca">项目介绍</b></h3><p>本项目采用云服务混合架构（B/S+C/S），用户可以通过浏览器访问系统进行库存、人员、通知等相关操作，也可以通过客户端扫描货物二维码快速出入库。</p>
-<h3 id="团队成员"><a href="#团队成员" class="headerlink" title="团队成员"></a><b style="color: #42d2ca">团队成员</b></h3><p>张京宇 温蟾圆 吴彩元 张广浩 武文斌</p>
-<h3 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a><b style="color: #42d2ca">编程语言</b></h3><p>HTML ; JavaScript ; PHP ; SQL ; Swift</p>
-<h3 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a><b style="color: #42d2ca">硬件环境</b></h3><p>开发：CPU：Intel i7 主频2.8Ghz 运行内存：16GB 硬盘内存：1.5TB<br>运行：CPU主频1GHz以上 运行内存：1GB以上 硬盘内存：150MB以上 客户端iPhone4以上机型</p>
-<h3 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a><b style="color: #42d2ca">软件环境</b></h3><p>开发：服务端开发操作系统：Windows 10 客户端开发操作系统：macOS Catalin; 服务端：Dreamweaver+WAMP环境 客户端：Xcode<br>运行：服务端：Linux 客户端：iOS8.0; 服务端：Apache服务器、MySQL数据库</p>
-<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a><b style="color: #42d2ca">主要功能</b></h3><p>服务端：<br><strong>登录注册：</strong>团队注册、团队登录、个人注册、个人登录<br><strong>库存管理：</strong>产品库存及信息展示、添加产品、手动入库、手动出库、入库记录查看、出库记录查看、数据统计、数据更正、数据删除<br><strong>员工管理：</strong>个人信息管理、人员信息管理、人员权限管理<br><strong>通知公告：</strong>通知展示、通知发布</p>
-<p>客户端：<br><strong>出入库操作：</strong>扫码入库、扫码出库</p>
-<h2 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a><b style="color: #42d2ca">项目展示</b></h2><p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/1.png" alt="项目展示1"></p>
+          <h1 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h1><p>本项目采用云服务混合架构（B/S+C/S），用户可以通过浏览器访问系统查看库存统计、库存记录，并进行出入库、人员信息管理与权限分配、发布或查看通知等相关操作，也可以通过移动端扫描货物二维码快速出入库。主要功能如下</p>
+<ul>
+<li><p>服务端：</p>
+</li>
+<li><ul>
+<li><strong>登录注册：</strong>团队注册、团队登录、个人注册、个人登录</li>
+<li><strong>库存管理：</strong>产品库存及信息展示、添加产品、手动入库、手动出库、入库记录查看、出库记录查看、数据统计、数据更正、数据删除</li>
+<li><strong>员工管理：</strong>个人信息管理、人员信息管理、人员权限管理</li>
+<li><strong>通知公告：</strong>通知展示、通知发布</li>
+</ul>
+</li>
+<li><p>移动端：</p>
+</li>
+<li><ul>
+<li><strong>出入库操作：</strong>扫码入库、扫码出库</li>
+</ul>
+</li>
+</ul>
+<h1 id="团队成员"><a href="#团队成员" class="headerlink" title="团队成员"></a>团队成员</h1><p>张京宇：文档撰写、“登录注册” “产品出入库” “人员权限”模块开发、移动端API接口开发、系统整合、模块与系统整体测试、系统部署</p>
+<p>温蟾圆：移动端整体开发与测试</p>
+<p>吴彩元：“库存信息展示” “出入库记录”模块开发、模块与系统整体测试</p>
+<p>张广浩：“人员信息”模块开发、模块测试</p>
+<p>武文斌：系统整体测试、系统部署</p>
+<blockquote>
+<p>所有成员均参与了软件系统各模块的概要设计与详细设计</p>
+</blockquote>
+<h1 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h1><ul>
+<li>HTML</li>
+<li>JavaScript </li>
+<li>PHP</li>
+<li>SQL</li>
+<li>Swift</li>
+</ul>
+<h1 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a>硬件环境</h1><p><strong>开发环境</strong></p>
+<ul>
+<li>CPU：Intel i7 主频2.8Ghz</li>
+<li>运行内存：16GB</li>
+<li>硬盘内存：1.5TB</li>
+</ul>
+<p><strong>运行环境</strong></p>
+<ul>
+<li>CPU：主频1GHz以上</li>
+<li>运行内存：1GB以上</li>
+<li>硬盘内存：150MB以上</li>
+<li>移动端iPhone4以上机型</li>
+</ul>
+<h1 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h1><p><strong>开发环境</strong></p>
+<ul>
+<li><p>服务端：</p>
+</li>
+<li><ul>
+<li>Windows 10操作系统</li>
+<li>Apache服务器</li>
+<li>MySQL数据库</li>
+<li>PHP脚本语言</li>
+<li>DreamWeaver、NetBeans等IDE</li>
+</ul>
+</li>
+<li><p>客服端：</p>
+</li>
+<li><ul>
+<li><p>MacOS Catalin操作系统</p>
+</li>
+<li><p>Xcode编程环境</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>运行环境</strong></p>
+<ul>
+<li>服务端：</li>
+<li><ul>
+<li>Deepin操作系统（Linux）</li>
+<li>Apache服务器</li>
+<li>MySQL数据库</li>
+<li>PHP环境</li>
+</ul>
+</li>
+<li>移动端：</li>
+<li><ul>
+<li>IOS 8.0操作系统</li>
+</ul>
+</li>
+</ul>
+<h1 id="项目展示"><a href="#项目展示" class="headerlink" title="项目展示"></a>项目展示</h1><p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/1.png" alt="项目展示1"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/2.png" alt="项目展示2"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/3.png" alt="项目展示3"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/4.png" alt="项目展示4"></p>
-<h2 id="软件著作权"><a href="#软件著作权" class="headerlink" title="软件著作权"></a><b style="color: #42d2ca">软件著作权</b></h2><p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/5.png" alt="软件著作权"></p>
-<h2 id="项目论文"><a href="#项目论文" class="headerlink" title="项目论文"></a><b style="color: #42d2ca">项目论文</b></h2><p>基于二维码技术的库存管理系统设计与实现  <b style="color: #000000"><a href = "https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=DZRU202017097&v=vwj5CCu%25mmd2FUCAKB%25mmd2Bsi7loMuo77hzIz5Q682jwgs6k4ZJvjkgfSJtHC3YrK6NlD2IWJ">知网链接</a></b></p>
+<h2 id="软件著作权"><a href="#软件著作权" class="headerlink" title="软件著作权"></a>软件著作权</h2><p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/5.png" alt="软件著作权"></p>
+<h2 id="项目论文"><a href="#项目论文" class="headerlink" title="项目论文"></a>项目论文</h2><p>基于二维码技术的库存管理系统设计与实现  <b style="color: #000000"><a href = "https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=DZRU202017097&v=vwj5CCu%25mmd2FUCAKB%25mmd2Bsi7loMuo77hzIz5Q682jwgs6k4ZJvjkgfSJtHC3YrK6NlD2IWJ">知网链接</a></b></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/6.png" alt="论文1"></p>
 <p>面向用户的密码设置规则——分级可变规则  <b style="color: #000000"><a href = "https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=WLAQ202101015&v=uhpJZzBKs4mjq%25mmd2B3%25mmd2FcOS1HOolJrN5P4H%25mmd2BeBBiFFOEmht0oP3Uoc7jg8Meqk6mpIly">知网链接</a></b></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/SWLogisticsSystem/7.png" alt="论文2"></p>
@@ -508,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目介绍"><span class="nav-number">1.</span> <span class="nav-text">项目介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#团队成员"><span class="nav-number">2.</span> <span class="nav-text">团队成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编程语言"><span class="nav-number">3.</span> <span class="nav-text">编程语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件环境"><span class="nav-number">4.</span> <span class="nav-text">硬件环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件环境"><span class="nav-number">5.</span> <span class="nav-text">软件环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主要功能"><span class="nav-number">6.</span> <span class="nav-text">主要功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目展示"><span class="nav-number"></span> <span class="nav-text">项目展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件著作权"><span class="nav-number"></span> <span class="nav-text">软件著作权</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目论文"><span class="nav-number"></span> <span class="nav-text">项目论文</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目介绍"><span class="nav-number">1.</span> <span class="nav-text">项目介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#团队成员"><span class="nav-number">2.</span> <span class="nav-text">团队成员</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编程语言"><span class="nav-number">3.</span> <span class="nav-text">编程语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#硬件环境"><span class="nav-number">4.</span> <span class="nav-text">硬件环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软件环境"><span class="nav-number">5.</span> <span class="nav-text">软件环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目展示"><span class="nav-number">6.</span> <span class="nav-text">项目展示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件著作权"><span class="nav-number">6.1.</span> <span class="nav-text">软件著作权</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目论文"><span class="nav-number">6.2.</span> <span class="nav-text">项目论文</span></a></li></ol></li></ol></div>
             
 
           </div>
