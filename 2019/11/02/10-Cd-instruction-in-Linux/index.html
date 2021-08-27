@@ -88,14 +88,14 @@
 
 
 
-<meta name="description" content="[TOC] cd指令​    Linux cd命令用于切换当前工作目录至 dirName(目录参数)。​    其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚登录时所在的目录)。​    另外，”~” 也表示为 home 目录 的意思，”.” 则是表示目前所在的目录，”..” 则表示目前目录位置的上一层目录。">
+<meta name="description" content="[TOC] cd指令​    Linux cd命令用于切换当前工作目录至 dirName(目录参数)。​    其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚登录时所在的目录)。​    另外，”~” 也表示为 home 目录 的意思，”.” 则是表示目前所在的目录，”..” 则表示目前目录位置的上一层目录。 cd语法cd [dir">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux中的cd指令">
 <meta property="og:url" content="https://zam9036.gitee.io/2019/11/02/10-Cd-instruction-in-Linux/index.html">
 <meta property="og:site_name" content="Zam9036博客">
-<meta property="og:description" content="[TOC] cd指令​    Linux cd命令用于切换当前工作目录至 dirName(目录参数)。​    其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚登录时所在的目录)。​    另外，”~” 也表示为 home 目录 的意思，”.” 则是表示目前所在的目录，”..” 则表示目前目录位置的上一层目录。">
+<meta property="og:description" content="[TOC] cd指令​    Linux cd命令用于切换当前工作目录至 dirName(目录参数)。​    其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚登录时所在的目录)。​    另外，”~” 也表示为 home 目录 的意思，”.” 则是表示目前所在的目录，”..” 则表示目前目录位置的上一层目录。 cd语法cd [dir">
 <meta property="article:published_time" content="2019-11-02T12:31:25.000Z">
-<meta property="article:modified_time" content="2021-08-16T16:11:21.780Z">
+<meta property="article:modified_time" content="2021-08-27T16:46:19.839Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Shell">
@@ -109,7 +109,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -438,8 +438,6 @@
       
         <p>[TOC]</p>
 <h2 id="cd指令"><a href="#cd指令" class="headerlink" title="cd指令"></a>cd指令</h2><p>​    Linux cd命令用于切换当前工作目录至 dirName(目录参数)。<br>​    其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚登录时所在的目录)。<br>​    另外，”~” 也表示为 home 目录 的意思，”.” 则是表示目前所在的目录，”..” 则表示目前目录位置的上一层目录。</p>
-<a id="more"></a>
-
 <h2 id="cd语法"><a href="#cd语法" class="headerlink" title="cd语法"></a>cd语法</h2><pre><code class="Linux终端指令">cd [dirName]    //dirName：要切换的目标目录</code></pre>
 <h2 id="指令实例"><a href="#指令实例" class="headerlink" title="指令实例"></a>指令实例</h2><pre><code class="Linux终端指令">cd /usr/bin      //跳转到/usr/bin/目录
 
@@ -690,9 +688,9 @@ cd ../path      //跳转到上层目录中的path目录中，“..”表示上�
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="/images/wechat_channel.png" target="_blank" title="公众号">
+                    <a href="https://zam90.github.io/" target="_blank" title="博客镜像">
                       
-                        <i class="fa fa-fw fa-wechat"></i>公众号</a>
+                        <i class="fa fa-fw fa-github"></i>博客镜像</a>
                   </span>
                 
             </div>
@@ -727,6 +725,13 @@ cd ../path      //跳转到上层目录中的path目录中，“..”表示上�
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -783,11 +788,6 @@ cd ../path      //跳转到上层目录中的path目录中，“..”表示上�
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1298,6 +1298,9 @@ cd ../path      //跳转到上层目录中的path目录中，“..”表示上�
 
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 

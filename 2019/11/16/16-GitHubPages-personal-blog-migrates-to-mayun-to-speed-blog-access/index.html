@@ -88,19 +88,19 @@
 
 
 
-<meta name="description" content="[TOC] 前言GitHubPages部署静态网页十分方便与快捷，常常被用来建立个人博客。但因为其服务器设在国外，且曾经被中国防火长城GFW屏蔽（后来解除屏蔽），导致其访问速度十分缓慢，甚至极少数状态下出现访问出错的状况，极大影响了博客的使用体验。所以我近期尝试将GitHub的Hexo博客迁移至国内码云，以解决博客访问过于缓慢的情况。">
+<meta name="description" content="[TOC] 前言GitHubPages部署静态网页十分方便与快捷，常常被用来建立个人博客。但因为其服务器设在国外，且曾经被中国防火长城GFW屏蔽（后来解除屏蔽），导致其访问速度十分缓慢，甚至极少数状态下出现访问出错的状况，极大影响了博客的使用体验。所以我近期尝试将GitHub的Hexo博客迁移至国内码云，以解决博客访问过于缓慢的情况。 迁移流程建立码云仓库创建码云账号的流程我在此就不过多赘述了，根">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GitHubPages个人博客迁移至码云从而加快博客访问速度">
 <meta property="og:url" content="https://zam9036.gitee.io/2019/11/16/16-GitHubPages-personal-blog-migrates-to-mayun-to-speed-blog-access/index.html">
 <meta property="og:site_name" content="Zam9036博客">
-<meta property="og:description" content="[TOC] 前言GitHubPages部署静态网页十分方便与快捷，常常被用来建立个人博客。但因为其服务器设在国外，且曾经被中国防火长城GFW屏蔽（后来解除屏蔽），导致其访问速度十分缓慢，甚至极少数状态下出现访问出错的状况，极大影响了博客的使用体验。所以我近期尝试将GitHub的Hexo博客迁移至国内码云，以解决博客访问过于缓慢的情况。">
+<meta property="og:description" content="[TOC] 前言GitHubPages部署静态网页十分方便与快捷，常常被用来建立个人博客。但因为其服务器设在国外，且曾经被中国防火长城GFW屏蔽（后来解除屏蔽），导致其访问速度十分缓慢，甚至极少数状态下出现访问出错的状况，极大影响了博客的使用体验。所以我近期尝试将GitHub的Hexo博客迁移至国内码云，以解决博客访问过于缓慢的情况。 迁移流程建立码云仓库创建码云账号的流程我在此就不过多赘述了，根">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/GitHubPages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E7%A0%81%E4%BA%91%E4%BB%8E%E8%80%8C%E5%8A%A0%E5%BF%AB%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/1.jpg">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/GitHubPages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E7%A0%81%E4%BA%91%E4%BB%8E%E8%80%8C%E5%8A%A0%E5%BF%AB%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/2.jpg">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/GitHubPages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E7%A0%81%E4%BA%91%E4%BB%8E%E8%80%8C%E5%8A%A0%E5%BF%AB%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/3.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/GitHubPages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E7%A0%81%E4%BA%91%E4%BB%8E%E8%80%8C%E5%8A%A0%E5%BF%AB%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/4.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/GitHubPages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E7%A0%81%E4%BA%91%E4%BB%8E%E8%80%8C%E5%8A%A0%E5%BF%AB%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/5.png">
 <meta property="article:published_time" content="2019-11-16T12:47:45.000Z">
-<meta property="article:modified_time" content="2021-08-19T07:33:45.466Z">
+<meta property="article:modified_time" content="2021-08-27T16:47:13.891Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="GitHub">
@@ -115,7 +115,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -444,8 +444,6 @@
       
         <p>[TOC]</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>GitHubPages部署静态网页十分方便与快捷，常常被用来建立个人博客。但因为其服务器设在国外，且曾经被中国防火长城GFW屏蔽（后来解除屏蔽），导致其访问速度十分缓慢，甚至极少数状态下出现访问出错的状况，极大影响了博客的使用体验。所以我近期尝试将GitHub的Hexo博客迁移至国内码云，以解决博客访问过于缓慢的情况。</p>
-<a id="more"></a>
-
 <h2 id="迁移流程"><a href="#迁移流程" class="headerlink" title="迁移流程"></a>迁移流程</h2><h3 id="建立码云仓库"><a href="#建立码云仓库" class="headerlink" title="建立码云仓库"></a>建立码云仓库</h3><p>创建码云账号的流程我在此就不过多赘述了，根据提示操作即可，下面我来说一下建立码云仓库的操作。码云的仓库建立机制和GitHub一样，只需要新建仓库然后填写信息即可，其中仓库名字尤为关键。码云的静态资源托管平台可以托管用户的任意仓库，不必像GitHub那样仓库名必须和用户名一致才可。用户创建任意仓库，然后点击<code>服务-GiteePages</code>即可开启该仓库的静态资源托管服务。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/GitHubPages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E7%A0%81%E4%BA%91%E4%BB%8E%E8%80%8C%E5%8A%A0%E5%BF%AB%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/1.jpg" alt="开启Page服务"></p>
 <p>但是！在这里建议大家仓库名仍使用和自己码云用户名相同的名称！！因为当博客仓库名与自己的个性地址不一致时，博客部署完成后会存在一些资源访问404。原因是当需要部署的仓库和自己的个性地址不一致时，如：<a href="https://gitee.com/ipvb/blog" target="_blank" rel="noopener">https://gitee.com/ipvb/blog</a> ，生成的pages url 为 <a href="https://ipvb.gitee.io/blog" target="_blank" rel="noopener">https://ipvb.gitee.io/blog</a> ，而访问的资源404，如 <a href="https://ipvb.gitee.io/style.css" target="_blank" rel="noopener">https://ipvb.gitee.io/style.css</a> 这是相应配置文件的相对路径存在问题导致的，生成的资源 url 应该为 <a href="https://ipvb.gitee.io/blog/style.css" target="_blank" rel="noopener">https://ipvb.gitee.io/blog/style.css</a> 才对。 而针对这个问题官方给出了解决方案。</p>
@@ -732,9 +730,9 @@ deploy:
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="/images/wechat_channel.png" target="_blank" title="公众号">
+                    <a href="https://zam90.github.io/" target="_blank" title="博客镜像">
                       
-                        <i class="fa fa-fw fa-wechat"></i>公众号</a>
+                        <i class="fa fa-fw fa-github"></i>博客镜像</a>
                   </span>
                 
             </div>
@@ -769,6 +767,13 @@ deploy:
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -825,11 +830,6 @@ deploy:
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1340,6 +1340,9 @@ deploy:
 
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 

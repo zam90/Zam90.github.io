@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/33-Linux-Shell/wordCloud.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/33-Linux-Shell/1.png">
 <meta property="article:published_time" content="2020-04-26T03:44:05.000Z">
-<meta property="article:modified_time" content="2021-08-16T16:19:14.066Z">
+<meta property="article:modified_time" content="2021-08-27T16:50:01.070Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Shell">
@@ -114,7 +114,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -459,8 +459,6 @@
 <p>对于超级用户（root）来说，<code>$</code>的位置出现的是<code>#</code></p>
 </blockquote>
 <p>在提示符之后，用户输入命令，然后按Enter键。shell命令解释程序将接收、分析、解释并执行相应的命令，执行结果将在屏幕上显示。</p>
-<a id="more"></a>
-
 <h3 id="主提示符"><a href="#主提示符" class="headerlink" title="主提示符"></a>主提示符</h3><p>在bash（Linux系统默认的shell）中，主提示符用环境变量PS1表示。</p>
 <p>bash默认的主提示符是<code>\s-\v\ $</code> ，其中<code>\s</code>表示shell名称，<code>\v</code>表示bash版本号</p>
 <p>可以利用命令修改默认的主提示符</p>
@@ -1065,9 +1063,9 @@ chmod 777 file
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="/images/wechat_channel.png" target="_blank" title="公众号">
+                    <a href="https://zam90.github.io/" target="_blank" title="博客镜像">
                       
-                        <i class="fa fa-fw fa-wechat"></i>公众号</a>
+                        <i class="fa fa-fw fa-github"></i>博客镜像</a>
                   </span>
                 
             </div>
@@ -1102,6 +1100,13 @@ chmod 777 file
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -1158,11 +1163,6 @@ chmod 777 file
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1673,6 +1673,9 @@ chmod 777 file
 
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 

@@ -88,12 +88,12 @@
 
 
 
-<meta name="description" content="[TOC] 编程语言​    C++ 问题描述实验目的​    熟悉C++的语法，掌握栈的运算及应用，了解对算法的健壮性要求。 实验内容 实现计算器类中lp、rp和operate函数 完善计算器类evaluate函数，增加对输入的合法性检查，包括滤掉所有非法输入及处理左右括号不配对的输入 编制应用程序测试这个计算器">
+<meta name="description" content="[TOC] 编程语言​    C++ 问题描述实验目的​    熟悉C++的语法，掌握栈的运算及应用，了解对算法的健壮性要求。 实验内容 实现计算器类中lp、rp和operate函数 完善计算器类evaluate函数，增加对输入的合法性检查，包括滤掉所有非法输入及处理左右括号不配对的输入 编制应用程序测试这个计算器  程序设计程序要求​    利用栈原理，设计一个可以计算所输入表达式的程序，要求可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用栈实现简易计算器">
 <meta property="og:url" content="https://zam9036.gitee.io/2019/11/01/9-Implementing-a-simple-calculator-with-a-stack/index.html">
 <meta property="og:site_name" content="Zam9036博客">
-<meta property="og:description" content="[TOC] 编程语言​    C++ 问题描述实验目的​    熟悉C++的语法，掌握栈的运算及应用，了解对算法的健壮性要求。 实验内容 实现计算器类中lp、rp和operate函数 完善计算器类evaluate函数，增加对输入的合法性检查，包括滤掉所有非法输入及处理左右括号不配对的输入 编制应用程序测试这个计算器">
+<meta property="og:description" content="[TOC] 编程语言​    C++ 问题描述实验目的​    熟悉C++的语法，掌握栈的运算及应用，了解对算法的健壮性要求。 实验内容 实现计算器类中lp、rp和operate函数 完善计算器类evaluate函数，增加对输入的合法性检查，包括滤掉所有非法输入及处理左右括号不配对的输入 编制应用程序测试这个计算器  程序设计程序要求​    利用栈原理，设计一个可以计算所输入表达式的程序，要求可">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E8%AE%A1%E7%AE%97%E5%99%A8/1.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E8%AE%A1%E7%AE%97%E5%99%A8/2.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E8%AE%A1%E7%AE%97%E5%99%A8/3.png">
@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E8%AE%A1%E7%AE%97%E5%99%A8/5.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E8%AE%A1%E7%AE%97%E5%99%A8/6.png">
 <meta property="article:published_time" content="2019-11-01T12:16:35.000Z">
-<meta property="article:modified_time" content="2021-08-16T16:10:54.506Z">
+<meta property="article:modified_time" content="2021-08-27T16:46:13.582Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="数据结构">
@@ -119,7 +119,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -454,8 +454,6 @@
 <li>完善计算器类evaluate函数，增加对输入的合法性检查，包括滤掉所有非法输入及处理左右括号不配对的输入</li>
 <li>编制应用程序测试这个计算器</li>
 </ul>
-<a id="more"></a>
-
 <h2 id="程序设计"><a href="#程序设计" class="headerlink" title="程序设计"></a>程序设计</h2><h3 id="程序要求"><a href="#程序要求" class="headerlink" title="程序要求"></a>程序要求</h3><p>​    利用栈原理，设计一个可以计算所输入表达式的程序，要求可以计算正数，负数，小数的加减乘除运算和括号运算，以#结束输入。</p>
 <h3 id="程序功能"><a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h3><p>​    对输入的式子进行判断式子格式是否正确。若正确，进行运算并输出最终结果；若错误，提示报错。</p>
 <h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>​    用栈实现计算器，主要思路就是设置一个符号栈和一个数字栈用于存储数字和字符。输入字符串时在字符串尾部加一个“#”以示输入结束。然后扫描字符串，如果扫描结果是数字就进入数字栈。如果是运算符号要判断符号优先级，若栈外符号优先级大于栈内符号优先级则进栈；若小于栈内优先级，则符号栈出栈一位，数字栈出栈两位进行计算，结果重新进入数字栈，直到栈外优先级大于栈内。</p>
@@ -1077,9 +1075,9 @@ int main()
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="/images/wechat_channel.png" target="_blank" title="公众号">
+                    <a href="https://zam90.github.io/" target="_blank" title="博客镜像">
                       
-                        <i class="fa fa-fw fa-wechat"></i>公众号</a>
+                        <i class="fa fa-fw fa-github"></i>博客镜像</a>
                   </span>
                 
             </div>
@@ -1114,6 +1112,13 @@ int main()
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -1170,11 +1175,6 @@ int main()
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1685,6 +1685,9 @@ int main()
 
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 

@@ -120,7 +120,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -451,18 +451,19 @@
 
       
         
-          <p><img src="https://zam9036.gitee.io/img/postimg/32-Physical-layer-computer-network-knowledge-summary-2/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="数据通信基础"><a href="#数据通信基础" class="headerlink" title="数据通信基础"></a>数据通信基础</h1><h2 id="数据通信系统"><a href="#数据通信系统" class="headerlink" title="数据通信系统"></a>数据通信系统</h2><p>基本组成：</p>
-<p><img src="https://zam9036.gitee.io/img/postimg/32-Physical-layer-computer-network-knowledge-summary-2/1.png" alt="基本组成"></p>
-<ul>
-<li>发送端：实现数据的产生及发送，亦称为信源</li>
-<li>中间设备：泛指转发器、网桥、交换机、路由器、网关等</li>
-<li>介质：传输介质，实现数据传输的物理通路</li>
-<li>报文：泛指在传输信道上承载的具有特定结构的数据单元</li>
-<li>接收端：实现数据的接收，亦称为信宿</li>
-<li>协议：通信的各方为进行数据交换必须共同遵循的规则</li>
-</ul>
+          
+          
+[TOC]
+数据通信基础数据通信系统基本组成：
+
+
+发送端：实现数据的产生及发送，亦称为信源
+中间设备：泛指转发器、网桥、交换机、路由器、网关等
+介质：传输介质，实现数据传输的物理通路
+报文：泛指在传输信道上承载的具有特定结构的数据单元
+接收端：实现数据的接收，亦称为信宿
+协议：通信的各方为进行数
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/09/32-Physical-layer-computer-network-knowledge-summary-2/#more" rel="contents">
@@ -643,14 +644,13 @@
 
       
         
-          <p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="代码语言"><a href="#代码语言" class="headerlink" title="代码语言"></a>代码语言</h1><p>C语言</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>近期，一个数学系专业的朋友联系我，问我能不能写出一个程序实现“判断一个数是否为整同余数”的功能，他还给了我同余数的定义：同余数是一个三边均为有理数的直角三角形的面积</p>
-<h1 id="问题研究"><a href="#问题研究" class="headerlink" title="问题研究"></a>问题研究</h1><p>对于程序设计来说，仅仅按照这个定义来实现“判断一个数是否为同余数”的功能实在困难，就单纯让计算机来判断一个数是不是有理数就是一门学问。</p>
-<p>所以我只好另辟蹊径，找找还有什么方法能验证一个数是同余数。在百度百科上，我看到了数学家给出的一个重要结论，也是验证n是整同余数的充要条件：</p>
-<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/1.png" alt="重要结论"></p>
-<p>我很敬佩数学家们的智慧，能得出这个重要的结论，这对用程序验证一个数是整同余数指明了思路。</p>
+          
+          
+[TOC]
+代码语言C语言
+前言近期，一个数学系专业的朋友联系我，问我能不能写出一个程序实现“判断一个数是否为整同余数”的功能，他还给了我同余数的定义：同余数是一个三边均为有理数的直角三角形的面积
+问题研究对于程序设计来说，仅仅按照这个定义来实现“判断一个数是否为同余数”的功能实在困难，就单纯让计
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/06/31-Determine-if-a-number-is-congruent-C-language/#more" rel="contents">
@@ -831,21 +831,17 @@
 
       
         
-          <p><img src="https://zam9036.gitee.io/img/postimg/30-Algorithm-Design-and-Analysis-Knowledge-Summary-2/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h1><p><strong>递归算法</strong></p>
-<p>直接或间接地调用自身的算法称为<strong>递归算法</strong>。</p>
-<p><strong>递归函数</strong></p>
-<p>用函数自身给出定义的函数称为<strong>递归函数</strong>。</p>
-<p>在计算机算法设计与分析中，使用递归技术往往使函数的定义和算法的描述简洁且易于理解。<strong>使用递归算法，要考虑递归的效率问题!</strong></p>
-<blockquote>
-<p>若递归过程中，问题规模减小的速度很慢，则递归算法的复杂度会比较高。</p>
-</blockquote>
-<h2 id="使用递归的准则"><a href="#使用递归的准则" class="headerlink" title="使用递归的准则"></a>使用递归的准则</h2><p>如果待解决的问题具备下列2个特性，就可以考虑使用递归：</p>
-<ul>
-<li>复杂的问题转换为简单的1个或几个子问题</li>
-<li>最简单的问题可以直接解决 </li>
-</ul>
+          
+          
+[TOC]
+递归算法递归算法
+直接或间接地调用自身的算法称为递归算法。
+递归函数
+用函数自身给出定义的函数称为递归函数。
+在计算机算法设计与分析中，使用递归技术往往使函数的定义和算法的描述简洁且易于理解。使用递归算法，要考虑递归的效率问题!
+
+若递归过程中，问题规模减小的速度很慢，则递归算法的复杂
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/05/30-Algorithm-Design-and-Analysis-Knowledge-Summary-2/#more" rel="contents">
@@ -1026,12 +1022,14 @@
 
       
         
-          <p><img src="https://zam9036.gitee.io/img/postimg/29-Installation-and-use-of-SQL-Server/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="版本平台"><a href="#版本平台" class="headerlink" title="版本平台"></a>版本平台</h1><p>Windows</p>
-<p>SQL Server 2019 Developer</p>
-<p>SQL Server Management Studio 18.4</p>
-<h1 id="SQL-Server介绍"><a href="#SQL-Server介绍" class="headerlink" title="SQL Server介绍"></a>SQL Server介绍</h1><p>SQL是英文Structured Query Language的缩写，意思为结构化查询语言。SQL语言的主要功能就是同各种数据库建立联系，进行沟通。按照ANSI(美国国家标准协会)的规定，SQL被作为关系型数据库管理系统的标准语言。SQL Server是由Microsoft开发和推广的关系数据库管理系统（RDBMS）。</p>
+          
+          
+[TOC]
+版本平台Windows
+SQL Server 2019 Developer
+SQL Server Management Studio 18.4
+SQL Server介绍SQL是英文Structured Query Language的缩写，意思为结构化查询语言。SQL语言的主要功能就是同
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/03/29-Installation-and-use-of-SQL-Server/#more" rel="contents">
@@ -1212,20 +1210,19 @@
 
       
         
-          <p><img src="https://zam9036.gitee.io/img/postimg/28-Algorithm-design-and-analysis-study-notes-1/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="算法与程序"><a href="#算法与程序" class="headerlink" title="算法与程序"></a>算法与程序</h1><h2 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h2><ul>
-<li>算法是解决问题的一种方法或一个过程。</li>
-<li>算法是若干指令的有穷序列。</li>
-<li>算法是以一步接一步的方式来详细描述计算机如何将输入转化为所要求的输出的过程。</li>
-<li>算法是对计算机上执行的计算过程的具体描述。</li>
-</ul>
-<h2 id="算法的性质"><a href="#算法的性质" class="headerlink" title="算法的性质"></a>算法的性质</h2><ul>
-<li><strong>输入</strong>：算法的输入由零个和多个外部量提供。</li>
-<li><strong>输出</strong>：算法产生至少一个量作为输出。</li>
-<li><strong>确定性</strong>：组成算法的每条指令清晰、无歧义。</li>
-<li><strong>有限性</strong>：算法中<strong>每条指令</strong>的执行次数和执行时间都是有限的。</li>
-</ul>
+          
+          
+[TOC]
+算法与程序算法概述
+算法是解决问题的一种方法或一个过程。
+算法是若干指令的有穷序列。
+算法是以一步接一步的方式来详细描述计算机如何将输入转化为所要求的输出的过程。
+算法是对计算机上执行的计算过程的具体描述。
+
+算法的性质
+输入：算法的输入由零个和多个外部量提供。
+输出：算法产生至少一个
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/27/28-Algorithm-design-and-analysis-study-notes-1/#more" rel="contents">
@@ -1406,12 +1403,14 @@
 
       
         
-          <p><img src="https://zam9036.gitee.io/img/postimg/27-Linux-system-installation-on-Windows-virtual-machine/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="平台与工具"><a href="#平台与工具" class="headerlink" title="平台与工具"></a>平台与工具</h1><p>Windows 10</p>
-<p>Oracle VM VirtualBox 6.1 虚拟机</p>
-<p>Ubuntukylin 19.10 Linux系统镜像文件</p>
-<h1 id="虚拟机安装与使用"><a href="#虚拟机安装与使用" class="headerlink" title="虚拟机安装与使用"></a>虚拟机安装与使用</h1><h2 id="下载安装VirtualBox"><a href="#下载安装VirtualBox" class="headerlink" title="下载安装VirtualBox"></a>下载安装VirtualBox</h2><p>访问<a href="https://www.virtualbox.org/" target="_blank" rel="noopener">Oracle VM VirtualBox官方网站</a>，下载VM VirtualBox，我使用的版本是6.1。浏览英文网页如有困难，可以尝试使用Google/有道的网页翻译功能。</p>
+          
+          
+[TOC]
+平台与工具Windows 10
+Oracle VM VirtualBox 6.1 虚拟机
+Ubuntukylin 19.10 Linux系统镜像文件
+虚拟机安装与使用下载安装VirtualBox访问Oracle VM VirtualBox官方网站，下载VM VirtualBox，我使用
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/25/27-Linux-system-installation-on-Windows-virtual-machine/#more" rel="contents">
@@ -1592,20 +1591,15 @@
 
       
         
-          <p><img src="https://zam9036.gitee.io/img/postimg/26-Computer-network-study-notes-1/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="计算机网络的概念与组成"><a href="#计算机网络的概念与组成" class="headerlink" title="计算机网络的概念与组成"></a>计算机网络的概念与组成</h1><h2 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h2><p>计算机网络系统是将地理位置不同的<strong>多个计算机系统</strong>，通过<strong>通信设备</strong>和<strong>线路</strong>连接起来，并配以功能完善的<strong>网络软件</strong>(如网络操作系统等)，按照一定的<strong>协议</strong>实现<strong>相互通信和资源共享</strong>的<strong>系统</strong>，称为计算机网络系统。 </p>
-<blockquote>
-<p>计算机网络的功能：相互通信、资源共享</p>
-</blockquote>
-<h3 id="计算机网络的应用"><a href="#计算机网络的应用" class="headerlink" title="计算机网络的应用"></a>计算机网络的应用</h3><ul>
-<li>进行各种规模和不同范围的信息管理：教务管理系统、企业管理系统、办公自动化……</li>
-<li>进行信息/文献检索：时事新闻、市场商情、产品需求、图书、期刊、专业型动态数据</li>
-<li>电子数据交换：电子政务、电子商务、联网售票、网络直播</li>
-<li>实现不同范围的监测、数据传递、信息处理与反馈控制 </li>
-<li>提供分布式计算和分布式处理的环境 ：集群机、网格、云</li>
-<li>计算机综合(集成)制造系统(CIMS) </li>
-</ul>
+          
+          
+[TOC]
+计算机网络的概念与组成计算机网络的概念计算机网络系统是将地理位置不同的多个计算机系统，通过通信设备和线路连接起来，并配以功能完善的网络软件(如网络操作系统等)，按照一定的协议实现相互通信和资源共享的系统，称为计算机网络系统。 
+
+计算机网络的功能：相互通信、资源共享
+
+计算机网络的应用
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/24/26-Computer-network-study-notes-1/#more" rel="contents">
@@ -1786,10 +1780,12 @@
 
       
         
-          <p>[TOC]</p>
-<h1 id="适用平台"><a href="#适用平台" class="headerlink" title="适用平台"></a>适用平台</h1><p>Windows</p>
-<h1 id="Flutter介绍"><a href="#Flutter介绍" class="headerlink" title="Flutter介绍"></a>Flutter介绍</h1><p>Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。 Flutter可以与现有的代码一起工作。在全世界，Flutter正在被越来越多的开发者和组织使用，并且Flutter是完全免费、开源的。</p>
-<h1 id="Flutter安装"><a href="#Flutter安装" class="headerlink" title="Flutter安装"></a>Flutter安装</h1><h2 id="下载flutter"><a href="#下载flutter" class="headerlink" title="下载flutter"></a>下载flutter</h2><p>访问<a href="https://flutter.dev/docs/development/tools/sdk/releases#windows" target="_blank" rel="noopener">flutter官网</a>，下载flutter。flutter集成了Dart，因此不需要单独安装dart-sdk。</p>
+          
+          [TOC]
+适用平台Windows
+Flutter介绍Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。 Flutter可以与现有的代码一起工作。在全世界，Flutter正在被越来越多的开发者和组织使用，并且Flutter是完全免费、开源的。
+Flutt
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/29/25-Android-UI-framework-flutter-installation-and-use/#more" rel="contents">
@@ -1970,20 +1966,10 @@
 
       
         
-          <h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><p>Android（安卓）是<strong>基于Linux</strong>的移动设备操作系统，主要应用于智能手机与平板电脑，现已拓展应用于互联网电视、可穿戴设备、智能家居等领域。Android与IOS同为智能手机市场的两大操作系统。</p>
-<p>Android开发环境：Android Studio+Android SDK+Java 或 Android Studio+Android SDK+Kotlin</p>
-<p>Android一般一年更新一个大版本。</p>
-<blockquote>
-<p>Android与IOS是两大最主要的移动操作系统</p>
-<p>Android是市场占有率最高的移动操作系统</p>
-</blockquote>
-<h1 id="Android-Studio"><a href="#Android-Studio" class="headerlink" title="Android Studio"></a>Android Studio</h1><p>早期Android开发APP主要使用Eclipse和基于Eclipse的ADT，但Eclipse平台是专为Java工程开发而生的平台，先天性不足在所难免，所以Google打造了自家的Android开发平台：Android Studio。</p>
-<p>Android Studio比Eclipse有如下优势：</p>
-<ul>
-<li>Android Studio使用v7库与design库只需要增加一行配置，而Eclipse如果想使用这些库需要引用整个工程</li>
-<li>高版本的SDK与NDK只支持Android Studio，不支持Eclipse</li>
-<li>许多新功能只能在Android Studio中应用</li>
-</ul>
+          
+          AndroidAndroid（安卓）是基于Linux的移动设备操作系统，主要应用于智能手机与平板电脑，现已拓展应用于互联网电视、可穿戴设备、智能家居等领域。Android与IOS同为智能手机市场的两大操作系统。
+Android开发环境：Android Studio+Android SDK+Java 
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/24/24-Android-Study-Notes-1/#more" rel="contents">
@@ -2164,9 +2150,10 @@
 
       
         
-          <p>[TOC]</p>
-<h1 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h1><p>插入排序（Insertion sort）是一种简单直观且稳定的排序算法。如果有一个已经有序的数据序列，要求在这个已经排好的数据序列中插入一个数，但要求插入后此数据序列仍然有序，这个时候就要用到一种新的排序方法—插入排序法,插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序，时间复杂度为O(n^2)。是稳定的排序方法。插入算法把要排序的数组分成两部分：第一部分包含了这个数组的所有元素，但将最后一个元素除外（让数组多一个空间才有插入的位置），而第二部分就只包含这一个元素（即待插入元素）。在第一部分排序完成后，再将这个最后元素插入到已排好序的第一部分中。<br>插入排序的基本思想是：每步将一个待排序的记录，按其数值的大小插入前面已经排序的数字中适当位置上，直到全部插入完为止。</p>
-<h1 id="图解核心原理"><a href="#图解核心原理" class="headerlink" title="图解核心原理"></a>图解核心原理</h1><p><img src="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/1.jpg" alt="插入排序核心原理1"></p>
+          
+          [TOC]
+算法概述插入排序（Insertion sort）是一种简单直观且稳定的排序算法。如果有一个已经有序的数据序列，要求在这个已经排好的数据序列中插入一个数，但要求插入后此数据序列仍然有序，这个时候就要用到一种新的排序方法—插入排序法,插入排序的基本操作就是将一个数据插入到已经排好序的有序数据
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/12/23-Graphical-data-structure-Insertion-sort/#more" rel="contents">
@@ -2314,9 +2301,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="/images/wechat_channel.png" target="_blank" title="公众号">
+                    <a href="https://zam90.github.io/" target="_blank" title="博客镜像">
                       
-                        <i class="fa fa-fw fa-wechat"></i>公众号</a>
+                        <i class="fa fa-fw fa-github"></i>博客镜像</a>
                   </span>
                 
             </div>
@@ -2335,6 +2322,13 @@
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -2391,11 +2385,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -2902,6 +2891,9 @@
 
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 

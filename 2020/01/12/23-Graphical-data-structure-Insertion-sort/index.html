@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/25.jpg">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/26.jpg">
 <meta property="article:published_time" content="2020-01-12T14:37:17.000Z">
-<meta property="article:modified_time" content="2021-08-16T16:15:52.885Z">
+<meta property="article:modified_time" content="2021-08-27T16:48:20.224Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="数据结构">
 <meta property="article:tag" content="算法">
@@ -136,7 +136,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -466,8 +466,6 @@
         <p>[TOC]</p>
 <h1 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h1><p>插入排序（Insertion sort）是一种简单直观且稳定的排序算法。如果有一个已经有序的数据序列，要求在这个已经排好的数据序列中插入一个数，但要求插入后此数据序列仍然有序，这个时候就要用到一种新的排序方法—插入排序法,插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序，时间复杂度为O(n^2)。是稳定的排序方法。插入算法把要排序的数组分成两部分：第一部分包含了这个数组的所有元素，但将最后一个元素除外（让数组多一个空间才有插入的位置），而第二部分就只包含这一个元素（即待插入元素）。在第一部分排序完成后，再将这个最后元素插入到已排好序的第一部分中。<br>插入排序的基本思想是：每步将一个待排序的记录，按其数值的大小插入前面已经排序的数字中适当位置上，直到全部插入完为止。</p>
 <h1 id="图解核心原理"><a href="#图解核心原理" class="headerlink" title="图解核心原理"></a>图解核心原理</h1><p><img src="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/1.jpg" alt="插入排序核心原理1"></p>
-<a id="more"></a>
-
 <p>插入排序需要把数列分为两个部分，一部分为排好的有序数列和另一部分未排的无序数列。假如我们需要对上图数列进行排序。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/2.jpg" alt="插入排序核心原理2"></p>
 <p>排序开始时首先把最左端的数字归为已排序数列(5)，其余数字为未排数列(34728691)。</p>
@@ -758,9 +756,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="/images/wechat_channel.png" target="_blank" title="公众号">
+                    <a href="https://zam90.github.io/" target="_blank" title="博客镜像">
                       
-                        <i class="fa fa-fw fa-wechat"></i>公众号</a>
+                        <i class="fa fa-fw fa-github"></i>博客镜像</a>
                   </span>
                 
             </div>
@@ -795,6 +793,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -851,11 +856,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1366,6 +1366,9 @@
 
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 

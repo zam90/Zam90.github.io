@@ -88,12 +88,12 @@
 
 
 
-<meta name="description" content="[TOC] 本地应用迁移到云端本地应用上云基础传统Web应用架构单体架构：  本地应用上云基本步骤 本地服务器→云服务器 本地数据库→云数据库 本地存储→云存储">
+<meta name="description" content="[TOC] 本地应用迁移到云端本地应用上云基础传统Web应用架构单体架构：  本地应用上云基本步骤 本地服务器→云服务器 本地数据库→云数据库 本地存储→云存储   应用上云场景介绍以简单的图书管理系统为例 迁移方案云数据盘：云服务器一台，数据盘60G以上  安装MySQL数据库，用于数据库存储  云服务器：云服务器一台  部署TOMCAT及相关应用，保存图片资源  本地应用迁移云上架构 云服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TCA腾讯云开发工程师课程学习笔记（二）">
 <meta property="og:url" content="https://zam9036.gitee.io/2021/01/03/38-TCA-study-notes-2/index.html">
 <meta property="og:site_name" content="Zam9036博客">
-<meta property="og:description" content="[TOC] 本地应用迁移到云端本地应用上云基础传统Web应用架构单体架构：  本地应用上云基本步骤 本地服务器→云服务器 本地数据库→云数据库 本地存储→云存储">
+<meta property="og:description" content="[TOC] 本地应用迁移到云端本地应用上云基础传统Web应用架构单体架构：  本地应用上云基本步骤 本地服务器→云服务器 本地数据库→云数据库 本地存储→云存储   应用上云场景介绍以简单的图书管理系统为例 迁移方案云数据盘：云服务器一台，数据盘60G以上  安装MySQL数据库，用于数据库存储  云服务器：云服务器一台  部署TOMCAT及相关应用，保存图片资源  本地应用迁移云上架构 云服务器">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/1.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/2.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/3.png">
@@ -146,7 +146,7 @@
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/50.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/51.png">
 <meta property="article:published_time" content="2021-01-03T03:05:25.000Z">
-<meta property="article:modified_time" content="2021-08-16T16:20:58.320Z">
+<meta property="article:modified_time" content="2021-08-27T16:50:51.475Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="云计算">
 <meta property="article:tag" content="课程：TCA认证课程">
@@ -161,7 +161,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -497,8 +497,6 @@
 <li>本地存储→云存储</li>
 </ul>
 <p><img src="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/2.png" alt="本地应用上云"></p>
-<a id="more"></a>
-
 <h2 id="应用上云场景介绍"><a href="#应用上云场景介绍" class="headerlink" title="应用上云场景介绍"></a>应用上云场景介绍</h2><p>以简单的图书管理系统为例</p>
 <h3 id="迁移方案"><a href="#迁移方案" class="headerlink" title="迁移方案"></a>迁移方案</h3><p>云数据盘：云服务器一台，数据盘60G以上</p>
 <blockquote>
@@ -936,9 +934,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="/images/wechat_channel.png" target="_blank" title="公众号">
+                    <a href="https://zam90.github.io/" target="_blank" title="博客镜像">
                       
-                        <i class="fa fa-fw fa-wechat"></i>公众号</a>
+                        <i class="fa fa-fw fa-github"></i>博客镜像</a>
                   </span>
                 
             </div>
@@ -973,6 +971,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -1029,11 +1034,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1544,6 +1544,9 @@
 
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 
