@@ -88,12 +88,12 @@
 
 
 
-<meta name="description" content="[TOC] 算法概述选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。 图解核心原理 假设我们需要对上图数列进行排序。  首先，我们需要对数">
+<meta name="description" content="[TOC] 算法概述选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。 图解核心原理 假设我们需要对上图数列进行排序。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图解数据结构—选择排序">
 <meta property="og:url" content="https://zam9036.gitee.io/2020/01/11/22-Graphical-data-structure-selection-sort/index.html">
 <meta property="og:site_name" content="Zam9036博客">
-<meta property="og:description" content="[TOC] 算法概述选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。 图解核心原理 假设我们需要对上图数列进行排序。  首先，我们需要对数">
+<meta property="og:description" content="[TOC] 算法概述选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。 图解核心原理 假设我们需要对上图数列进行排序。">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/1.jpg">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/2.jpg">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/3.jpg">
@@ -113,7 +113,7 @@
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/17.jpg">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/18.jpg">
 <meta property="article:published_time" content="2020-01-11T14:17:37.000Z">
-<meta property="article:modified_time" content="2021-08-27T16:48:11.239Z">
+<meta property="article:modified_time" content="2021-08-27T17:09:14.610Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="数据结构">
 <meta property="article:tag" content="算法">
@@ -460,6 +460,8 @@
 <h1 id="图解核心原理"><a href="#图解核心原理" class="headerlink" title="图解核心原理"></a>图解核心原理</h1><p><img src="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/1.jpg" alt="选择排序核心原理1"></p>
 <p>假设我们需要对上图数列进行排序。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/2.jpg" alt="选择排序核心原理2"></p>
+<a id="more"></a>
+
 <p>首先，我们需要对数列进行线性搜索(从头到尾逐个元素搜索)，找出最小的元素值(最小为1)。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/3.jpg" alt="选择排序核心原理3"></p>
 <p>将值最小的元素(最小为1)与数列最左端的元素(原来数列最左端元素为6)互换。如果最小值已经在最左端，则不需要执行任何操作。</p>

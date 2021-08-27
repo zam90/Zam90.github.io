@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E8%AE%A1%E7%AE%97%E5%99%A8/5.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E8%AE%A1%E7%AE%97%E5%99%A8/6.png">
 <meta property="article:published_time" content="2019-11-01T12:16:35.000Z">
-<meta property="article:modified_time" content="2021-08-27T16:46:13.582Z">
+<meta property="article:modified_time" content="2021-08-27T17:06:25.455Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="数据结构">
@@ -457,6 +457,8 @@
 <h2 id="程序设计"><a href="#程序设计" class="headerlink" title="程序设计"></a>程序设计</h2><h3 id="程序要求"><a href="#程序要求" class="headerlink" title="程序要求"></a>程序要求</h3><p>​    利用栈原理，设计一个可以计算所输入表达式的程序，要求可以计算正数，负数，小数的加减乘除运算和括号运算，以#结束输入。</p>
 <h3 id="程序功能"><a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h3><p>​    对输入的式子进行判断式子格式是否正确。若正确，进行运算并输出最终结果；若错误，提示报错。</p>
 <h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>​    用栈实现计算器，主要思路就是设置一个符号栈和一个数字栈用于存储数字和字符。输入字符串时在字符串尾部加一个“#”以示输入结束。然后扫描字符串，如果扫描结果是数字就进入数字栈。如果是运算符号要判断符号优先级，若栈外符号优先级大于栈内符号优先级则进栈；若小于栈内优先级，则符号栈出栈一位，数字栈出栈两位进行计算，结果重新进入数字栈，直到栈外优先级大于栈内。</p>
+<a id="more"></a>
+
 <h3 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h3><p>用如下表达式进行测试：</p>
 <p>(56-23)/8-4#   期望结果：0.125</p>
 <p>34+p(u89-12.3)k/3#    期望结果：59.5667</p>

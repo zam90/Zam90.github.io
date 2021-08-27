@@ -88,14 +88,14 @@
 
 
 
-<meta name="description" content="[TOC] rm指令rm指令的作用：用于删除一个文件或者目录。  rm语法rm [选项] 目录 选项说明-f    &#x2F;&#x2F;忽略不存在的文件，即使原文件属性是只读，也强制删除文件或目录，无任何提示 -i    &#x2F;&#x2F;进行交互式地删除，删除已有文件或目录之前先询问用户 -r &#x2F; -R    &#x2F;&#x2F;递归处理，将目录下的所有文件与子目录一块处理 -v    &#x2F;&#x2F;详细显示指令执行的步骤 目录说明目录可以是文件或目">
+<meta name="description" content="[TOC] rm指令rm指令的作用：用于删除一个文件或者目录。  rm语法rm [选项] 目录 选项说明-f    &#x2F;&#x2F;忽略不存在的文件，即使原文件属性是只读，也强制删除文件或目录，无任何提示 -i    &#x2F;&#x2F;进行交互式地删除，删除已有文件或目录之前先询问用户 -r &#x2F; -R    &#x2F;&#x2F;递归处理，将目录下的所有文件与子目录一块处理 -v    &#x2F;&#x2F;详细显示指令执行的步骤">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux中的rm删除指令">
 <meta property="og:url" content="https://zam9036.gitee.io/2019/11/04/11-Rm-delete-instruction-in-Linux/index.html">
 <meta property="og:site_name" content="Zam9036博客">
-<meta property="og:description" content="[TOC] rm指令rm指令的作用：用于删除一个文件或者目录。  rm语法rm [选项] 目录 选项说明-f    &#x2F;&#x2F;忽略不存在的文件，即使原文件属性是只读，也强制删除文件或目录，无任何提示 -i    &#x2F;&#x2F;进行交互式地删除，删除已有文件或目录之前先询问用户 -r &#x2F; -R    &#x2F;&#x2F;递归处理，将目录下的所有文件与子目录一块处理 -v    &#x2F;&#x2F;详细显示指令执行的步骤 目录说明目录可以是文件或目">
+<meta property="og:description" content="[TOC] rm指令rm指令的作用：用于删除一个文件或者目录。  rm语法rm [选项] 目录 选项说明-f    &#x2F;&#x2F;忽略不存在的文件，即使原文件属性是只读，也强制删除文件或目录，无任何提示 -i    &#x2F;&#x2F;进行交互式地删除，删除已有文件或目录之前先询问用户 -r &#x2F; -R    &#x2F;&#x2F;递归处理，将目录下的所有文件与子目录一块处理 -v    &#x2F;&#x2F;详细显示指令执行的步骤">
 <meta property="article:published_time" content="2019-11-04T12:57:47.000Z">
-<meta property="article:modified_time" content="2021-08-27T16:46:29.656Z">
+<meta property="article:modified_time" content="2021-08-27T17:06:45.963Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Shell">
@@ -443,6 +443,8 @@
 -i    //进行交互式地删除，删除已有文件或目录之前先询问用户
 -r / -R    //递归处理，将目录下的所有文件与子目录一块处理
 -v    //详细显示指令执行的步骤</code></pre>
+<a id="more"></a>
+
 <h3 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h3><p>目录可以是文件或目录的路径，如果需要删除的目录中含有子目录，则需要加上<code>-r 或 -R</code>选项</p>
 <h2 id="指令实例"><a href="#指令实例" class="headerlink" title="指令实例"></a>指令实例</h2><pre><code class="指令实例">[root]# rm a.txt    //常规方法删除a.txt文件
 

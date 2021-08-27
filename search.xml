@@ -3,8 +3,8 @@
   <entry>
     <title>第一篇博客</title>
     <url>/2019/10/23/1-First-blog/</url>
-    <content><![CDATA[<h2 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h2><p>​    这是第一篇博客，网站已经能够稳定运行，博客系统可以使用。</p>
-]]></content>
+    <content><![CDATA[<h2 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h2><p>这是第一篇博客，网站已经能够稳定运行，博客系统可以使用。</p>
+<a id="more"></a>]]></content>
       <categories>
         <category>文章随笔</category>
       </categories>
@@ -15,6 +15,8 @@
     <content><![CDATA[<p>[TOC]</p>
 <h2 id="cd指令"><a href="#cd指令" class="headerlink" title="cd指令"></a>cd指令</h2><p>​    Linux cd命令用于切换当前工作目录至 dirName(目录参数)。<br>​    其中 dirName 表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的 home 目录 (也就是刚登录时所在的目录)。<br>​    另外，”~” 也表示为 home 目录 的意思，”.” 则是表示目前所在的目录，”..” 则表示目前目录位置的上一层目录。</p>
 <h2 id="cd语法"><a href="#cd语法" class="headerlink" title="cd语法"></a>cd语法</h2><pre><code class="Linux终端指令">cd [dirName]    //dirName：要切换的目标目录</code></pre>
+<a id="more"></a>
+
 <h2 id="指令实例"><a href="#指令实例" class="headerlink" title="指令实例"></a>指令实例</h2><pre><code class="Linux终端指令">cd /usr/bin      //跳转到/usr/bin/目录
 
 cd ~      //跳转到自己的 home 目录
@@ -47,6 +49,8 @@ npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@
 updated 1 package and audited 7064 packages in 7.194s
 found 0 vulnerabilities</code></pre>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E8%AE%B0Hexo%E5%8D%9A%E5%AE%A2%E5%AE%89%E8%A3%85hexo-generator-search%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/1.png" alt="问题描述"></p>
+<a id="more"></a>
+
 <h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>查阅资料得知，出现这样的原因是：fsevents不在package.json里，但是仍然安装了，是因为本机系统是Windows系统，而fsevents是苹果系统的可选依赖，博客主题作者可能是Mac电脑，所以作者在他的Mac上安装了fsevents相关依赖库，到本机也就自动安装到本机windows上边了。</p>
 <p>既然Git bash不成，来尝试一下Windows的命令提示符cmd。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E8%AE%B0Hexo%E5%8D%9A%E5%AE%A2%E5%AE%89%E8%A3%85hexo-generator-search%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/2.png" alt="cmd1"></p>
@@ -87,6 +91,8 @@ npm install hexo-generator-searchdb --save</code></pre>
 -i    //进行交互式地删除，删除已有文件或目录之前先询问用户
 -r / -R    //递归处理，将目录下的所有文件与子目录一块处理
 -v    //详细显示指令执行的步骤</code></pre>
+<a id="more"></a>
+
 <h3 id="目录说明"><a href="#目录说明" class="headerlink" title="目录说明"></a>目录说明</h3><p>目录可以是文件或目录的路径，如果需要删除的目录中含有子目录，则需要加上<code>-r 或 -R</code>选项</p>
 <h2 id="指令实例"><a href="#指令实例" class="headerlink" title="指令实例"></a>指令实例</h2><pre><code class="指令实例">[root]# rm a.txt    //常规方法删除a.txt文件
 
@@ -123,6 +129,8 @@ int main() {
         return 0;
     }    </code></pre>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF%E9%A2%98%E5%9E%8B%E5%BD%92%E7%B1%BB%E7%A4%BA%E4%BE%8B-1/1.png" alt="输出样例1"></p>
+<a id="more"></a>
+
 <h5 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h5><pre><code class="c++">#include &lt;iostream&gt;
 #include &lt;iomanip&gt;
 using namespace std;
@@ -1108,6 +1116,8 @@ int main()
     return 0;
 }</code></pre>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF%E9%A2%98%E5%9E%8B%E5%BD%92%E7%B1%BB%E7%A4%BA%E4%BE%8B-2/11.jpg" alt="输出样例11"></p>
+<a id="more"></a>
+
 <h5 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h5><pre><code class="c++">#include &lt;iostream&gt;
 #include &lt;string&gt;
 using namespace std;
@@ -1771,6 +1781,8 @@ int main()
 <h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><p>由n*n个方块排成n行n列的正方形称为n元棋盘。如果两个皇后位于n元棋盘上的同一行、同一列或同一对角线上，则称它们在互相攻击。现要找出使棋盘上n个皇后互不攻击的布局。</p>
 <h1 id="概要设计"><a href="#概要设计" class="headerlink" title="概要设计"></a>概要设计</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>用一维数组代表皇后，其中角标代表皇后的序数，数组元素的值代表皇后的列位置，用深度优先搜索法DFS（回溯法（Backtracking Algorithms）技术求解N皇后的所有不冲突放置方法。</p>
 <h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><p>分别求解8皇后和12皇后的不冲突放置方法</p>
+<a id="more"></a>
+
 <h1 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h1><h2 id="数据结构详细设计"><a href="#数据结构详细设计" class="headerlink" title="数据结构详细设计"></a>数据结构详细设计</h2><p>用一维数组代表皇后，其中角标代表皇后的序数，数组元素的值代表皇后的列位置，用深度优先搜索法DFS（回溯法Backtracking Algorithms）技术求解N皇后的所有不冲突放置方法。</p>
 <p>首先定义一维数组，利用for循环对所有皇后的位置进行初始化。然后开始比较循环。用双层嵌套循环实现皇后的循环比较过程，每完成一次第一层循环将摆好一个皇后，利用二层循环来对单个皇后与已摆好的皇后进行冲突判断，不满足平衡条件时，该皇后列位置向下移动一格。</p>
 <h2 id="实现算法"><a href="#实现算法" class="headerlink" title="实现算法"></a>实现算法</h2><p>详细内容说明见注释</p>
@@ -1900,6 +1912,8 @@ bool checkQueens(int i ,int j) {
 <p>编写算法，交换该二叉树上所有结点的左右子树，并打印交换后各结点的信息</p>
 <h2 id="程序设计"><a href="#程序设计" class="headerlink" title="程序设计"></a>程序设计</h2><h3 id="程序要求"><a href="#程序要求" class="headerlink" title="程序要求"></a>程序要求</h3><p>​    生成一棵不少于15结点的二叉树，用二叉链表存储该二叉树。编写算法，利用递归算法实现该二叉树的前序中序后序遍历，并打印交换后各结点的信息。编写算法，利用非递归算法实现该二叉树的前序中序后序遍历，并打印交换后各结点的信息。编写算法，交换该二叉树上所有结点的左右子树，并打印交换后各结点的信息。</p>
 <h3 id="程序功能"><a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h3><p>​    生成二叉树，递归/非递归的前中后序遍历二叉树，交换二叉树上所有结点的左右子树</p>
+<a id="more"></a>
+
 <h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><h4 id="二叉树的建立"><a href="#二叉树的建立" class="headerlink" title="二叉树的建立"></a>二叉树的建立</h4><p>​    定义一个节点（结点）类，类中有三种公有信息：<code>char</code>型的data用来存储当前节点的数据，两个<code>node*</code>指针型用来分别指向当前节点的左孩子和右孩子。</p>
 <pre><code class="c++">//定义节点类
 class node
@@ -2221,6 +2235,8 @@ int main()
 <h1 id="图解核心原理"><a href="#图解核心原理" class="headerlink" title="图解核心原理"></a>图解核心原理</h1><p><img src="https://zam9036.gitee.io/img/postimg/21-Graphical-data-structure%E2%80%94bubble-sort/1.jpg" alt="冒泡排序核心原理1"></p>
 <p>首先，我们将天平放在序列的右端，并比较天平左右的数字。在这种情况下，我们来比较7和6。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/21-Graphical-data-structure%E2%80%94bubble-sort/2.jpg" alt="冒泡排序核心原理2"></p>
+<a id="more"></a>
+
 <p>比较后如果右边的数字较小，则被交换。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/21-Graphical-data-structure%E2%80%94bubble-sort/3.jpg" alt="冒泡排序核心原理3"></p>
 <p>比较完成后，逐一移动天平继续比较。这次6大于4，所以数字不交换。</p>
@@ -2257,6 +2273,8 @@ int main()
 <h1 id="图解核心原理"><a href="#图解核心原理" class="headerlink" title="图解核心原理"></a>图解核心原理</h1><p><img src="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/1.jpg" alt="选择排序核心原理1"></p>
 <p>假设我们需要对上图数列进行排序。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/2.jpg" alt="选择排序核心原理2"></p>
+<a id="more"></a>
+
 <p>首先，我们需要对数列进行线性搜索(从头到尾逐个元素搜索)，找出最小的元素值(最小为1)。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/22-Graphical-data-structure-selection-sort/3.jpg" alt="选择排序核心原理3"></p>
 <p>将值最小的元素(最小为1)与数列最左端的元素(原来数列最左端元素为6)互换。如果最小值已经在最左端，则不需要执行任何操作。</p>
@@ -2307,6 +2325,8 @@ int main()
 <h3 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h3><p>C++</p>
 <h3 id="运算符的重载"><a href="#运算符的重载" class="headerlink" title="运算符的重载"></a>运算符的重载</h3><h4 id="21、定义复数类，并使用运算符重载来实现其功能"><a href="#21、定义复数类，并使用运算符重载来实现其功能" class="headerlink" title="21、定义复数类，并使用运算符重载来实现其功能"></a>21、定义复数类，并使用运算符重载来实现其功能</h4><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>定义一个复数类Complex，重载运算符+，使之能用于复数的加法。运算符的重载函数作为Complex类的成员函数，求两个复数的和。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF%E9%A2%98%E5%9E%8B%E5%BD%92%E7%B1%BB%E7%A4%BA%E4%BE%8B-3/21.jpg" alt="输出样例21"></p>
+<a id="more"></a>
+
 <h5 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h5><pre><code class="c++">#include &lt;iostream&gt;
 using namespace std;
 
@@ -2841,6 +2861,8 @@ int main()
 <li>安装git for windows 或 GitHub Desktop（或者其它git客户端）</li>
 </ul>
 <h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><h3 id="创建GitHub博客仓库"><a href="#创建GitHub博客仓库" class="headerlink" title="创建GitHub博客仓库"></a>创建GitHub博客仓库</h3><p>​    如没有GitHub账号请自行百度并注册。在GitHub上新建一个名为<code>username.github.io</code>的仓库，其中username为GitHub的用户名（注意而非昵称！），那么最终生成的博客链接就为<code>https://username.github.io</code></p>
+<a id="more"></a>
+
 <p><img src="https://zam9036.gitee.io/img/postimg/%E5%88%A9%E7%94%A8GitHub+Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/1.png" alt="创建仓库"></p>
 <p><strong>例</strong>：如果你的github用户名是jack，那么你应该新建jack.github.io的仓库（其他名称无效）</p>
 <p><strong>注</strong>：</p>
@@ -2922,6 +2944,8 @@ $ hexo init  #在此文件内创建Hexo工作区</code></pre><p><img src="https:
 <h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><h2 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h2><p>通过建立无向非连通图，并对图进行DFS及BFS遍历，了解图的构建算法，并加深对DFS及BFS的理解。</p>
 <h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><p>1）建立无向非连通图的邻接表存储结构，要求顶点个数不少于15个。 2）用DFS及BFS对此邻接表进行遍历，打印出两种遍历的顶点访问顺序。3）给定图中任意两个顶点v1和v2及整数k，判断是否存在从v1到v2的路径长度为k的简单路径，若有打印出路径上的顶点序列（要求路径上不含回路）。进一步：找出从v1到v2的所有路径长度为k的简单路径。（简单路径：顶点序列中不含重现的顶点的路径。）</p>
 <h1 id="概要设计"><a href="#概要设计" class="headerlink" title="概要设计"></a>概要设计</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>本实验实现DFS算法是利用栈储存待访问的节点，利用栈的FILO（先入后出）来实现深度搜索；实现BFS是利用队列储存待访问的节点，利用队列的FIFO（先入后出）来实现广度搜索。</p>
+<a id="more"></a>
+
 <h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><p>测试以下5节点图和12节点图</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E5%88%A9%E7%94%A8%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%82%A8%E5%AD%98%E6%97%A0%E5%90%91%E9%9D%9E%E8%BF%9E%E9%80%9A%E5%9B%BE%E5%B9%B6%E5%88%A9%E7%94%A8DFS%E5%92%8CBFS%E9%81%8D%E5%8E%86%E5%9B%BE%E7%9A%84%E9%82%BB%E6%8E%A5%E8%A1%A8/1.png" alt="5节点图"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E5%88%A9%E7%94%A8%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%82%A8%E5%AD%98%E6%97%A0%E5%90%91%E9%9D%9E%E8%BF%9E%E9%80%9A%E5%9B%BE%E5%B9%B6%E5%88%A9%E7%94%A8DFS%E5%92%8CBFS%E9%81%8D%E5%8E%86%E5%9B%BE%E7%9A%84%E9%82%BB%E6%8E%A5%E8%A1%A8/2.png" alt="12节点图"></p>
@@ -3159,6 +3183,8 @@ int main()
 <h1 id="图解核心原理"><a href="#图解核心原理" class="headerlink" title="图解核心原理"></a>图解核心原理</h1><p><img src="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/1.jpg" alt="插入排序核心原理1"></p>
 <p>插入排序需要把数列分为两个部分，一部分为排好的有序数列和另一部分未排的无序数列。假如我们需要对上图数列进行排序。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/2.jpg" alt="插入排序核心原理2"></p>
+<a id="more"></a>
+
 <p>排序开始时首先把最左端的数字归为已排序数列(5)，其余数字为未排数列(34728691)。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/3.jpg" alt="插入排序核心原理3"></p>
 <p>然后，取出未排数列中未操作过的最左端的数字(3)。</p>
@@ -3234,6 +3260,8 @@ int main()
 </ul>
 </blockquote>
 <p>我选择的是最新的Stable channel（v1.12.13+hotfix.7）。为避免不必要的麻烦，请不要选择C盘作为下载目录，否则可能遇到权限问题。</p>
+<a id="more"></a>
+
 <h2 id="更新环境变量"><a href="#更新环境变量" class="headerlink" title="更新环境变量"></a>更新环境变量</h2><p>flutter下载完成后，解压到存放SDK的目录。</p>
 <p>注意：目标SDK路径仅能包含英文和数字，不能包含中文和空格！</p>
 <p>解压完成后，返回桌面，右击<code>我的电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt; 系统环境变量</code>，编辑Path，添加目标SDK的路径至Path内（我的路径是<code>G:\flutter\bin</code>）</p>
@@ -3316,6 +3344,8 @@ int main()
 <p>网络软件硬件的关系：相辅相成，缺一不可</p>
 <p>网络协议：网络中各部分必须遵守的规定，必不可少！</p>
 </blockquote>
+<a id="more"></a>
+
 <h4 id="网络硬件"><a href="#网络硬件" class="headerlink" title="网络硬件"></a>网络硬件</h4><h5 id="客户机（Client）"><a href="#客户机（Client）" class="headerlink" title="客户机（Client）"></a>客户机（Client）</h5><ul>
 <li>PC、PDA、智能设备(仪器/仪表-&gt;嵌入式系统)、智能手机</li>
 <li>中、大型机、（专业）工作站</li>
@@ -3741,6 +3771,8 @@ int main()
 <h3 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h3><p>C++</p>
 <h3 id="类和对象的特性"><a href="#类和对象的特性" class="headerlink" title="类和对象的特性"></a>类和对象的特性</h3><h4 id="31、利用面向对象的思想求解长方体体积"><a href="#31、利用面向对象的思想求解长方体体积" class="headerlink" title="31、利用面向对象的思想求解长方体体积"></a>31、利用面向对象的思想求解长方体体积</h4><h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>有一个长方体类，其类名为box, 其私有数据成员包括length(长)、width(宽)、height(高)以及一个名为volume的公有成员函数，volume函数用来计算长方体的体积。现有3个长方体，分别为r1, r2, r3，3个长方体的长、宽、高(三者均为整数)从键盘分别输入，要求有序输出三个长方体的体积。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF%E9%A2%98%E5%9E%8B%E5%BD%92%E7%B1%BB%E7%A4%BA%E4%BE%8B-4/31.jpg" alt="输出样例31"></p>
+<a id="more"></a>
+
 <h5 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h5><pre><code class="c++">#include &lt;iostream&gt;
 #include &lt;iomanip&gt;
 using namespace std;
@@ -4186,6 +4218,8 @@ int main()
 <h2 id="Android-Studio安装"><a href="#Android-Studio安装" class="headerlink" title="Android Studio安装"></a>Android Studio安装</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><h4 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h4><p>JDK是Java语言的编译器，是Java开发工具包。Android采用Java语言（现还可以使用Kotlin）进行开发，故需要安装JDK。</p>
 <h4 id="SDK"><a href="#SDK" class="headerlink" title="SDK"></a>SDK</h4><p>SDK是Android应用的编译器，是软件开发工具包。LTS代表稳定支持版。</p>
 <h4 id="NDK"><a href="#NDK" class="headerlink" title="NDK"></a>NDK</h4><p>NDK是C/C++代码编译器，是原生开发工具包。</p>
+<a id="more"></a>
+
 <h2 id="Android-Studio功能"><a href="#Android-Studio功能" class="headerlink" title="Android Studio功能"></a>Android Studio功能</h2><p>SDK Manager：SDK版本管理器</p>
 <p>AVD Manager：Android虚拟机管理器</p>
 <p>PackageName包名：域名反写作为包名。例：cn.edu.bistu.cs</p>
@@ -4214,6 +4248,8 @@ int main()
 <h1 id="SQL-Server介绍"><a href="#SQL-Server介绍" class="headerlink" title="SQL Server介绍"></a>SQL Server介绍</h1><p>SQL是英文Structured Query Language的缩写，意思为结构化查询语言。SQL语言的主要功能就是同各种数据库建立联系，进行沟通。按照ANSI(美国国家标准协会)的规定，SQL被作为关系型数据库管理系统的标准语言。SQL Server是由Microsoft开发和推广的关系数据库管理系统（RDBMS）。</p>
 <h1 id="SQL-Server安装"><a href="#SQL-Server安装" class="headerlink" title="SQL Server安装"></a>SQL Server安装</h1><h2 id="下载SQL-Server"><a href="#下载SQL-Server" class="headerlink" title="下载SQL Server"></a>下载SQL Server</h2><p>访问<a href="https://www.microsoft.com/zh-cn/sql-server/sql-server-downloads" target="_blank" rel="noopener">SQL Server官网</a>，下载SQL Server，我选择下载的是SQL Server 2019 Developer。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/29-Installation-and-use-of-SQL-Server/1.png" alt="SQL Server官网"></p>
+<a id="more"></a>
+
 <h2 id="启动安装"><a href="#启动安装" class="headerlink" title="启动安装"></a>启动安装</h2><p>下载完成后，运行安装程序，选择“基本安装”</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/29-Installation-and-use-of-SQL-Server/2.png" alt="基本安装"></p>
 <p>同意服务条款后，指定SQL Server的安装位置</p>
@@ -4273,6 +4309,8 @@ int main()
     if (n==0) return 1;
     return  n*factorial(n-1); 
 }</code></pre>
+<a id="more"></a>
+
 <h3 id="斐波那契-Fibonacci-序列"><a href="#斐波那契-Fibonacci-序列" class="headerlink" title="斐波那契(Fibonacci)序列"></a>斐波那契(Fibonacci)序列</h3><p>斐波那契(Fibonacci)序列：<br>$$<br>\begin{aligned}<br>&amp;\mathrm{F}<em>{0}=\mathrm{F}</em>{1}=1\<br>&amp;\mathrm{F}<em>{\mathrm{i}}=\mathrm{F}</em>{\mathrm{i}-1}+\mathrm{F}_{\mathrm{i}-2} \quad(\mathrm{i}&gt;1)<br>\end{aligned}<br>$$</p>
 <blockquote>
 <p>第一行为边界条件<br>第二行为递归方程</p>
@@ -4415,6 +4453,8 @@ int main()
 <li>需要空间资源的量称为<strong>空间复杂性S(n)</strong>。</li>
 <li>n为问题的规模，即输入的大小。</li>
 </ul>
+<a id="more"></a>
+
 <h2 id="研究算法的复杂性-性能、效率-的必要性"><a href="#研究算法的复杂性-性能、效率-的必要性" class="headerlink" title="研究算法的复杂性(性能、效率)的必要性"></a>研究算法的复杂性(性能、效率)的必要性</h2><ul>
 <li>性能有时决定系统是否可行。</li>
 </ul>
@@ -4574,6 +4614,8 @@ int main()
 <h2 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h2><h3 id="从网上选择主题"><a href="#从网上选择主题" class="headerlink" title="从网上选择主题"></a>从网上选择主题</h3><p>​    互联网资源丰富，大家可以在网上（如GitHub）查找自己喜欢的Hexo的模板主题并下载。一般情况下，Hexo的模板主题下载后会有以下文件（当然每个主题包含的文件也是不一样的），如果文件内容出入比较大，大家就需要进一步确认一下下载的主题是不是一个Hexo的主题。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E6%9B%B4%E6%94%B9Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%BB%E9%A2%98/1.png" alt="主题文件参考"></p>
 <h3 id="从Hexo官方主题库选择主题"><a href="#从Hexo官方主题库选择主题" class="headerlink" title="从Hexo官方主题库选择主题"></a>从Hexo官方主题库选择主题</h3><p>​    访问<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题库</a>，选择并下载自己所需的主题。不得不说，官方的主题库还是有很多好用的模板的。</p>
+<a id="more"></a>
+
 <p><img src="https://zam9036.gitee.io/img/postimg/%E6%9B%B4%E6%94%B9Hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%BB%E9%A2%98/2.png" alt="官方主题页"></p>
 <h3 id="自创主题"><a href="#自创主题" class="headerlink" title="自创主题"></a>自创主题</h3><p>​    如果你是大神，你还可以参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a>自己写主题模板！</p>
 <h2 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h2><p>​    一般情况下，主题文件内会含有README.md文件供大家参考，大家可以查看README.md文件查看主题的启用方式和注意事项。</p>
@@ -4606,6 +4648,8 @@ theme: obsidian
 <blockquote>
 <p>注意：安装Oracle VM VirtualBox的时候会重置网络连接状态，并且可能会要求重启电脑。</p>
 </blockquote>
+<a id="more"></a>
+
 <h2 id="VirtualBox的使用"><a href="#VirtualBox的使用" class="headerlink" title="VirtualBox的使用"></a>VirtualBox的使用</h2><p>安装完成后启动Oracle VM VirtualBox虚拟机控制台，如下图所示。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/27-Linux-system-installation-on-Windows-virtual-machine/2.png" alt="VirtualBox控制台1"></p>
 <blockquote>
@@ -4698,6 +4742,8 @@ theme: obsidian
 <p>所以我只好另辟蹊径，找找还有什么方法能验证一个数是同余数。在百度百科上，我看到了数学家给出的一个重要结论，也是验证n是整同余数的充要条件：</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/1.png" alt="重要结论"></p>
 <p>我很敬佩数学家们的智慧，能得出这个重要的结论，这对用程序验证一个数是整同余数指明了思路。</p>
+<a id="more"></a>
+
 <h2 id="四个变量"><a href="#四个变量" class="headerlink" title="四个变量"></a>四个变量</h2><p>首先，我们需要<strong>四个变量：n,a,b,v</strong></p>
 <p>这四个变量的关系是：<strong>需要寻找n，要先确定a,b,v</strong></p>
 <h2 id="四个条件"><a href="#四个条件" class="headerlink" title="四个条件"></a>四个条件</h2><p>然后，这四个变量需要满足以下四个条件</p>
@@ -4933,6 +4979,8 @@ int gongshi(int a,int b,int v,int n){
 <h2 id="迁移流程"><a href="#迁移流程" class="headerlink" title="迁移流程"></a>迁移流程</h2><h3 id="建立码云仓库"><a href="#建立码云仓库" class="headerlink" title="建立码云仓库"></a>建立码云仓库</h3><p>创建码云账号的流程我在此就不过多赘述了，根据提示操作即可，下面我来说一下建立码云仓库的操作。码云的仓库建立机制和GitHub一样，只需要新建仓库然后填写信息即可，其中仓库名字尤为关键。码云的静态资源托管平台可以托管用户的任意仓库，不必像GitHub那样仓库名必须和用户名一致才可。用户创建任意仓库，然后点击<code>服务-GiteePages</code>即可开启该仓库的静态资源托管服务。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/GitHubPages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E7%A0%81%E4%BA%91%E4%BB%8E%E8%80%8C%E5%8A%A0%E5%BF%AB%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/1.jpg" alt="开启Page服务"></p>
 <p>但是！在这里建议大家仓库名仍使用和自己码云用户名相同的名称！！因为当博客仓库名与自己的个性地址不一致时，博客部署完成后会存在一些资源访问404。原因是当需要部署的仓库和自己的个性地址不一致时，如：<a href="https://gitee.com/ipvb/blog" target="_blank" rel="noopener">https://gitee.com/ipvb/blog</a> ，生成的pages url 为 <a href="https://ipvb.gitee.io/blog" target="_blank" rel="noopener">https://ipvb.gitee.io/blog</a> ，而访问的资源404，如 <a href="https://ipvb.gitee.io/style.css" target="_blank" rel="noopener">https://ipvb.gitee.io/style.css</a> 这是相应配置文件的相对路径存在问题导致的，生成的资源 url 应该为 <a href="https://ipvb.gitee.io/blog/style.css" target="_blank" rel="noopener">https://ipvb.gitee.io/blog/style.css</a> 才对。 而针对这个问题官方给出了解决方案。</p>
+<a id="more"></a>
+
 <blockquote>
 <p>对于不同的静态资源生成器，配置如下： </p>
 <ul>
@@ -5003,6 +5051,8 @@ deploy:
 <p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/2.jpg" alt="准备物品"></p>
 <p>然后来验证一下它是不是还能正常工作吧！开机！</p>
 <p>久违的古董XP系统？？？？</p>
+<a id="more"></a>
+
 <p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/3.jpg" alt="验证开机"></p>
 <p>来看一下参数配置</p>
 <table>
@@ -5108,6 +5158,8 @@ deploy:
 <p>安装完成后根据提示，一键安装Google服务。注意安装过程中会多次启用应用安装程序，请注意点击“安装”按钮</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/35-How-to-use-Google-services-on-mobile-phones/1.png" alt="Google服务安装器"></p>
 <p>所有服务安装完成后，连接国际互联网，然后就可以访问Google Play商店了</p>
+<a id="more"></a>
+
 <p>此时手机可以运行绝大部分Google软件了，但是部分游戏仍不能运行</p>
 <p>还需要安装Google Play服务</p>
 <p>下载<a href="https://pan.baidu.com/s/1i9SRDCLHJdMGI3CnYOtgAw" target="_blank" rel="noopener">OurPlay</a>（提取码：02ig），安装并启动应用，应用会自动检查Google相关服务，并自动安装。</p>
@@ -5142,6 +5194,8 @@ deploy:
 <p>对于超级用户（root）来说，<code>$</code>的位置出现的是<code>#</code></p>
 </blockquote>
 <p>在提示符之后，用户输入命令，然后按Enter键。shell命令解释程序将接收、分析、解释并执行相应的命令，执行结果将在屏幕上显示。</p>
+<a id="more"></a>
+
 <h3 id="主提示符"><a href="#主提示符" class="headerlink" title="主提示符"></a>主提示符</h3><p>在bash（Linux系统默认的shell）中，主提示符用环境变量PS1表示。</p>
 <p>bash默认的主提示符是<code>\s-\v\ $</code> ，其中<code>\s</code>表示shell名称，<code>\v</code>表示bash版本号</p>
 <p>可以利用命令修改默认的主提示符</p>
@@ -5545,6 +5599,8 @@ chmod 777 file
 <p>SOA：面向服务的架构，微服务的前身。将重复公用的功能抽取为组件，以服务的方式给各个系统提供服务。</p>
 <p>ESB企业服务总线作为项目与服务之间通信的桥梁。</p>
 </blockquote>
+<a id="more"></a>
+
 <h2 id="“互联网-”带来的挑战"><a href="#“互联网-”带来的挑战" class="headerlink" title="“互联网+”带来的挑战"></a>“互联网+”带来的挑战</h2><h3 id="“互联网-”时代业务特征"><a href="#“互联网-”时代业务特征" class="headerlink" title="“互联网+”时代业务特征"></a>“互联网+”时代业务特征</h3><ul>
 <li>用户规模大、接入方式多</li>
 <li>集中式访问、流量突增</li>
@@ -5723,6 +5779,8 @@ chmod 777 file
 </blockquote>
 <p>远距离网络传输？</p>
 <p>—— 线路的成本、串扰等原因，一般不采用并行通信。</p>
+<a id="more"></a>
+
 <h3 id="通信制式"><a href="#通信制式" class="headerlink" title="通信制式"></a>通信制式</h3><p><strong>单工通信</strong></p>
 <p>利用一条物理信道(2线制）进行单向信息传输。</p>
 <blockquote>
@@ -6172,6 +6230,8 @@ chmod 777 file
 <li>管理配置：创建配置、生成新版本配置、删除配置</li>
 <li>配置可以发布到命名空间下的所有应用</li>
 </ul>
+<a id="more"></a>
+
 <h2 id="TSF服务治理"><a href="#TSF服务治理" class="headerlink" title="TSF服务治理"></a>TSF服务治理</h2><p>服务治理：用于对用户运行业务的统一管理，包含对线上流量的管控、服务监控与告警、权限的限制、抑制线上突发情况等</p>
 <p>TSF服务治理包含：</p>
 <ul>
@@ -6361,6 +6421,8 @@ expire key seconds</code></pre>
 <li>企业级应用</li>
 <li>移动互联网</li>
 </ul>
+<a id="more"></a>
+
 <h1 id="PHP扩展库"><a href="#PHP扩展库" class="headerlink" title="PHP扩展库"></a>PHP扩展库</h1><p>PHP5扩展库包括<strong>标准库SPL</strong>和<strong>外部扩展库PECL</strong></p>
 <p>PHP扩展库的dll文件都具有<strong>“php_”</strong>前缀</p>
 <p>在Windows下加载PHP扩展库，是通过<strong>修改php.ini文件</strong>来完成的；用户也可以在脚本中使用<strong>dl()函数</strong>实现动态加载。</p>
@@ -6430,6 +6492,8 @@ extension=pdo_sqlite
 <h1 id="小程序开发基础"><a href="#小程序开发基础" class="headerlink" title="小程序开发基础"></a>小程序开发基础</h1><h2 id="小程序概述"><a href="#小程序概述" class="headerlink" title="小程序概述"></a>小程序概述</h2><p>小程序是一种全新的<strong>连接用户与服务</strong>的方式，它可以在微信内被快捷地获取和传播，同时具有出色的使用体验</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/42-TCA-study-notes-6/1.png" alt="小程序发展历程"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/42-TCA-study-notes-6/2.png" alt="小程序技术定位"></p>
+<a id="more"></a>
+
 <p><img src="https://zam9036.gitee.io/img/postimg/42-TCA-study-notes-6/3.png" alt="小程序注册流程"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/42-TCA-study-notes-6/4.png" alt="小程序开发流程"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/42-TCA-study-notes-6/5.png" alt="项目文件类型说明"></p>
@@ -6557,6 +6621,8 @@ extension=pdo_sqlite
 </tbody></table>
 <h2 id="文章模板（Scaffold）"><a href="#文章模板（Scaffold）" class="headerlink" title="文章模板（Scaffold）"></a>文章模板（Scaffold）</h2><p>​    在新建文章时，Hexo 会根据 <code>scaffolds</code> 文件夹内相对应的文件来建立文件，例如：</p>
 <pre><code>$ hexo new photo &quot;My Gallery&quot;</code></pre><p>​    在执行这行指令时，Hexo 会尝试在 <code>scaffolds</code> 文件夹中寻找 <code>photo.md</code>，并根据其内容建立文章。所以大家可以在 <code>source/_posts</code> 文件夹中自定义文章模板，来节省重复操作的时间。</p>
+<a id="more"></a>
+
 <h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><p>​    你可以执行下列命令来创建一篇新文章或者新的页面。</p>
 <pre><code>$ hexo new [layout] &lt;title&gt;</code></pre><p>​    你可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局。</p>
 <p>​    新建文章后，可以在 <code>source</code> 中找到新建的文章（.md文件），然后使用Typora或其他md编辑器编写博客。MarkDown的语法请关注我后续的博客！</p>
@@ -6583,7 +6649,9 @@ extension=pdo_sqlite
 ### 这是三级标题
 #### 这是四级标题
 ##### 这是五级标题
-###### 这是六级标题</code></pre><p>上方代码效果：</p>
+###### 这是六级标题</code></pre><a id="more"></a>
+
+<p>上方代码效果：</p>
 <h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><blockquote>
 <p>Tips：部分软件及网页对标题层级支持有限</p>
 </blockquote>
@@ -6773,6 +6841,8 @@ cond(no)-&gt;sub-&gt;io</code></pre>
 <h2 id="利用SCP指令从Windows上传文件到Linux服务器"><a href="#利用SCP指令从Windows上传文件到Linux服务器" class="headerlink" title="利用SCP指令从Windows上传文件到Linux服务器"></a>利用SCP指令从Windows上传文件到Linux服务器</h2><p>​    现有一个本地的BBS-Forum.zip文件需要上传到Linux服务器。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/Windows%E4%B8%8ELinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%B4%E5%BF%AB%E9%80%9F%E4%B8%8A%E4%BC%A0%E3%80%81%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%EF%BC%88SCP%E6%8C%87%E4%BB%A4%EF%BC%89/1.png" alt="本地文件"></p>
 <p>​    首先打开命令提示符cmd，按SCP指令格式输入<code>scp F:\GitHub\BBS-Forum.zip root@211.68.46.235:/var/www/html</code>，其中root是远端Liunx用户名，然后输入密码（密码不显示），开始上传。</p>
+<a id="more"></a>
+
 <p><img src="https://zam9036.gitee.io/img/postimg/Windows%E4%B8%8ELinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%B4%E5%BF%AB%E9%80%9F%E4%B8%8A%E4%BC%A0%E3%80%81%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%EF%BC%88SCP%E6%8C%87%E4%BB%A4%EF%BC%89/2.png" alt="命令提示符"></p>
 <p>​    然后去云服务器端查看文件，成功上传！</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/Windows%E4%B8%8ELinux%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%B4%E5%BF%AB%E9%80%9F%E4%B8%8A%E4%BC%A0%E3%80%81%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%EF%BC%88SCP%E6%8C%87%E4%BB%A4%EF%BC%89/3.png" alt="云服务器端"></p>
@@ -6816,6 +6886,8 @@ cond(no)-&gt;sub-&gt;io</code></pre>
 <p>客户端对API网关发送一次请求，API网关进行认证后就可以调用相应的一系列微服务，无需客户端多次向多个微服务发送请求，降低客户端和服务端耦合度</p>
 <p>通过API网关，在不同命名空间下的微服务可以实现相互调用</p>
 </blockquote>
+<a id="more"></a>
+
 <h3 id="微服务网关使用场景"><a href="#微服务网关使用场景" class="headerlink" title="微服务网关使用场景"></a>微服务网关使用场景</h3><p><img src="https://zam9036.gitee.io/img/postimg/41-TCA-study-notes-5/2.png" alt="微服务带来的状况"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/41-TCA-study-notes-5/3.png" alt="微服务网关典型应用场景"></p>
 <h2 id="TSF与微服务网关的使用"><a href="#TSF与微服务网关的使用" class="headerlink" title="TSF与微服务网关的使用"></a>TSF与微服务网关的使用</h2><h3 id="TSF微服务网关的分类"><a href="#TSF微服务网关的分类" class="headerlink" title="TSF微服务网关的分类"></a>TSF微服务网关的分类</h3><ul>
@@ -6870,6 +6942,8 @@ cond(no)-&gt;sub-&gt;io</code></pre>
 <h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>​    我们在启用博客主题时会发现，博客主题中的内置图片，会随<code>hexo g</code>指令一起部署到public文件夹，上传时也会一同上传到Github上，这就为我们保存博客中的图片提供了一种思路。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E5%88%A9%E7%94%A8Hexo%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%EF%BC%88%E6%97%A0%E9%9C%80%E5%A4%96%E9%93%BE%EF%BC%89/1.png" alt="public文件夹中的img文件夹"></p>
 <h2 id="新建本地图片库"><a href="#新建本地图片库" class="headerlink" title="新建本地图片库"></a>新建本地图片库</h2><p>​    查看<code>Hexo-themes</code>中的文件我们可以知道，主题文件的图片存在了<code>source-img</code>文件夹中，所以我们在这个文件夹中新建一个postimg文件夹，用于存放博客中需要保存的图片。</p>
+<a id="more"></a>
+
 <p><img src="https://zam9036.gitee.io/img/postimg/%E5%88%A9%E7%94%A8Hexo%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%EF%BC%88%E6%97%A0%E9%9C%80%E5%A4%96%E9%93%BE%EF%BC%89/2.png" alt="新建postimg文件夹"></p>
 <p>​    然后我们把图片存进去，执行<code>hexo g</code>，会发现在<code>public-img</code>文件夹中也多了一个postimg文件夹，里面有我们刚刚存进去的图片。这说明Hexo在部署博客时，也将postimg部署到了博客里。同理，上传时也会将postimg一起上传到Github上，这说明利用相对路径保存图片的方法可行。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/%E5%88%A9%E7%94%A8Hexo%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%EF%BC%88%E6%97%A0%E9%9C%80%E5%A4%96%E9%93%BE%EF%BC%89/3.png" alt="postimg文件夹"></p>
@@ -6897,6 +6971,8 @@ cond(no)-&gt;sub-&gt;io</code></pre>
 <h2 id="什么是云原生"><a href="#什么是云原生" class="headerlink" title="什么是云原生"></a>什么是云原生</h2><p>云原生是一种文化，是云计算的一个必然导向，其意义在于让云成为云化战略成功的基石</p>
 <p>云原生的概念可以总结为“适合云的应用”和“好用的云架构”</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/4.png" alt="云原生相关概念"></p>
+<a id="more"></a>
+
 <h3 id="云时代业务与云原生应用"><a href="#云时代业务与云原生应用" class="headerlink" title="云时代业务与云原生应用"></a>云时代业务与云原生应用</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/5.png" alt="云时代业务与云原生应用"></p>
 <h2 id="云原生架构的关键技术"><a href="#云原生架构的关键技术" class="headerlink" title="云原生架构的关键技术"></a>云原生架构的关键技术</h2><h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><p>把一个庞大的项目<strong>拆分成几个小的独立的服务</strong>，再把独立的服务串起来的架构设计：<strong>内聚更强、更加敏捷</strong></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/6.png" alt="微服务与传统架构"></p>
@@ -6995,6 +7071,8 @@ cond(no)-&gt;sub-&gt;io</code></pre>
 <h2 id="程序设计"><a href="#程序设计" class="headerlink" title="程序设计"></a>程序设计</h2><h3 id="程序要求"><a href="#程序要求" class="headerlink" title="程序要求"></a>程序要求</h3><p>​    利用栈原理，设计一个可以计算所输入表达式的程序，要求可以计算正数，负数，小数的加减乘除运算和括号运算，以#结束输入。</p>
 <h3 id="程序功能"><a href="#程序功能" class="headerlink" title="程序功能"></a>程序功能</h3><p>​    对输入的式子进行判断式子格式是否正确。若正确，进行运算并输出最终结果；若错误，提示报错。</p>
 <h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>​    用栈实现计算器，主要思路就是设置一个符号栈和一个数字栈用于存储数字和字符。输入字符串时在字符串尾部加一个“#”以示输入结束。然后扫描字符串，如果扫描结果是数字就进入数字栈。如果是运算符号要判断符号优先级，若栈外符号优先级大于栈内符号优先级则进栈；若小于栈内优先级，则符号栈出栈一位，数字栈出栈两位进行计算，结果重新进入数字栈，直到栈外优先级大于栈内。</p>
+<a id="more"></a>
+
 <h3 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h3><p>用如下表达式进行测试：</p>
 <p>(56-23)/8-4#   期望结果：0.125</p>
 <p>34+p(u89-12.3)k/3#    期望结果：59.5667</p>
@@ -7387,6 +7465,8 @@ int main()
 <pre><code class="提示">没有已启用的仓库。
 执行 &amp;quot;yum repolist all&amp;quot; 查看您拥有的仓库。
 您可以用 yum-config-manager --enable &amp;amp;lt;仓库名&amp;amp;gt; 来启用仓库</code></pre>
+<a id="more"></a>
+
 <h2 id="问题思考"><a href="#问题思考" class="headerlink" title="问题思考"></a>问题思考</h2><p>​    CentOS的默认软件包管理器是yum，而Ubuntu默认软件包管理器是dpkp，可以尝试<code>apt-get</code>的方法进行安装。</p>
 <h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>​    输入命令代码<code>sudo apt-get install php-gd</code>，发现可以安装了。</p>
 ]]></content>
@@ -7419,6 +7499,8 @@ int main()
 <blockquote>
 <p>部署TOMCAT及相关应用，保存图片资源</p>
 </blockquote>
+<a id="more"></a>
+
 <h3 id="本地应用迁移云上架构"><a href="#本地应用迁移云上架构" class="headerlink" title="本地应用迁移云上架构"></a>本地应用迁移云上架构</h3><p><img src="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/3.png" alt="本地应用迁移云上架构"></p>
 <h2 id="云服务器简介"><a href="#云服务器简介" class="headerlink" title="云服务器简介"></a>云服务器简介</h2><ul>
 <li>云服务器CVM：通用场景，对性能要求不高……（不独享物理资源）</li>

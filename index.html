@@ -451,85 +451,10 @@
 
       
         
-          
-          [TOC]
-小程序开发基础小程序概述小程序是一种全新的连接用户与服务的方式，它可以在微信内被快捷地获取和传播，同时具有出色的使用体验
-
-
-
-
-
-
-小程序开发基础页面结构构建WXML
-
-
-
-
-
-
-
-
-页面样式定义WXSS
-
-WXSS与CSS不同点：尺寸单位、样式导入、选择器
-
-
-
-小程序基础组件
-
-小程序API
-
-
-
-
-
-
-
-部分API需提前进行权限声明
-
-小程序云开发小程序云开发概述
-
-
-
-小程序云开发云数据库
-
-
-
-
-
-
-
-
-云存储
-
-
-
-临时文件链接有效时长为2小时
-
-云函数
-
-
-
-云开发TCB
-
-
-对小程序进行云开发不一定必须使用TCB，使用云数据库、云存储、云函数进行开发也可称为小程序云开发，TCB只是对上述功能进行了集成和统一管理
-
-
-
-云开发接入
-
-
-AI应用开发人工智能概述人工智能简介
-常见的人工智能
-
-图片分类
-计算机视觉：物体识别、场景识别、地点识别……
-天气预测
-
-
-人
-          ...
+          <p>[TOC]</p>
+<h1 id="小程序开发基础"><a href="#小程序开发基础" class="headerlink" title="小程序开发基础"></a>小程序开发基础</h1><h2 id="小程序概述"><a href="#小程序概述" class="headerlink" title="小程序概述"></a>小程序概述</h2><p>小程序是一种全新的<strong>连接用户与服务</strong>的方式，它可以在微信内被快捷地获取和传播，同时具有出色的使用体验</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/42-TCA-study-notes-6/1.png" alt="小程序发展历程"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/42-TCA-study-notes-6/2.png" alt="小程序技术定位"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2021/01/09/42-TCA-study-notes-6/#more" rel="contents">
@@ -710,27 +635,27 @@ AI应用开发人工智能概述人工智能简介
 
       
         
-          
-          [TOC]
-TSF与微服务网关TSF与API网关结合，API网关就可以封装云应用的业务，将企业系统中的数据、业务逻辑、功能模块安全可靠的开放出来，用来实现系统的集成或与其他系统进行业务链接
-微服务网关概述（API网关）微服务网关是用于实现微服务对外出口的服务，用于协助开发者完成微服务对外提供调用及微服务相互之间调用
-
-微服务网关本身也是一个微服务
-
-
-API网关的功能
-路由转发：通过接收外界的请求，将请求转发到后端相应的微服务
-起到过滤器的作用：在API网关中可以完成一系列横向功能（限流、鉴权、监控等）
-
-API网关的优势
-减少客户端与微服务之间的调用次数，提高效率
-便于监控，可在网关中监控数据，可以做统一的切面任务处理
-便于认证，只需要在网关中认证即可，无需每个微服务都进行认证
-降低客户端与服务端的耦合度
-
-
-客户端对API网关发送一次请求，API网关进行认证后就可以调用相应的一系列微服
-          ...
+          <p>[TOC]</p>
+<h1 id="TSF与微服务网关"><a href="#TSF与微服务网关" class="headerlink" title="TSF与微服务网关"></a>TSF与微服务网关</h1><p>TSF与API网关结合，API网关就可以封装云应用的业务，将企业系统中的数据、业务逻辑、功能模块安全可靠的开放出来，用来实现系统的集成或与其他系统进行业务链接</p>
+<h2 id="微服务网关概述（API网关）"><a href="#微服务网关概述（API网关）" class="headerlink" title="微服务网关概述（API网关）"></a>微服务网关概述（API网关）</h2><p>微服务网关是用于实现微服务对外出口的服务，用于协助开发者完成微服务对外提供调用及微服务相互之间调用</p>
+<blockquote>
+<p>微服务网关本身也是一个微服务</p>
+</blockquote>
+<p><img src="https://zam9036.gitee.io/img/postimg/41-TCA-study-notes-5/1.png" alt="微服务网关"></p>
+<h3 id="API网关的功能"><a href="#API网关的功能" class="headerlink" title="API网关的功能"></a>API网关的功能</h3><ul>
+<li>路由转发：通过接收外界的请求，将请求转发到后端相应的微服务</li>
+<li>起到过滤器的作用：在API网关中可以完成一系列横向功能（限流、鉴权、监控等）</li>
+</ul>
+<h3 id="API网关的优势"><a href="#API网关的优势" class="headerlink" title="API网关的优势"></a>API网关的优势</h3><ul>
+<li>减少客户端与微服务之间的调用次数，提高效率</li>
+<li>便于监控，可在网关中监控数据，可以做统一的切面任务处理</li>
+<li>便于认证，只需要在网关中认证即可，无需每个微服务都进行认证</li>
+<li>降低客户端与服务端的耦合度</li>
+</ul>
+<blockquote>
+<p>客户端对API网关发送一次请求，API网关进行认证后就可以调用相应的一系列微服务，无需客户端多次向多个微服务发送请求，降低客户端和服务端耦合度</p>
+<p>通过API网关，在不同命名空间下的微服务可以实现相互调用</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2021/01/08/41-TCA-study-notes-5/#more" rel="contents">
@@ -911,31 +836,43 @@ API网关的优势
 
       
         
-          
-          [TOC]
-TSF平台管理TSF配置管理配置管理：解决分布式环境下多台服务实例的配置统一管理问题
-TSF配置功能的特点
-
-支持配置分布式化管理
-支持配置异构系统管理
-支持在控制台编写YAML格式配置文件进行配置
-
-
-TSF分布式配置功能仅支持SpringCloud类型的应用
-异构系统：异构系统整合了多个信息化系统的数据库，各数据库在加入异构数据库系统之前本身就已经存在，拥有自己的DBMS
-
-配置管理的分类
-
-应用配置（针对于应用的配置）
-全局配置（针对所有微服务配置）
-本地配置（针对本地开发时应用的配置）
-
-
-应用配置和全局配置属于TSF平台的配置（也可称为远程配置、分布式配置）
-本地配置是应用在代码工程中创建的配置，如BootStrap.yml
-
-配置优先级：应用配置&gt;全局配置&gt;本地配置。针对于某个应用服务的配置，先寻找针对该应用的配置，没找到按照默认的全局配置进行配置，若也
-          ...
+          <p>[TOC]</p>
+<h1 id="TSF平台管理"><a href="#TSF平台管理" class="headerlink" title="TSF平台管理"></a>TSF平台管理</h1><h2 id="TSF配置管理"><a href="#TSF配置管理" class="headerlink" title="TSF配置管理"></a>TSF配置管理</h2><p>配置管理：解决分布式环境下多台服务实例的配置统一管理问题</p>
+<p>TSF配置功能的特点</p>
+<ul>
+<li>支持配置分布式化管理</li>
+<li>支持配置异构系统管理</li>
+<li>支持在控制台编写YAML格式配置文件进行配置</li>
+</ul>
+<blockquote>
+<p>TSF分布式配置功能仅支持SpringCloud类型的应用</p>
+<p>异构系统：异构系统整合了多个信息化系统的数据库，各数据库在加入异构数据库系统之前本身就已经存在，拥有自己的DBMS</p>
+</blockquote>
+<p>配置管理的分类</p>
+<ul>
+<li>应用配置（针对于应用的配置）</li>
+<li>全局配置（针对所有微服务配置）</li>
+<li>本地配置（针对本地开发时应用的配置）</li>
+</ul>
+<blockquote>
+<p>应用配置和全局配置属于TSF平台的配置（也可称为远程配置、分布式配置）</p>
+<p>本地配置是应用在代码工程中创建的配置，如BootStrap.yml</p>
+</blockquote>
+<p>配置优先级：<strong>应用配置&gt;全局配置&gt;本地配置</strong>。针对于某个应用服务的配置，先寻找针对该应用的配置，没找到按照默认的全局配置进行配置，若也没有全局配置，则按照本地开发时的配置文件进行配置</p>
+<h3 id="应用配置"><a href="#应用配置" class="headerlink" title="应用配置"></a>应用配置</h3><p><img src="https://zam9036.gitee.io/img/postimg/40-TCA-study-notes-4/1.png" alt="应用配置步骤"></p>
+<p>应用配置的功能：</p>
+<ul>
+<li>创建配置项：一个配置项可以管理多个版本的配置</li>
+<li>生成新版本：基于历史版本生成新版本</li>
+<li>发布配置：支持发布配置到<strong>部署组</strong></li>
+<li>回滚：回滚到上一个版本的配置</li>
+</ul>
+<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><p>用于动态更新应用代码中的配置，全局配置可以保证配置内容在某个<strong>集群</strong>或者<strong>命名空间</strong>中全局生效</p>
+<p>全局配置的功能：</p>
+<ul>
+<li>管理配置：创建配置、生成新版本配置、删除配置</li>
+<li>配置可以发布到命名空间下的所有应用</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2021/01/07/40-TCA-study-notes-4/#more" rel="contents">
@@ -1116,29 +1053,13 @@ TSF分布式配置功能仅支持SpringCloud类型的应用
 
       
         
-          
-          [TOC]
-云原生应用设计与开发云原生的演进过程
-
-云原生计算基金会CNCF
-什么是云原生云原生是一种文化，是云计算的一个必然导向，其意义在于让云成为云化战略成功的基石
-云原生的概念可以总结为“适合云的应用”和“好用的云架构”
-
-云时代业务与云原生应用
-云原生架构的关键技术微服务把一个庞大的项目拆分成几个小的独立的服务，再把独立的服务串起来的架构设计：内聚更强、更加敏捷
-
-微服务常见架构-Spring Cloud仅支持使用Java语言进行开发
-
-微服务常见架构-ServiceMesh支持异构语言（多语言混写），适合单体架构到微服务架构的过渡
-
-
-
-
-容器化容器技术——资源调度、微服务更容易
-容器是一种轻量级虚拟化技术，能够在单一主机上提供多个隔离的操作系统环境，通过Namespace进行进程隔离，每个容器都有唯一的可写文件系统和资源配额
-
-DevOps传统瀑布模型开发：开发、测试、部署运维
-          ...
+          <p>[TOC]</p>
+<h1 id="云原生应用设计与开发"><a href="#云原生应用设计与开发" class="headerlink" title="云原生应用设计与开发"></a>云原生应用设计与开发</h1><h2 id="云原生的演进过程"><a href="#云原生的演进过程" class="headerlink" title="云原生的演进过程"></a>云原生的演进过程</h2><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/1.png" alt="应用的三个维度"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/2.png" alt="云原生的演进过程"></p>
+<h3 id="云原生计算基金会CNCF"><a href="#云原生计算基金会CNCF" class="headerlink" title="云原生计算基金会CNCF"></a>云原生计算基金会CNCF</h3><p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/3.png" alt="云原生计算基金会CNCF"></p>
+<h2 id="什么是云原生"><a href="#什么是云原生" class="headerlink" title="什么是云原生"></a>什么是云原生</h2><p>云原生是一种文化，是云计算的一个必然导向，其意义在于让云成为云化战略成功的基石</p>
+<p>云原生的概念可以总结为“适合云的应用”和“好用的云架构”</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/39-TCA-study-notes-3/4.png" alt="云原生相关概念"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2021/01/04/39-TCA-study-notes-3/#more" rel="contents">
@@ -1319,35 +1240,24 @@ DevOps传统瀑布模型开发：开发、测试、部署运维
 
       
         
-          
-          [TOC]
-本地应用迁移到云端本地应用上云基础传统Web应用架构单体架构：
-
-本地应用上云基本步骤
-本地服务器→云服务器
-本地数据库→云数据库
-本地存储→云存储
-
-
-应用上云场景介绍以简单的图书管理系统为例
-迁移方案云数据盘：云服务器一台，数据盘60G以上
-
-安装MySQL数据库，用于数据库存储
-
-云服务器：云服务器一台
-
-部署TOMCAT及相关应用，保存图片资源
-
-本地应用迁移云上架构
-云服务器简介
-云服务器CVM：通用场景，对性能要求不高……（不独享物理资源）
-GPU云服务器：深度学习，科学计算，视频编码……（不独享物理资源）
-FPGA云服务器：硬件加速，可编程阵列，深度学习，实时图像压缩……（不独享物理资源）
-专用宿主机CDH：金融业务，高性能业务……（独享物理资源，搭载虚拟化系统）
-黑石物理服务器CPM：大数据，虚拟化，游戏……（独享物理资源，不搭载虚拟化系统）
-
-云服务器CVM云
-          ...
+          <p>[TOC]</p>
+<h1 id="本地应用迁移到云端"><a href="#本地应用迁移到云端" class="headerlink" title="本地应用迁移到云端"></a>本地应用迁移到云端</h1><h2 id="本地应用上云基础"><a href="#本地应用上云基础" class="headerlink" title="本地应用上云基础"></a>本地应用上云基础</h2><h3 id="传统Web应用架构"><a href="#传统Web应用架构" class="headerlink" title="传统Web应用架构"></a>传统Web应用架构</h3><p>单体架构：</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/1.png" alt="传统Web应用架构"></p>
+<h3 id="本地应用上云基本步骤"><a href="#本地应用上云基本步骤" class="headerlink" title="本地应用上云基本步骤"></a>本地应用上云基本步骤</h3><ul>
+<li>本地服务器→云服务器</li>
+<li>本地数据库→云数据库</li>
+<li>本地存储→云存储</li>
+</ul>
+<p><img src="https://zam9036.gitee.io/img/postimg/38-TCA-study-notes-2/2.png" alt="本地应用上云"></p>
+<h2 id="应用上云场景介绍"><a href="#应用上云场景介绍" class="headerlink" title="应用上云场景介绍"></a>应用上云场景介绍</h2><p>以简单的图书管理系统为例</p>
+<h3 id="迁移方案"><a href="#迁移方案" class="headerlink" title="迁移方案"></a>迁移方案</h3><p>云数据盘：云服务器一台，数据盘60G以上</p>
+<blockquote>
+<p>安装MySQL数据库，用于数据库存储</p>
+</blockquote>
+<p>云服务器：云服务器一台</p>
+<blockquote>
+<p>部署TOMCAT及相关应用，保存图片资源</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2021/01/03/38-TCA-study-notes-2/#more" rel="contents">
@@ -1528,33 +1438,35 @@ FPGA云服务器：硬件加速，可编程阵列，深度学习，实时图像�
 
       
         
-          
-          [TOC]
-腾讯云文档中心
-云开发基础传统IT架构的特点传统应用的开发特点
-企业内部应用
-需求变化量慢
-技术复杂度低
-迭代升级缓慢
-用户规模小
-需求明确
-
-传统应用的开发方式软件开发模式：瀑布开发模型（标准化、阶段清晰、环环相扣）+软件架构：单体架构（开发速度快、成本低）
-瀑布开发模型：软件定义（问题定义可行性分析、需求分析）、软件开发（设计、编码、测试）、软件维护（运营维护）
-单体架构：最简单的软件架构，功能点+UI界面+后台服务放入同一个包进行开发，然后统一部署
-业务驱动下的IT架构变革业务发展带来的挑战
-资源利用率差
-功能重复开发
-不同开发语言
-维护困难
-信息孤岛
-
-IT架构如何支撑业务发展硬件基础设施：用户数量增多，服务器集群规模也需要不断扩大
-
-自建机房、集群扩展（成本太高）→IDC互联网数据中心（租用服务器）
-
-软件架构：传统的单体架构造成大量信息孤岛，各业务部门软件不能互通，
-          ...
+          <p>[TOC]</p>
+<p><a href="https://cloud.tencent.com/document/product" target="_blank" rel="noopener">腾讯云文档中心</a></p>
+<h1 id="云开发基础"><a href="#云开发基础" class="headerlink" title="云开发基础"></a>云开发基础</h1><h2 id="传统IT架构的特点"><a href="#传统IT架构的特点" class="headerlink" title="传统IT架构的特点"></a>传统IT架构的特点</h2><h3 id="传统应用的开发特点"><a href="#传统应用的开发特点" class="headerlink" title="传统应用的开发特点"></a>传统应用的开发特点</h3><ul>
+<li>企业内部应用</li>
+<li>需求变化量慢</li>
+<li>技术复杂度低</li>
+<li>迭代升级缓慢</li>
+<li>用户规模小</li>
+<li>需求明确</li>
+</ul>
+<h3 id="传统应用的开发方式"><a href="#传统应用的开发方式" class="headerlink" title="传统应用的开发方式"></a>传统应用的开发方式</h3><p>软件开发模式：<strong>瀑布开发模型</strong>（标准化、阶段清晰、环环相扣）+软件架构：<strong>单体架构</strong>（开发速度快、成本低）</p>
+<p>瀑布开发模型：软件定义（问题定义可行性分析、需求分析）、软件开发（设计、编码、测试）、软件维护（运营维护）</p>
+<p>单体架构：最简单的软件架构，功能点+UI界面+后台服务放入同一个包进行开发，然后统一部署</p>
+<h2 id="业务驱动下的IT架构变革"><a href="#业务驱动下的IT架构变革" class="headerlink" title="业务驱动下的IT架构变革"></a>业务驱动下的IT架构变革</h2><h3 id="业务发展带来的挑战"><a href="#业务发展带来的挑战" class="headerlink" title="业务发展带来的挑战"></a>业务发展带来的挑战</h3><ul>
+<li>资源利用率差</li>
+<li>功能重复开发</li>
+<li>不同开发语言</li>
+<li>维护困难</li>
+<li>信息孤岛</li>
+</ul>
+<h3 id="IT架构如何支撑业务发展"><a href="#IT架构如何支撑业务发展" class="headerlink" title="IT架构如何支撑业务发展"></a>IT架构如何支撑业务发展</h3><p>硬件基础设施：用户数量增多，服务器集群规模也需要不断扩大</p>
+<blockquote>
+<p>自建机房、集群扩展（成本太高）→IDC互联网数据中心（租用服务器）</p>
+</blockquote>
+<p>软件架构：传统的单体架构造成大量信息孤岛，各业务部门软件不能互通，代码复用度低</p>
+<blockquote>
+<p>SOA：面向服务的架构，微服务的前身。将重复公用的功能抽取为组件，以服务的方式给各个系统提供服务。</p>
+<p>ESB企业服务总线作为项目与服务之间通信的桥梁。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2021/01/02/37-TCA-study-notes-1/#more" rel="contents">
@@ -1735,37 +1647,32 @@ IT架构如何支撑业务发展硬件基础设施：用户数量增多，服务
 
       
         
-          
-          [TOC]
-PHP概述什么是PHPPHP：超文本预处理器（Hypertext Preprocessor），是一种服务器端、跨平台、HTML嵌入式的脚本语言
-PHP是B/S（浏览器/服务器结构）体系结构，属于三层结构。
-
-三层架构就是为了符合“高内聚，低耦合”思想，把各个功能模块划分为表示层（UI）、业务逻辑层（BLL）和数据访问层（DAL）三层架构。
-
-PHP优势
-安全性高：开源软件
-跨平台特性
-支持广泛的数据库
-易学性
-执行速度快：占用系统资源少
-免费：LAMP全部开源免费
-模板化：程序逻辑与用户界面分离
-支持面向对象与面向过程
-
-PHP应用领域
-中小型网站的开发
-大型网站的业务逻辑结果展示
-Web应用系统
-硬件管控软件的GUI
-电子商务
-多媒体系统
-企业级应用
-移动互联网
-
-PHP扩展库PHP5扩展库包括标准库SPL和外部扩展库PECL
-PHP扩展库的dll文件都具有“php_”前缀
-
-          ...
+          <p>[TOC]</p>
+<h1 id="PHP概述"><a href="#PHP概述" class="headerlink" title="PHP概述"></a>PHP概述</h1><h2 id="什么是PHP"><a href="#什么是PHP" class="headerlink" title="什么是PHP"></a>什么是PHP</h2><p>PHP：超文本预处理器（Hypertext Preprocessor），是一种服务器端、跨平台、HTML嵌入式的<strong>脚本</strong>语言</p>
+<p>PHP是B/S（浏览器/服务器结构）体系结构，属于三层结构。</p>
+<blockquote>
+<p>三层架构就是为了符合“高内聚，低耦合”思想，把各个功能模块划分为表示层（UI）、业务逻辑层（BLL）和数据访问层（DAL）三层架构。</p>
+</blockquote>
+<h2 id="PHP优势"><a href="#PHP优势" class="headerlink" title="PHP优势"></a>PHP优势</h2><ul>
+<li>安全性高：开源软件</li>
+<li>跨平台特性</li>
+<li>支持广泛的数据库</li>
+<li>易学性</li>
+<li>执行速度快：占用系统资源少</li>
+<li>免费：LAMP全部开源免费</li>
+<li>模板化：程序逻辑与用户界面分离</li>
+<li>支持面向对象与面向过程</li>
+</ul>
+<h2 id="PHP应用领域"><a href="#PHP应用领域" class="headerlink" title="PHP应用领域"></a>PHP应用领域</h2><ul>
+<li>中小型网站的开发</li>
+<li>大型网站的业务逻辑结果展示</li>
+<li>Web应用系统</li>
+<li>硬件管控软件的GUI</li>
+<li>电子商务</li>
+<li>多媒体系统</li>
+<li>企业级应用</li>
+<li>移动互联网</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/09/11/36-PHP-study-notes-1/#more" rel="contents">
@@ -1946,21 +1853,16 @@ PHP扩展库的dll文件都具有“php_”前缀
 
       
         
-          
-          
-[TOC]
-适用平台Android
-前言由于众所周知的原因，Google无法在国内访问。所以国内手机厂商并没有在国产手机上提供Google服务框架，这也导致了安装Google应用变得十分困难，有些游戏在国产手机上因没有Google服务而闪退。
-本文仅介绍如何在手机上安装Google服务，不提供虚拟专用网络（VPN）相关内容
-安装过程本文提供极简安装方法，适用于新手小白。
-首先下载Google服务安装器（提取码：5oea），然后在手机上安装即可。
-安装完成后根据提示，一键安装Google服务。注意安装过程中会多次启用应用安装程序，请注意点击“安装”按钮
-
-所有服务安装完成后，连接国际互联网，然后就可以访问Google Play商店了
-此时手机可以运行绝大部分Google软件了，但是部分游戏仍不能运行
-还需要安装Google Play服务
-下载OurPlay（提取码：02ig），安装并启动应
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/35-How-to-use-Google-services-on-mobile-phones/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="适用平台"><a href="#适用平台" class="headerlink" title="适用平台"></a>适用平台</h1><p>Android</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于众所周知的原因，Google无法在国内访问。所以国内手机厂商并没有在国产手机上提供Google服务框架，这也导致了安装Google应用变得十分困难，有些游戏在国产手机上因没有Google服务而闪退。</p>
+<p>本文仅介绍如何在手机上安装Google服务，不提供虚拟专用网络（VPN）相关内容</p>
+<h1 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h1><p>本文提供极简安装方法，适用于新手小白。</p>
+<p>首先下载<a href="https://pan.baidu.com/s/1K5aLLVxvcdb7Sthe5Q1V_w" target="_blank" rel="noopener">Google服务安装器</a>（提取码：5oea），然后在手机上安装即可。</p>
+<p>安装完成后根据提示，一键安装Google服务。注意安装过程中会多次启用应用安装程序，请注意点击“安装”按钮</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/35-How-to-use-Google-services-on-mobile-phones/1.png" alt="Google服务安装器"></p>
+<p>所有服务安装完成后，连接国际互联网，然后就可以访问Google Play商店了</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/07/15/35-How-to-use-Google-services-on-mobile-phones/#more" rel="contents">
@@ -2141,54 +2043,21 @@ PHP扩展库的dll文件都具有“php_”前缀
 
       
         
-          
-          
-[TOC]
-前言这学期学习了计算机组成原理，但是这门课太过于理论了啊，完全就是纸上谈兵。身为计算机专业的人r，我也就在计算机导论课上拆过一次台式电脑，实在不太行。刚好手边有台很古董的笔记本电脑（十几年前），性能就不谈了，起码能用就行了，不如拆机来看看。
-
-前方多图预警
-
-准备工作首先准备好必备的物品：电脑、鼠标、电源线、螺丝刀套装（专业拆机工具包）
-
-这里螺丝刀套装选用米家的产品，不仅好用而且颜值在线！
-
-各有喜好，选用其他工具也可以
-
-
-然后来验证一下它是不是还能正常工作吧！开机！
-久违的古董XP系统？？？？
-
-来看一下参数配置
-
-
-
-部件
-配置
-
-
-
-CPU
-Intel 凌动N270（1.6GHz）
-
-
-屏幕
-LED高亮屏（1024*600）、可顺时针180度旋转折叠、支持触屏
-
-
-硬盘
-SATA硬盘160GB
-
-
-内存
-DDR2内存1G
-
-
-显卡
-Intel GMA950
-
-
-摄像
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这学期学习了计算机组成原理，但是这门课太过于理论了啊，完全就是纸上谈兵。身为计算机专业的人r，我也就在计算机导论课上拆过一次台式电脑，实在不太行。刚好手边有台很古董的笔记本电脑（十几年前），性能就不谈了，起码能用就行了，不如拆机来看看。</p>
+<blockquote>
+<p>前方多图预警</p>
+</blockquote>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>首先准备好必备的物品：电脑、鼠标、电源线、螺丝刀套装（专业拆机工具包）</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/1.jpg" alt="准备物品"></p>
+<p>这里螺丝刀套装选用米家的产品，不仅好用而且颜值在线！</p>
+<blockquote>
+<p>各有喜好，选用其他工具也可以</p>
+</blockquote>
+<p><img src="https://zam9036.gitee.io/img/postimg/34-First-experience-of-laptop-disassembly/2.jpg" alt="准备物品"></p>
+<p>然后来验证一下它是不是还能正常工作吧！开机！</p>
+<p>久违的古董XP系统？？？？</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/07/01/34-First-experience-of-laptop-disassembly/#more" rel="contents">
@@ -2369,27 +2238,24 @@ Intel GMA950
 
       
         
-          
-          
-[TOC]
-Shell概述什么是shell？命令行模式下，用户和UNIX/Linux操作系统内核间的接口。它接收用户输入的命令或数据，并解释执行，之后，将命令的执行结果在显示器等输出设备上显示出来。Shell：外壳，也就是界面
-Shell的作用
-接受输入
-
-解释执行接受到的输入信息
-
-输出结果
-
-
-Shell提示符
-图中zam9036@zam9036-PC:~$ 是shell的主提示符，是shell准备接受命令时显示的字符串。
-zam9036是当前用户名，zam9036-PC是主机名，~表示用户主目录，$ 表示用户是普通用户
-
-对于超级用户（root）来说，$的位置出现的是#
-
-在提示符之后，用户输入命令，然后按Enter键。shell命令解释程序将接收、分析、解释并执行相应的命令，执行结果将在屏幕上显示。
-主提示符在bash（Linux系统默认的shell）中，主提示符用环境变量PS1
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/33-Linux-Shell/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="Shell概述"><a href="#Shell概述" class="headerlink" title="Shell概述"></a>Shell概述</h1><h2 id="什么是shell？"><a href="#什么是shell？" class="headerlink" title="什么是shell？"></a>什么是shell？</h2><p>命令行模式下，用户和UNIX/Linux操作系统内核间的接口。它接收用户输入的命令或数据，并解释执行，之后，将命令的执行结果在显示器等输出设备上显示出来。Shell：外壳，也就是界面</p>
+<h2 id="Shell的作用"><a href="#Shell的作用" class="headerlink" title="Shell的作用"></a>Shell的作用</h2><ul>
+<li><p>接受输入</p>
+</li>
+<li><p>解释执行接受到的输入信息</p>
+</li>
+<li><p>输出结果</p>
+</li>
+</ul>
+<h2 id="Shell提示符"><a href="#Shell提示符" class="headerlink" title="Shell提示符"></a>Shell提示符</h2><p><img src="https://zam9036.gitee.io/img/postimg/33-Linux-Shell/1.png" alt="提示符"></p>
+<p>图中<code>zam9036@zam9036-PC:~$</code> 是shell的主提示符，是shell准备接受命令时显示的字符串。</p>
+<p><code>zam9036</code>是当前用户名，<code>zam9036-PC</code>是主机名，<code>~</code>表示用户主目录，<code>$</code> 表示用户是普通用户</p>
+<blockquote>
+<p>对于超级用户（root）来说，<code>$</code>的位置出现的是<code>#</code></p>
+</blockquote>
+<p>在提示符之后，用户输入命令，然后按Enter键。shell命令解释程序将接收、分析、解释并执行相应的命令，执行结果将在屏幕上显示。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/04/26/33-Linux-Shell/#more" rel="contents">

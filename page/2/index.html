@@ -451,39 +451,30 @@
 
       
         
-          
-          
-[TOC]
-数据通信基础数据通信系统基本组成：
-
-
-发送端：实现数据的产生及发送，亦称为信源
-中间设备：泛指转发器、网桥、交换机、路由器、网关等
-介质：传输介质，实现数据传输的物理通路
-报文：泛指在传输信道上承载的具有特定结构的数据单元
-接收端：实现数据的接收，亦称为信宿
-协议：通信的各方为进行数据交换必须共同遵循的规则
-
-通信方式与通信制式通信方式并行通信
-每个数据编码的各个比特都是同时发送的。
-
-通常用于计算机系统内部及与外设之间大量频繁的数据传输
-
-串行通信
-比特(bit)的逐位传送(从低位到高位)。
-
-线路成本低、无串扰，远距离数据传输较好的选择
-
-远距离网络传输？
-—— 线路的成本、串扰等原因，一般不采用并行通信。
-通信制式单工通信
-利用一条物理信道(2线制）进行单向信息传输。
-
-多用于测试或控制环境下的数据传输
-
-半双工通信
-可以进行双向传输，但由于只有一条物理信道(2线制)
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/32-Physical-layer-computer-network-knowledge-summary-2/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="数据通信基础"><a href="#数据通信基础" class="headerlink" title="数据通信基础"></a>数据通信基础</h1><h2 id="数据通信系统"><a href="#数据通信系统" class="headerlink" title="数据通信系统"></a>数据通信系统</h2><p>基本组成：</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/32-Physical-layer-computer-network-knowledge-summary-2/1.png" alt="基本组成"></p>
+<ul>
+<li>发送端：实现数据的产生及发送，亦称为信源</li>
+<li>中间设备：泛指转发器、网桥、交换机、路由器、网关等</li>
+<li>介质：传输介质，实现数据传输的物理通路</li>
+<li>报文：泛指在传输信道上承载的具有特定结构的数据单元</li>
+<li>接收端：实现数据的接收，亦称为信宿</li>
+<li>协议：通信的各方为进行数据交换必须共同遵循的规则</li>
+</ul>
+<h2 id="通信方式与通信制式"><a href="#通信方式与通信制式" class="headerlink" title="通信方式与通信制式"></a>通信方式与通信制式</h2><h3 id="通信方式"><a href="#通信方式" class="headerlink" title="通信方式"></a>通信方式</h3><p><strong>并行通信</strong></p>
+<p>每个数据编码的各个比特都是同时发送的。</p>
+<blockquote>
+<p>通常用于计算机系统内部及与外设之间大量频繁的数据传输</p>
+</blockquote>
+<p><strong>串行通信</strong></p>
+<p>比特(bit)的逐位传送(从低位到高位)。</p>
+<blockquote>
+<p>线路成本低、无串扰，远距离数据传输较好的选择</p>
+</blockquote>
+<p>远距离网络传输？</p>
+<p>—— 线路的成本、串扰等原因，一般不采用并行通信。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/09/32-Physical-layer-computer-network-knowledge-summary-2/#more" rel="contents">
@@ -664,24 +655,14 @@
 
       
         
-          
-          
-[TOC]
-代码语言C语言
-前言近期，一个数学系专业的朋友联系我，问我能不能写出一个程序实现“判断一个数是否为整同余数”的功能，他还给了我同余数的定义：同余数是一个三边均为有理数的直角三角形的面积
-问题研究对于程序设计来说，仅仅按照这个定义来实现“判断一个数是否为同余数”的功能实在困难，就单纯让计算机来判断一个数是不是有理数就是一门学问。
-所以我只好另辟蹊径，找找还有什么方法能验证一个数是同余数。在百度百科上，我看到了数学家给出的一个重要结论，也是验证n是整同余数的充要条件：
-
-我很敬佩数学家们的智慧，能得出这个重要的结论，这对用程序验证一个数是整同余数指明了思路。
-四个变量首先，我们需要四个变量：n,a,b,v
-这四个变量的关系是：需要寻找n，要先确定a,b,v
-四个条件然后，这四个变量需要满足以下四个条件
-
-(a,b)=1
-a,b一奇数一偶数
-a,b为正整数并且a&gt;b
-a,b,
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="代码语言"><a href="#代码语言" class="headerlink" title="代码语言"></a>代码语言</h1><p>C语言</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>近期，一个数学系专业的朋友联系我，问我能不能写出一个程序实现“判断一个数是否为整同余数”的功能，他还给了我同余数的定义：同余数是一个三边均为有理数的直角三角形的面积</p>
+<h1 id="问题研究"><a href="#问题研究" class="headerlink" title="问题研究"></a>问题研究</h1><p>对于程序设计来说，仅仅按照这个定义来实现“判断一个数是否为同余数”的功能实在困难，就单纯让计算机来判断一个数是不是有理数就是一门学问。</p>
+<p>所以我只好另辟蹊径，找找还有什么方法能验证一个数是同余数。在百度百科上，我看到了数学家给出的一个重要结论，也是验证n是整同余数的充要条件：</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/1.png" alt="重要结论"></p>
+<p>我很敬佩数学家们的智慧，能得出这个重要的结论，这对用程序验证一个数是整同余数指明了思路。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/06/31-Determine-if-a-number-is-congruent-C-language/#more" rel="contents">
@@ -862,28 +843,31 @@ a,b,
 
       
         
-          
-          
-[TOC]
-递归算法递归算法
-直接或间接地调用自身的算法称为递归算法。
-递归函数
-用函数自身给出定义的函数称为递归函数。
-在计算机算法设计与分析中，使用递归技术往往使函数的定义和算法的描述简洁且易于理解。使用递归算法，要考虑递归的效率问题!
-
-若递归过程中，问题规模减小的速度很慢，则递归算法的复杂度会比较高。
-
-使用递归的准则如果待解决的问题具备下列2个特性，就可以考虑使用递归：
-
-复杂的问题转换为简单的1个或几个子问题
-最简单的问题可以直接解决 
-
-经典递归问题阶乘函数可递归地定义为：$$n !=\left{\begin{array}{cc}1 &amp; n=0 \n(n-1) ! &amp; n&gt;0\end{array}\right.$$
-
-定义域n=0一行 称为边界条件定义域$n&gt;0$一行 称为递归方程
-
-边界条件与递归方程是递归函数的2个要素，递归函数只有具备了这2
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/30-Algorithm-Design-and-Analysis-Knowledge-Summary-2/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h1><p><strong>递归算法</strong></p>
+<p>直接或间接地调用自身的算法称为<strong>递归算法</strong>。</p>
+<p><strong>递归函数</strong></p>
+<p>用函数自身给出定义的函数称为<strong>递归函数</strong>。</p>
+<p>在计算机算法设计与分析中，使用递归技术往往使函数的定义和算法的描述简洁且易于理解。<strong>使用递归算法，要考虑递归的效率问题!</strong></p>
+<blockquote>
+<p>若递归过程中，问题规模减小的速度很慢，则递归算法的复杂度会比较高。</p>
+</blockquote>
+<h2 id="使用递归的准则"><a href="#使用递归的准则" class="headerlink" title="使用递归的准则"></a>使用递归的准则</h2><p>如果待解决的问题具备下列2个特性，就可以考虑使用递归：</p>
+<ul>
+<li>复杂的问题转换为简单的1个或几个子问题</li>
+<li>最简单的问题可以直接解决 </li>
+</ul>
+<h2 id="经典递归问题"><a href="#经典递归问题" class="headerlink" title="经典递归问题"></a>经典递归问题</h2><h3 id="阶乘函数"><a href="#阶乘函数" class="headerlink" title="阶乘函数"></a>阶乘函数</h3><p>可递归地定义为：<br>$$<br>n !=\left{\begin{array}{cc}<br>1 &amp; n=0 \<br>n(n-1) ! &amp; n&gt;0<br>\end{array}\right.<br>$$</p>
+<blockquote>
+<p>定义域n=0一行 称为边界条件<br>定义域$n&gt;0$一行 称为递归方程</p>
+</blockquote>
+<p>边界条件与递归方程是递归函数的2个要素，递归函数只有具备了这2个要素，才能在有限次计算后得出结果。</p>
+<pre><code class="c">int factorial(int n)
+{
+    if (n==0) return 1;
+    return  n*factorial(n-1); 
+}</code></pre>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/05/30-Algorithm-Design-and-Analysis-Knowledge-Summary-2/#more" rel="contents">
@@ -1064,21 +1048,14 @@ a,b,
 
       
         
-          
-          
-[TOC]
-版本平台Windows
-SQL Server 2019 Developer
-SQL Server Management Studio 18.4
-SQL Server介绍SQL是英文Structured Query Language的缩写，意思为结构化查询语言。SQL语言的主要功能就是同各种数据库建立联系，进行沟通。按照ANSI(美国国家标准协会)的规定，SQL被作为关系型数据库管理系统的标准语言。SQL Server是由Microsoft开发和推广的关系数据库管理系统（RDBMS）。
-SQL Server安装下载SQL Server访问SQL Server官网，下载SQL Server，我选择下载的是SQL Server 2019 Developer。
-
-启动安装下载完成后，运行安装程序，选择“基本安装”
-
-同意服务条款后，指定SQL Server的安装位置
-
-然后程序会自动
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/29-Installation-and-use-of-SQL-Server/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="版本平台"><a href="#版本平台" class="headerlink" title="版本平台"></a>版本平台</h1><p>Windows</p>
+<p>SQL Server 2019 Developer</p>
+<p>SQL Server Management Studio 18.4</p>
+<h1 id="SQL-Server介绍"><a href="#SQL-Server介绍" class="headerlink" title="SQL Server介绍"></a>SQL Server介绍</h1><p>SQL是英文Structured Query Language的缩写，意思为结构化查询语言。SQL语言的主要功能就是同各种数据库建立联系，进行沟通。按照ANSI(美国国家标准协会)的规定，SQL被作为关系型数据库管理系统的标准语言。SQL Server是由Microsoft开发和推广的关系数据库管理系统（RDBMS）。</p>
+<h1 id="SQL-Server安装"><a href="#SQL-Server安装" class="headerlink" title="SQL Server安装"></a>SQL Server安装</h1><h2 id="下载SQL-Server"><a href="#下载SQL-Server" class="headerlink" title="下载SQL Server"></a>下载SQL Server</h2><p>访问<a href="https://www.microsoft.com/zh-cn/sql-server/sql-server-downloads" target="_blank" rel="noopener">SQL Server官网</a>，下载SQL Server，我选择下载的是SQL Server 2019 Developer。</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/29-Installation-and-use-of-SQL-Server/1.png" alt="SQL Server官网"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/03/03/29-Installation-and-use-of-SQL-Server/#more" rel="contents">
@@ -1259,30 +1236,33 @@ SQL Server安装下载SQL Server访问SQL Server官网，下载SQL Server，我�
 
       
         
-          
-          
-[TOC]
-算法与程序算法概述
-算法是解决问题的一种方法或一个过程。
-算法是若干指令的有穷序列。
-算法是以一步接一步的方式来详细描述计算机如何将输入转化为所要求的输出的过程。
-算法是对计算机上执行的计算过程的具体描述。
-
-算法的性质
-输入：算法的输入由零个和多个外部量提供。
-输出：算法产生至少一个量作为输出。
-确定性：组成算法的每条指令清晰、无歧义。
-有限性：算法中每条指令的执行次数和执行时间都是有限的。
-
-程序概述程序是算法用某种程序设计语言的具体实现。
-
-注意：程序可以不满足算法的第4条性质“有限性”，即程序可以是无限循环的。
-例如操作系统就是一个在无限循环中执行的程序。
-
-研究算法的必要性高效的算法可以节省时间和存储空间
-算法复杂性分析算法分析概述算法分析是研究算法对计算机资源进行使用的理论，是对算法运行所需要的计算机资源的量的预测。
-算法复杂性算法复杂性即算法运行所需要的计算机资
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/28-Algorithm-design-and-analysis-study-notes-1/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="算法与程序"><a href="#算法与程序" class="headerlink" title="算法与程序"></a>算法与程序</h1><h2 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h2><ul>
+<li>算法是解决问题的一种方法或一个过程。</li>
+<li>算法是若干指令的有穷序列。</li>
+<li>算法是以一步接一步的方式来详细描述计算机如何将输入转化为所要求的输出的过程。</li>
+<li>算法是对计算机上执行的计算过程的具体描述。</li>
+</ul>
+<h2 id="算法的性质"><a href="#算法的性质" class="headerlink" title="算法的性质"></a>算法的性质</h2><ul>
+<li><strong>输入</strong>：算法的输入由零个和多个外部量提供。</li>
+<li><strong>输出</strong>：算法产生至少一个量作为输出。</li>
+<li><strong>确定性</strong>：组成算法的每条指令清晰、无歧义。</li>
+<li><strong>有限性</strong>：算法中<strong>每条指令</strong>的执行次数和执行时间都是有限的。</li>
+</ul>
+<h2 id="程序概述"><a href="#程序概述" class="headerlink" title="程序概述"></a>程序概述</h2><p>程序是算法用某种程序设计语言的具体实现。</p>
+<blockquote>
+<p>注意：程序可以不满足算法的第4条性质“有限性”，即程序可以是无限循环的。</p>
+<p>例如操作系统就是一个在无限循环中执行的程序。</p>
+</blockquote>
+<h2 id="研究算法的必要性"><a href="#研究算法的必要性" class="headerlink" title="研究算法的必要性"></a>研究算法的必要性</h2><p>高效的算法可以节省时间和存储空间</p>
+<h1 id="算法复杂性分析"><a href="#算法复杂性分析" class="headerlink" title="算法复杂性分析"></a>算法复杂性分析</h1><h2 id="算法分析概述"><a href="#算法分析概述" class="headerlink" title="算法分析概述"></a>算法分析概述</h2><p>算法分析是研究算法对计算机资源进行使用的理论，是对算法运行所需要的计算机资源的量的预测。</p>
+<h2 id="算法复杂性"><a href="#算法复杂性" class="headerlink" title="算法复杂性"></a>算法复杂性</h2><p>算法复杂性即算法运行所需要的计算机资源的量。</p>
+<ul>
+<li>需要时间资源的量称为<strong>时间复杂性T(n)</strong>。</li>
+<li>需要空间资源的量称为<strong>空间复杂性S(n)</strong>。</li>
+<li>n为问题的规模，即输入的大小。</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/27/28-Algorithm-design-and-analysis-study-notes-1/#more" rel="contents">
@@ -1463,26 +1443,17 @@ SQL Server安装下载SQL Server访问SQL Server官网，下载SQL Server，我�
 
       
         
-          
-          
-[TOC]
-平台与工具Windows 10
-Oracle VM VirtualBox 6.1 虚拟机
-Ubuntukylin 19.10 Linux系统镜像文件
-虚拟机安装与使用下载安装VirtualBox访问Oracle VM VirtualBox官方网站，下载VM VirtualBox，我使用的版本是6.1。浏览英文网页如有困难，可以尝试使用Google/有道的网页翻译功能。
-
-下载完成后，按照提示安装即可，在此不过多赘述。
-
-注意：安装Oracle VM VirtualBox的时候会重置网络连接状态，并且可能会要求重启电脑。
-
-VirtualBox的使用安装完成后启动Oracle VM VirtualBox虚拟机控制台，如下图所示。
-
-
-左侧列表是已经安装过的虚拟机
-如图，我已经安装了Windows 95、MS-DOS 6.22、MS_DOS 3.30、Ubuntu-18.04
-
-
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/27-Linux-system-installation-on-Windows-virtual-machine/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="平台与工具"><a href="#平台与工具" class="headerlink" title="平台与工具"></a>平台与工具</h1><p>Windows 10</p>
+<p>Oracle VM VirtualBox 6.1 虚拟机</p>
+<p>Ubuntukylin 19.10 Linux系统镜像文件</p>
+<h1 id="虚拟机安装与使用"><a href="#虚拟机安装与使用" class="headerlink" title="虚拟机安装与使用"></a>虚拟机安装与使用</h1><h2 id="下载安装VirtualBox"><a href="#下载安装VirtualBox" class="headerlink" title="下载安装VirtualBox"></a>下载安装VirtualBox</h2><p>访问<a href="https://www.virtualbox.org/" target="_blank" rel="noopener">Oracle VM VirtualBox官方网站</a>，下载VM VirtualBox，我使用的版本是6.1。浏览英文网页如有困难，可以尝试使用Google/有道的网页翻译功能。</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/27-Linux-system-installation-on-Windows-virtual-machine/1.png" alt="下载Oracle VM VirtualBox"></p>
+<p>下载完成后，按照提示安装即可，在此不过多赘述。</p>
+<blockquote>
+<p>注意：安装Oracle VM VirtualBox的时候会重置网络连接状态，并且可能会要求重启电脑。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/25/27-Linux-system-installation-on-Windows-virtual-machine/#more" rel="contents">
@@ -1663,28 +1634,39 @@ VirtualBox的使用安装完成后启动Oracle VM VirtualBox虚拟机控制台�
 
       
         
-          
-          
-[TOC]
-计算机网络的概念与组成计算机网络的概念计算机网络系统是将地理位置不同的多个计算机系统，通过通信设备和线路连接起来，并配以功能完善的网络软件(如网络操作系统等)，按照一定的协议实现相互通信和资源共享的系统，称为计算机网络系统。 
-
-计算机网络的功能：相互通信、资源共享
-
-计算机网络的应用
-进行各种规模和不同范围的信息管理：教务管理系统、企业管理系统、办公自动化……
-进行信息/文献检索：时事新闻、市场商情、产品需求、图书、期刊、专业型动态数据
-电子数据交换：电子政务、电子商务、联网售票、网络直播
-实现不同范围的监测、数据传递、信息处理与反馈控制 
-提供分布式计算和分布式处理的环境 ：集群机、网格、云
-计算机综合(集成)制造系统(CIMS) 
-
-计算机网络的重要性
-国家（经济、军事、科技、公用事业等）的重要基础设施和命脉
-
-战争的首要攻击目标（网络部队、网络司令部）
-
-企业、公众的
-          ...
+          <p><img src="https://zam9036.gitee.io/img/postimg/26-Computer-network-study-notes-1/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="计算机网络的概念与组成"><a href="#计算机网络的概念与组成" class="headerlink" title="计算机网络的概念与组成"></a>计算机网络的概念与组成</h1><h2 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h2><p>计算机网络系统是将地理位置不同的<strong>多个计算机系统</strong>，通过<strong>通信设备</strong>和<strong>线路</strong>连接起来，并配以功能完善的<strong>网络软件</strong>(如网络操作系统等)，按照一定的<strong>协议</strong>实现<strong>相互通信和资源共享</strong>的<strong>系统</strong>，称为计算机网络系统。 </p>
+<blockquote>
+<p>计算机网络的功能：相互通信、资源共享</p>
+</blockquote>
+<h3 id="计算机网络的应用"><a href="#计算机网络的应用" class="headerlink" title="计算机网络的应用"></a>计算机网络的应用</h3><ul>
+<li>进行各种规模和不同范围的信息管理：教务管理系统、企业管理系统、办公自动化……</li>
+<li>进行信息/文献检索：时事新闻、市场商情、产品需求、图书、期刊、专业型动态数据</li>
+<li>电子数据交换：电子政务、电子商务、联网售票、网络直播</li>
+<li>实现不同范围的监测、数据传递、信息处理与反馈控制 </li>
+<li>提供分布式计算和分布式处理的环境 ：集群机、网格、云</li>
+<li>计算机综合(集成)制造系统(CIMS) </li>
+</ul>
+<h4 id="计算机网络的重要性"><a href="#计算机网络的重要性" class="headerlink" title="计算机网络的重要性"></a>计算机网络的重要性</h4><ul>
+<li><p>国家（经济、军事、科技、公用事业等）的重要基础设施和命脉</p>
+</li>
+<li><p>战争的首要攻击目标（网络部队、网络司令部）</p>
+</li>
+<li><p>企业、公众的依赖</p>
+</li>
+<li><p>公共安全、社会稳定(公安网监）</p>
+</li>
+</ul>
+<h3 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h3><ul>
+<li>网络硬件：计算机、通信设备、通信线路</li>
+<li>网络软件：网络操作系统</li>
+<li>网络协议</li>
+</ul>
+<blockquote>
+<p>网络软件硬件的关系：相辅相成，缺一不可</p>
+<p>网络协议：网络中各部分必须遵守的规定，必不可少！</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/24/26-Computer-network-study-notes-1/#more" rel="contents">
@@ -1865,23 +1847,21 @@ VirtualBox的使用安装完成后启动Oracle VM VirtualBox虚拟机控制台�
 
       
         
-          
-          [TOC]
-适用平台Windows
-Flutter介绍Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。 Flutter可以与现有的代码一起工作。在全世界，Flutter正在被越来越多的开发者和组织使用，并且Flutter是完全免费、开源的。
-Flutter安装下载flutter访问flutter官网，下载flutter。flutter集成了Dart，因此不需要单独安装dart-sdk。
-
-
-flutter有四个版本
-
-Stable channel    //稳定版。最近一年中最稳定的Beta版本。
-Beta channel    //测试版。每隔一段时间都会选择近个月中最好的Bev版本作为Beta版。
-Dev channel    //经过测试的最新版，但仍可能包含很多问题。
-Master channel    //未经过测试的最新版。
-
-
-
-          ...
+          <p>[TOC]</p>
+<h1 id="适用平台"><a href="#适用平台" class="headerlink" title="适用平台"></a>适用平台</h1><p>Windows</p>
+<h1 id="Flutter介绍"><a href="#Flutter介绍" class="headerlink" title="Flutter介绍"></a>Flutter介绍</h1><p>Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。 Flutter可以与现有的代码一起工作。在全世界，Flutter正在被越来越多的开发者和组织使用，并且Flutter是完全免费、开源的。</p>
+<h1 id="Flutter安装"><a href="#Flutter安装" class="headerlink" title="Flutter安装"></a>Flutter安装</h1><h2 id="下载flutter"><a href="#下载flutter" class="headerlink" title="下载flutter"></a>下载flutter</h2><p>访问<a href="https://flutter.dev/docs/development/tools/sdk/releases#windows" target="_blank" rel="noopener">flutter官网</a>，下载flutter。flutter集成了Dart，因此不需要单独安装dart-sdk。</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/25-Android-UI-framework-flutter-installation-and-use/1.png" alt="flutter官网"></p>
+<blockquote>
+<p>flutter有四个版本</p>
+<ul>
+<li>Stable channel    //稳定版。最近一年中最稳定的Beta版本。</li>
+<li>Beta channel    //测试版。每隔一段时间都会选择近个月中最好的Bev版本作为Beta版。</li>
+<li>Dev channel    //经过测试的最新版，但仍可能包含很多问题。</li>
+<li>Master channel    //未经过测试的最新版。</li>
+</ul>
+</blockquote>
+<p>我选择的是最新的Stable channel（v1.12.13+hotfix.7）。为避免不必要的麻烦，请不要选择C盘作为下载目录，否则可能遇到权限问题。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/29/25-Android-UI-framework-flutter-installation-and-use/#more" rel="contents">
@@ -2062,17 +2042,23 @@ Master channel    //未经过测试的最新版。
 
       
         
-          
-          AndroidAndroid（安卓）是基于Linux的移动设备操作系统，主要应用于智能手机与平板电脑，现已拓展应用于互联网电视、可穿戴设备、智能家居等领域。Android与IOS同为智能手机市场的两大操作系统。
-Android开发环境：Android Studio+Android SDK+Java 或 Android Studio+Android SDK+Kotlin
-Android一般一年更新一个大版本。
-
-Android与IOS是两大最主要的移动操作系统
-Android是市场占有率最高的移动操作系统
-
-Android Studio早期Android开发APP主要使用Eclipse和基于Eclipse的ADT，但Eclipse平台是专为Java工程开发而生的平台，先天性不足在所难免，所以Google打造了自家的Android开发平台：Android Studio。
-Android Stu
-          ...
+          <h1 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h1><p>Android（安卓）是<strong>基于Linux</strong>的移动设备操作系统，主要应用于智能手机与平板电脑，现已拓展应用于互联网电视、可穿戴设备、智能家居等领域。Android与IOS同为智能手机市场的两大操作系统。</p>
+<p>Android开发环境：Android Studio+Android SDK+Java 或 Android Studio+Android SDK+Kotlin</p>
+<p>Android一般一年更新一个大版本。</p>
+<blockquote>
+<p>Android与IOS是两大最主要的移动操作系统</p>
+<p>Android是市场占有率最高的移动操作系统</p>
+</blockquote>
+<h1 id="Android-Studio"><a href="#Android-Studio" class="headerlink" title="Android Studio"></a>Android Studio</h1><p>早期Android开发APP主要使用Eclipse和基于Eclipse的ADT，但Eclipse平台是专为Java工程开发而生的平台，先天性不足在所难免，所以Google打造了自家的Android开发平台：Android Studio。</p>
+<p>Android Studio比Eclipse有如下优势：</p>
+<ul>
+<li>Android Studio使用v7库与design库只需要增加一行配置，而Eclipse如果想使用这些库需要引用整个工程</li>
+<li>高版本的SDK与NDK只支持Android Studio，不支持Eclipse</li>
+<li>许多新功能只能在Android Studio中应用</li>
+</ul>
+<h2 id="Android-Studio安装"><a href="#Android-Studio安装" class="headerlink" title="Android Studio安装"></a>Android Studio安装</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><h4 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h4><p>JDK是Java语言的编译器，是Java开发工具包。Android采用Java语言（现还可以使用Kotlin）进行开发，故需要安装JDK。</p>
+<h4 id="SDK"><a href="#SDK" class="headerlink" title="SDK"></a>SDK</h4><p>SDK是Android应用的编译器，是软件开发工具包。LTS代表稳定支持版。</p>
+<h4 id="NDK"><a href="#NDK" class="headerlink" title="NDK"></a>NDK</h4><p>NDK是C/C++代码编译器，是原生开发工具包。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/24/24-Android-Study-Notes-1/#more" rel="contents">
@@ -2253,12 +2239,11 @@ Android Stu
 
       
         
-          
-          [TOC]
-算法概述插入排序（Insertion sort）是一种简单直观且稳定的排序算法。如果有一个已经有序的数据序列，要求在这个已经排好的数据序列中插入一个数，但要求插入后此数据序列仍然有序，这个时候就要用到一种新的排序方法—插入排序法,插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序，时间复杂度为O(n^2)。是稳定的排序方法。插入算法把要排序的数组分成两部分：第一部分包含了这个数组的所有元素，但将最后一个元素除外（让数组多一个空间才有插入的位置），而第二部分就只包含这一个元素（即待插入元素）。在第一部分排序完成后，再将这个最后元素插入到已排好序的第一部分中。插入排序的基本思想是：每步将一个待排序的记录，按其数值的大小插入前面已经排序的数字中适当位置上，直到全部插入完为止。
-图解核心原理
-插入排序需要把数列分
-          ...
+          <p>[TOC]</p>
+<h1 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h1><p>插入排序（Insertion sort）是一种简单直观且稳定的排序算法。如果有一个已经有序的数据序列，要求在这个已经排好的数据序列中插入一个数，但要求插入后此数据序列仍然有序，这个时候就要用到一种新的排序方法—插入排序法,插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序，时间复杂度为O(n^2)。是稳定的排序方法。插入算法把要排序的数组分成两部分：第一部分包含了这个数组的所有元素，但将最后一个元素除外（让数组多一个空间才有插入的位置），而第二部分就只包含这一个元素（即待插入元素）。在第一部分排序完成后，再将这个最后元素插入到已排好序的第一部分中。<br>插入排序的基本思想是：每步将一个待排序的记录，按其数值的大小插入前面已经排序的数字中适当位置上，直到全部插入完为止。</p>
+<h1 id="图解核心原理"><a href="#图解核心原理" class="headerlink" title="图解核心原理"></a>图解核心原理</h1><p><img src="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/1.jpg" alt="插入排序核心原理1"></p>
+<p>插入排序需要把数列分为两个部分，一部分为排好的有序数列和另一部分未排的无序数列。假如我们需要对上图数列进行排序。</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/23-Graphical-data-structure-Insertion-sort/2.jpg" alt="插入排序核心原理2"></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/12/23-Graphical-data-structure-Insertion-sort/#more" rel="contents">
