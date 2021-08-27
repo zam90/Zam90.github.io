@@ -120,7 +120,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -453,7 +453,17 @@
         
           
           [TOC]
-算法概述选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零
+算法概述选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。
+图解核心原理
+假设我们需要对上图数列进行排序。
+
+首先，我们需要对数列进行线性搜索(从头到尾逐个元素搜索)，找出最小的元素值(最小为1)。
+
+将值最小的元素(最小为1)与数列最左端的元素(原来数列最左端元素为6)互换。如果最小值已经在最左端，则不需要执行任何操作。
+
+保持已经排好的元素位置不变(即1的位置不再改变)，在剩余元素中找出值最小的元素(最小为2)。
+
+将此时值最小的元素(最小为2)与未排序的数列最左端的元素(原来未排序的数列最左端元素为6)互换。同样，如
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -639,7 +649,23 @@
           [TOC]
 算法概述冒泡排序重复地走访过要排序的元素列，依次比较两个相邻的元素，如果顺序（如从大到小、首字母从从Z到A）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换为止，也就是说该元素列已经排序完成为止。
 图解核心原理
-首先，我们将天平放在序列的右端，并比较天平左右的数字
+首先，我们将天平放在序列的右端，并比较天平左右的数字。在这种情况下，我们来比较7和6。
+
+比较后如果右边的数字较小，则被交换。
+
+比较完成后，逐一移动天平继续比较。这次6大于4，所以数字不交换。
+
+将天平向左移动一个位置，继续比较。这次4小于8，交换4和8。
+
+将天平向左移动一个位置，继续比较。这次4大于2，所以数字不交换。
+
+将天平向左移动一个位置，继续比较。这次2大于1，所以数字不交换。
+
+将天平向左移动一个位置，继续比较。这次1小于3，交换1和3。
+
+将天平向左移动一个位置，继续比较。这次1小于9，交换1和9。
+
+将天平向左移动一个位置，继
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -825,7 +851,12 @@
           [TOC]
 编程语言​    C++
 需求分析实验目的通过建立无向非连通图，并对图进行DFS及BFS遍历，了解图的构建算法，并加深对DFS及BFS的理解。
-实验内容1）建立无向非连通图的邻接表存储结构，要求顶点个数不少于15个。 2）用DFS及BFS对此邻接表进行遍历，打印出两种遍历的顶点访问顺序。
+实验内容1）建立无向非连通图的邻接表存储结构，要求顶点个数不少于15个。 2）用DFS及BFS对此邻接表进行遍历，打印出两种遍历的顶点访问顺序。3）给定图中任意两个顶点v1和v2及整数k，判断是否存在从v1到v2的路径长度为k的简单路径，若有打印出路径上的顶点序列（要求路径上不含回路）。进一步：找出从v1到v2的所有路径长度为k的简单路径。（简单路径：顶点序列中不含重现的顶点的路径。）
+概要设计数据结构本实验实现DFS算法是利用栈储存待访问的节点，利用栈的FILO（先入后出）来实现深度搜索；实现BFS是利用队列储存待访问的节点，利用队列的FIFO（先入后出）来实现广度搜索。
+测试用例测试以下5节点图和12节点图
+
+
+详细设计首先创建节点
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1011,7 +1042,10 @@
           [TOC]
 编程语言​    C++
 需求分析实验目的通过求解皇后问题，熟悉深度优先搜索法DFS（回溯法（Backtracking Algorithms）技术。
-实验内容由n*n个方块排成n行n列的正方形称为n元棋盘。如果两个皇后位于n元棋盘上的同一行、同一列或同一对角线上，则称它们在互相攻击。现要
+实验内容由n*n个方块排成n行n列的正方形称为n元棋盘。如果两个皇后位于n元棋盘上的同一行、同一列或同一对角线上，则称它们在互相攻击。现要找出使棋盘上n个皇后互不攻击的布局。
+概要设计数据结构用一维数组代表皇后，其中角标代表皇后的序数，数组元素的值代表皇后的列位置，用深度优先搜索法DFS（回溯法（Backtracking Algorithms）技术求解N皇后的所有不冲突放置方法。
+测试用例分别求解8皇后和12皇后的不冲突放置方法
+详细设计数据结构详细设计用一维数组代表皇后，其中角标代表皇后的序数，数组元素的值代表皇后的列位置，用深度优先搜索法DFS（回溯法Backtracking Algorithms）技术求解N皇后的所有不冲突放
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1196,7 +1230,19 @@
           
           [TOC]
 编程语言C++
-类和对象的特性31、利用面向对象的思想求解长方体体积问题描述有一个长方体类，其类名为box, 其私有数据成员包括length(长)、width(宽)、height(高)以及一个名为volume的公有成员函数，volume函数用来计算长方体的体积。现有3个长方体，分别为r1
+类和对象的特性31、利用面向对象的思想求解长方体体积问题描述有一个长方体类，其类名为box, 其私有数据成员包括length(长)、width(宽)、height(高)以及一个名为volume的公有成员函数，volume函数用来计算长方体的体积。现有3个长方体，分别为r1, r2, r3，3个长方体的长、宽、高(三者均为整数)从键盘分别输入，要求有序输出三个长方体的体积。
+
+参考代码#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+class box
+{
+private:
+    int length, width, height;
+
+public:
+    box(int a, int b, int c) : length(a), width(b), height(
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1384,7 +1430,26 @@
 运算符的重载21、定义复数类，并使用运算符重载来实现其功能问题描述定义一个复数类Complex，重载运算符+，使之能用于复数的加法。运算符的重载函数作为Complex类的成员函数，求两个复数的和。
 
 参考代码#include &lt;iostream&gt;
-using 
+using namespace std;
+
+class Complex
+{
+private:
+    double real;
+    double imag;
+
+public:
+    Complex()
+    {
+    }
+    Complex(Complex &amp;c1)
+    {
+        real = c1.real;
+        imag = c1.imag;
+    }
+    Complex(double x, double y)
+    {
+        real 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1568,7 +1633,10 @@ using
         
           
           [TOC]
-前言GitHubPages部署静态网页十分方便与快捷，常常被用来建立个人博客。但因为其服务器设在国外，且曾经被中国防火长城GFW屏蔽（后来解除屏蔽），导致其访问速度十分缓慢，甚至极少数状态下出现访问出错的状况，极大影响了博客的使用体验。所以我近期尝试将GitHub的Hexo博客迁移至国内
+前言GitHubPages部署静态网页十分方便与快捷，常常被用来建立个人博客。但因为其服务器设在国外，且曾经被中国防火长城GFW屏蔽（后来解除屏蔽），导致其访问速度十分缓慢，甚至极少数状态下出现访问出错的状况，极大影响了博客的使用体验。所以我近期尝试将GitHub的Hexo博客迁移至国内码云，以解决博客访问过于缓慢的情况。
+迁移流程建立码云仓库创建码云账号的流程我在此就不过多赘述了，根据提示操作即可，下面我来说一下建立码云仓库的操作。码云的仓库建立机制和GitHub一样，只需要新建仓库然后填写信息即可，其中仓库名字尤为关键。码云的静态资源托管平台可以托管用户的任意仓库，不必像GitHub那样仓库名必须和用户名一致才可。用户创建任意仓库，然后点击服务-GiteePages即可开启该仓库的静态资源托管服务。
+
+但是！在这里建议大家仓库名仍使用和自己码云用户名相同的名称！！因为当博客
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1753,7 +1821,8 @@ using
           
           [TOC]
 问题描述在用Git bash安装hexo-generator-search和hexo-generator-searchdb来实现本地搜索时遇到以下问题
-npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.1 (node
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.1 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.1: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1940,7 +2009,10 @@ npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.1 (node
 编程语言​    C++
 问题描述实验目的​    熟悉C++语法，了解树的概念，掌握二叉树的运算及应用，了解前序中序后序遍历二叉树的递归/非递归原理，能够实现将二叉树左右子树结点交换。
 实验内容生成一棵以二叉链表存储的二叉树（至少15个结点）
-分别用递归和非递归的方法前序、中序、后序遍
+分别用递归和非递归的方法前序、中序、后序遍历该二叉树，并打印各结点信息
+编写算法，交换该二叉树上所有结点的左右子树，并打印交换后各结点的信息
+程序设计程序要求​    生成一棵不少于15结点的二叉树，用二叉链表存储该二叉树。编写算法，利用递归算法实现该二叉树的前序中序后序遍历，并打印交换后各结点的信息。编写算法，利用非递归算法实现该二叉树的前序中序后序遍历，并打印交换后各结点的信息。编写算法，交换该二叉树上所有结点的左右子树，并打印交换后各结点的信息。
+程序功能​    生成二叉树，递归/非递归的前中后序遍历二叉树，交换二叉树上所有结点
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2125,7 +2197,11 @@ npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.1 (node
           
           [TOC]
 编程语言C++
-继承与派生11、多重继承派生类的构造函数问题描述声明一个教师(Teacher)类和一个学生(Student)类，用公有多重继承的方式声明一个在职研究生(Graduate)派生类，包含私有成员wages(津贴)。教师类中包含保护数据成员name(姓名)、age(年龄)、ti
+继承与派生11、多重继承派生类的构造函数问题描述声明一个教师(Teacher)类和一个学生(Student)类，用公有多重继承的方式声明一个在职研究生(Graduate)派生类，包含私有成员wages(津贴)。教师类中包含保护数据成员name(姓名)、age(年龄)、title(职称)。学生类中包含保护数据成员name1(姓名)、sex(性别)、score(成绩)。在定义派生类对象时给出初始化的数据，然后输出这些数据。
+要求Teacher与Student类的数据成员都在自己的构造函数内初始化，新建Graduate对象时，Graduate应通过自身的构造函数去依次调用Teacher与Student的构造函数及其他。
+部分代码已在下面给出，请在已有代码上补全，要求不能改动已有代码。
+int main() {
+    Graduate grad1(&quot;John
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2296,13 +2372,6 @@ npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.1 (node
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -2358,6 +2427,11 @@ npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.1 (node
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
     
