@@ -7874,7 +7874,7 @@ int main()
 <li><strong>出入库操作：</strong>扫码入库、扫码出库</li>
 </ul>
 <h1 id="团队成员"><a href="#团队成员" class="headerlink" title="团队成员"></a>团队成员</h1><ul>
-<li><p><strong>张京宇</strong>：文档撰写、“登录注册” “产品出入库” “人员权限”模块开发、移动端API接口开发、系统整合、模块与系统整体测试、系统部署</p>
+<li><p><strong>张京宇</strong>：文档撰写、“登录注册” “产品出入库” “人员权限” “通知公告”模块开发、移动端API接口开发、系统整合、模块与系统整体测试、系统部署</p>
 </li>
 <li><p><strong>温蟾圆</strong>：移动端整体开发与测试</p>
 </li>
@@ -7889,11 +7889,11 @@ int main()
 <p>所有成员均参与了软件系统各模块的概要设计与详细设计</p>
 </blockquote>
 <h1 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h1><ul>
-<li>HTML</li>
-<li>JavaScript </li>
 <li>PHP</li>
-<li>SQL</li>
 <li>Swift</li>
+<li>HTML</li>
+<li>JavaScript</li>
+<li>SQL</li>
 </ul>
 <h1 id="硬件环境"><a href="#硬件环境" class="headerlink" title="硬件环境"></a>硬件环境</h1><p><strong>开发环境</strong></p>
 <ul>
@@ -7917,12 +7917,10 @@ int main()
 <li>PHP脚本语言</li>
 <li>DreamWeaver、NetBeans等IDE</li>
 </ul>
-<p>客服端：</p>
+<p>移动端：</p>
 <ul>
-<li><p>MacOS Catalin操作系统</p>
-</li>
-<li><p>Xcode编程环境</p>
-</li>
+<li>MacOS Catalin操作系统</li>
+<li>Xcode编程环境</li>
 </ul>
 <p><strong>运行环境</strong></p>
 <p>服务端：</p>
