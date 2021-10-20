@@ -328,6 +328,218 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zam9036.gitee.io/2021/10/20/43-3to1baoshu-3tuichu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zam9036">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zam9036博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/10/20/43-3to1baoshu-3tuichu/" itemprop="url">n人围圈报数问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-20T22:19:59+08:00">
+                2021-10-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  794
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>[TOC]</p>
+<h1 id="代码语言"><a href="#代码语言" class="headerlink" title="代码语言"></a>代码语言</h1><p>C语言</p>
+<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>n个人围成一圈，从1-n顺序编号。从第1个人开始循环报数，报到3的人退出圈子(1 2 3 1 2 3…)，问最后留下的人编号是多少？</p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>n个人围成一圈报数，最后剩下1个人，所以<strong>退出的人数为n-1</strong>。</p>
+<p>探究一下3人围成一圈报数顺序：第1个人报1，第2个人报2，第3个人报3（3号退出圈子），第1个人报1，第2个人报2，第1个人报3（1号退出圈子）。所以3个人循环报数，最后剩下2号。在这个过程中，需要<strong>有一个变量循环访问圈子里的人</strong>（第i个人报数），还需要<strong>一个变量记录当前报的数</strong>（报到了j），同时需要一个<strong>一维数组记录第i个人是否在圈子里</strong>。</p>
+<pre><code class="c">int n = 0;    //人数n
+int i = 0;    //循环访问圈子里的人
+int j = 0;    //当前报数
+int quit = 0;    //退出圈子的人数
+int a[999];        //记录第i个人是否在圈子里：a[i]=1表示在圈子中，a[i]=0表示已经退出了圈子</code></pre>
+<p>初始化以上变量，将a[n]初值都赋为1（起始的时候n个人都在圈子里），从0-n循环遍历i，直到quit=n-1（退出圈子的人数等于n-1，即只剩1个人）。在循环过程中，每次循环i和j都加1（第i个人报第j个数）；当i循环到第n个人时，将i赋值为0，重新循环遍历；当j=3时，将a[i]置0（该人报到3，退出圈子）。</p>
+<pre><code class="c">while (1) {
+    //quit=n-1，只剩一个人，退出循环
+    if (a[i] == 1 &amp;&amp; quit == n - 1) {
+        printf(&quot;最后1个人编号是%d&quot;, i + 1);
+        break;
+    }
+    //报到的不是3，j++
+    if (a[i] == 1 &amp;&amp; j != 3) {
+        j++;
+    }
+    //报到的是3，该人退出队伍（a[i] = 0），重置j，退出人数quit+1
+    if (a[i] == 1 &amp;&amp; j == 3) {
+        a[i] = 0;
+        j = 0;
+        quit++;
+    }
+    i++;
+    if (i == n) {
+        i = 0;
+    }
+}</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2021/10/20/43-3to1baoshu-3tuichu/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://zam9036.gitee.io/2021/01/09/42-TCA-study-notes-6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2102,204 +2314,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zam9036.gitee.io/2020/04/26/33-Linux-Shell/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zam9036">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zam9036博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/26/33-Linux-Shell/" itemprop="url">Linux Shell</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-26T11:44:05+08:00">
-                2020-04-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3.1k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  13
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://zam9036.gitee.io/img/postimg/33-Linux-Shell/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="Shell概述"><a href="#Shell概述" class="headerlink" title="Shell概述"></a>Shell概述</h1><h2 id="什么是shell？"><a href="#什么是shell？" class="headerlink" title="什么是shell？"></a>什么是shell？</h2><p>命令行模式下，用户和UNIX/Linux操作系统内核间的接口。它接收用户输入的命令或数据，并解释执行，之后，将命令的执行结果在显示器等输出设备上显示出来。Shell：外壳，也就是界面</p>
-<h2 id="Shell的作用"><a href="#Shell的作用" class="headerlink" title="Shell的作用"></a>Shell的作用</h2><ul>
-<li><p>接受输入</p>
-</li>
-<li><p>解释执行接受到的输入信息</p>
-</li>
-<li><p>输出结果</p>
-</li>
-</ul>
-<h2 id="Shell提示符"><a href="#Shell提示符" class="headerlink" title="Shell提示符"></a>Shell提示符</h2><p><img src="https://zam9036.gitee.io/img/postimg/33-Linux-Shell/1.png" alt="提示符"></p>
-<p>图中<code>zam9036@zam9036-PC:~$</code> 是shell的主提示符，是shell准备接受命令时显示的字符串。</p>
-<p><code>zam9036</code>是当前用户名，<code>zam9036-PC</code>是主机名，<code>~</code>表示用户主目录，<code>$</code> 表示用户是普通用户</p>
-<blockquote>
-<p>对于超级用户（root）来说，<code>$</code>的位置出现的是<code>#</code></p>
-</blockquote>
-<p>在提示符之后，用户输入命令，然后按Enter键。shell命令解释程序将接收、分析、解释并执行相应的命令，执行结果将在屏幕上显示。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/26/33-Linux-Shell/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2349,7 +2363,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -2371,7 +2385,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2450,7 +2464,7 @@
     
       <span class="post-meta-item-text">博客总字数&#58;</span>
     
-    <span title="博客总字数">65.1k</span>
+    <span title="博客总字数">65.9k</span>
   
 </div>
 
