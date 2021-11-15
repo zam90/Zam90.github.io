@@ -7856,7 +7856,7 @@ int main()
 <td align="center">学习优秀奖学金</td>
 <td align="center">二等奖</td>
 <td align="center"></td>
-<td align="center">排名前5%</td>
+<td align="center">专业第9名</td>
 </tr>
 <tr>
 <td align="center">学习优秀奖学金</td>
@@ -8059,8 +8059,7 @@ int main()
   <entry>
     <title>校园经历</title>
     <url>/prishow/CampusExperience/index.html</url>
-    <content><![CDATA[<p>[TOC]</p>
-<p><a href="https://zam9036.gitee.io/prishow/Project/index.html">查看项目经验</a> <a href="https://zam9036.gitee.io/prishow/CertificateAward/index.html">查看证书奖项</a></p>
+    <content><![CDATA[<p><a href="https://zam9036.gitee.io/prishow/Project/index.html">查看项目经验</a> <a href="https://zam9036.gitee.io/prishow/CertificateAward/index.html">查看证书奖项</a></p>
 <h1 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h1><h2 id="学院新闻中心副主席"><a href="#学院新闻中心副主席" class="headerlink" title="学院新闻中心副主席"></a>学院新闻中心副主席</h2><p>我在2019-2021年期间<strong>连续两年</strong>在学院新闻中心<strong>主席团任职</strong>；<strong>主管新闻中心媒体运营部</strong>，负责学院对内对外宣传工作，宣传学院及各类学生组织活动、各社团活动，<strong>多次获得“优秀学生干部”称号</strong>；<strong>主管学院官方公众号</strong>“BISTU计忆传媒”的日常运营和维护，定期进行公众号认证工作，对所发推文进行排版审核分类和发布，累计发送推文213篇，订阅者1582人，累计文章阅读量超20万；<strong>创建并管理学院官方视频号</strong>“计忆传媒”，探求学院宣传工作多元化发展，发布短视频10个，累计观看次数达1万次，获赞近千次。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/CampusExperience/1.png" alt="校园经历1"></p>
 <p>我主持部门例会、负责新闻中心部员的<strong>各项技术培训工作</strong>（公众号运营、图片处理、视频剪辑等）；<strong>撰写各类文档规范</strong>：媒体运营部微信公众号运营规范、PS图片设计规范，完善了新闻中心章程；负责新闻中心部员\部长的<strong>能力调研、分组及筛选工作</strong>，培养了两届媒体运营部部长；负责协调各组织社团的宣传工作，<strong>组织主办各类活动</strong>十余次；负责学院各平台舆论导向工作。</p>
@@ -8088,12 +8087,12 @@ int main()
     <title>项目经验</title>
     <url>/prishow/Project/index.html</url>
     <content><![CDATA[<p><a href="https://zam9036.gitee.io/prishow/CampusExperience/index.html">查看校园经历</a> <a href="https://zam9036.gitee.io/prishow/CertificateAward/index.html">查看证书奖项</a></p>
-<h2 id="SW智能库存管理系统"><a href="#SW智能库存管理系统" class="headerlink" title="SW智能库存管理系统"></a>SW智能库存管理系统</h2><p>本项目采用云服务混合架构（B/S+C/S），用户可以通过浏览器访问系统查看库存统计、库存记录，并进行出入库、人员信息管理与权限分配、发布或查看通知等相关操作，也可以通过移动端扫描货物二维码快速出入库。</p>
-<p>本项目申请了一项软件著作权（第一著作权人），发表了两篇国家级期刊论文（第一作者）</p>
+<h2 id="SW智能库存管理系统"><a href="#SW智能库存管理系统" class="headerlink" title="SW智能库存管理系统"></a>SW智能库存管理系统</h2><p><a href="https://zam9036.gitee.io/prishow/SWLogisticsSystem/index.html">查看该项目详情</a></p>
+<p>本项目采用云服务混合架构（B/S+C/S），用户可以通过浏览器访问系统查看库存统计、库存记录，并进行出入库、人员信息管理与权限分配、发布或查看通知等相关操作，也可以通过移动端扫描货物二维码快速出入库。</p>
+<p>本项目申请了一项<strong>软件著作权</strong>（第一著作权人），发表了<strong>两篇国家级期刊论文</strong>（第一作者）</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/Project/1.png" alt="项目展示1"></p>
 <p><img src="https://zam9036.gitee.io/img/postimg/Project/2.png" alt="项目展示2"></p>
-<p><a href="https://zam9036.gitee.io/prishow/SWLogisticsSystem/index.html">查看该项目详情</a></p>
-<h2 id="京东"><a href="#京东" class="headerlink" title="京东"></a>京东</h2><p>以京东商城手机类产品作为抓取目标，分析页面结构及网络流量，抓取产品信息、产品价格、产品评价等数据项。利用多线程共抓取100款产品的相关信息，并将数据存入磁盘。使用支持中文的Analyzer对抓取出来的结果集进行分词提取，并进行Lucene索引构建工作。最后编写检索代码，根据索引实现输入特定关键词搜索相应商品。</p>
+<h2 id="京东商品数据采集及本地搜索构建工程"><a href="#京东商品数据采集及本地搜索构建工程" class="headerlink" title="京东商品数据采集及本地搜索构建工程"></a>京东商品数据采集及本地搜索构建工程</h2><p>以京东商城手机类产品作为抓取目标，分析页面结构及网络流量，<strong>抓取产品数据</strong>（多项产品信息、产品价格、产品评价等）。利用多线程共抓取100款产品的相关信息，并将数据存入磁盘。对抓取出来的结果集进行<strong>分词提取</strong>，并进行<strong>索引构建</strong>工作。最后编写检索代码，根据索引实现输入<strong>特定关键词搜索</strong>相应商品。</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/Project/3.png" alt="项目展示3"></p>
 ]]></content>
   </entry>
