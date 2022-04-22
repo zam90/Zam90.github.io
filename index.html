@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  583
+                  1.8k
                 </span>
               
 
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  8
                 </span>
               
             </div>
@@ -451,8 +451,7 @@
 
       
         
-          
-            <h1 id="Spring概述"><a href="#Spring概述" class="headerlink" title="Spring概述"></a>Spring概述</h1><h2 id="Spring框架概述"><a href="#Spring框架概述" class="headerlink" title="Spring框架概述"></a>Spring框架概述</h2><ul>
+          <h1 id="Spring概述"><a href="#Spring概述" class="headerlink" title="Spring概述"></a>Spring概述</h1><h2 id="Spring框架概述"><a href="#Spring框架概述" class="headerlink" title="Spring框架概述"></a>Spring框架概述</h2><ul>
 <li>Spring是轻量级的开源的JavaEE框架</li>
 <li>Spring可以解决企业应用开发的复杂性</li>
 <li>Spring有两个核心部门<strong>IOC</strong>和<strong>Aop</strong></li>
@@ -479,56 +478,13 @@
 <p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/2.png" alt="libs目录详解"></p>
 <p>自上到下依次为Jar包、文档、源代码</p>
 <p>Spring依赖commons logging，故还需下载commons logging，<a href="http://archive.apache.org/dist/commons/logging/binaries/" target="_blank" rel="noopener">下载链接</a></p>
-<h1 id="Spring入门实例"><a href="#Spring入门实例" class="headerlink" title="Spring入门实例"></a>Spring入门实例</h1><p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/3.png" alt="创建普通Java工程"></p>
-<p>导入入门实例需要的基本包</p>
-<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/4.png" alt="入门实例需要的基本包"></p>
-<p>创建User类，添加一个add方法</p>
-<pre><code class="Java">package com.ZJY.Spring5;
-
-public class User {
-    public void add(){
-        System.out.println(&quot;正在添加......&quot;);
-    }
-}</code></pre>
-<p>创建UserBean.xml，并<strong>将该xml所在包标记为资源包</strong></p>
-<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/5.png" alt="标记资源包"></p>
-<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
-
-    &lt;!--创建User对象--&gt;
-    &lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;&lt;/bean&gt;
-&lt;/beans&gt;</code></pre>
-<p>创建Test测试类</p>
-<pre><code class="java">package com.ZJY.Spring5.Test;
-
-import com.ZJY.Spring5.User;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-public class TestUser {
-    public void testadd(){
-        //加载Spring配置文件
-        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;UserBean.xml&quot;);
-        //获取配置创建的对象  &quot;user&quot;是xml中id的值
-        User user = context.getBean(&quot;user&quot;, User.class);
-        //输出
-        System.out.println(user);
-        user.add();
-    }
-}
-</code></pre>
-<p>最终结果和文件结构</p>
-<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/6.png" alt="最终结果和文件结构"></p>
-<h1 id="IOC控制反转"><a href="#IOC控制反转" class="headerlink" title="IOC控制反转"></a>IOC控制反转</h1><h2 id="IOC概念"><a href="#IOC概念" class="headerlink" title="IOC概念"></a>IOC概念</h2><p>IOC控制反转，把对象创建和对象之间的调用过程，交给Spring进行管理</p>
-<p>使用IOC目的是降低耦合度</p>
-<p>入门实例就是IOC的实现</p>
-<blockquote>
-<p>通过控制反转，对象在被创建的时候，由一个调控系统内所有对象的外界实体（xml配置的Spring容器）将其所依赖的对象的引用传递给它。也可以说，依赖被注入到对象中。通过控制反转，业务端从主动创建对象（new对象）变为被动接收对象，其不必关注对象从何而来，如何创建。</p>
-</blockquote>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2022/04/22/45-Spring5-study-notes-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2540,7 +2496,7 @@ int a[999];        //记录第i个人是否在圈子里：a[i]=1表示在圈子�
     
       <span class="post-meta-item-text">博客总字数&#58;</span>
     
-    <span title="博客总字数">66.8k</span>
+    <span title="博客总字数">68k</span>
   
 </div>
 

@@ -100,8 +100,12 @@
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/4.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/5.png">
 <meta property="og:image" content="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/6.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/7.jpg">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/8.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/9.png">
+<meta property="og:image" content="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/10.png">
 <meta property="article:published_time" content="2022-04-22T02:42:13.000Z">
-<meta property="article:modified_time" content="2022-04-22T06:32:59.650Z">
+<meta property="article:modified_time" content="2022-04-22T09:46:52.061Z">
 <meta property="article:author" content="Zam9036">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Spring">
@@ -406,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  583
+                  1.8k
                 </span>
               
 
@@ -422,7 +426,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  8
                 </span>
               
             </div>
@@ -470,6 +474,8 @@
 <p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/2.png" alt="libs目录详解"></p>
 <p>自上到下依次为Jar包、文档、源代码</p>
 <p>Spring依赖commons logging，故还需下载commons logging，<a href="http://archive.apache.org/dist/commons/logging/binaries/" target="_blank" rel="noopener">下载链接</a></p>
+<a id="more"></a>
+
 <h1 id="Spring入门实例"><a href="#Spring入门实例" class="headerlink" title="Spring入门实例"></a>Spring入门实例</h1><p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/3.png" alt="创建普通Java工程"></p>
 <p>导入入门实例需要的基本包</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/4.png" alt="入门实例需要的基本包"></p>
@@ -512,12 +518,185 @@ public class TestUser {
 </code></pre>
 <p>最终结果和文件结构</p>
 <p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/6.png" alt="最终结果和文件结构"></p>
-<h1 id="IOC控制反转"><a href="#IOC控制反转" class="headerlink" title="IOC控制反转"></a>IOC控制反转</h1><h2 id="IOC概念"><a href="#IOC概念" class="headerlink" title="IOC概念"></a>IOC概念</h2><p>IOC控制反转，把对象创建和对象之间的调用过程，交给Spring进行管理</p>
-<p>使用IOC目的是降低耦合度</p>
-<p>入门实例就是IOC的实现</p>
+<h1 id="IOC控制反转"><a href="#IOC控制反转" class="headerlink" title="IOC控制反转"></a>IOC控制反转</h1><h2 id="IOC概念"><a href="#IOC概念" class="headerlink" title="IOC概念"></a>IOC概念</h2><ul>
+<li>IOC控制反转，把对象创建和对象之间的调用过程，交给Spring进行管理</li>
+<li>使用IOC目的是降低耦合度</li>
+<li>入门实例就是IOC的实现</li>
+</ul>
 <blockquote>
 <p>通过控制反转，对象在被创建的时候，由一个调控系统内所有对象的外界实体（xml配置的Spring容器）将其所依赖的对象的引用传递给它。也可以说，依赖被注入到对象中。通过控制反转，业务端从主动创建对象（new对象）变为被动接收对象，其不必关注对象从何而来，如何创建。</p>
 </blockquote>
+<h2 id="IOC底层原理"><a href="#IOC底层原理" class="headerlink" title="IOC底层原理"></a>IOC底层原理</h2><p>IOC原理：xml解析+工厂模式+反射</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/7.jpg" alt="图解IOC底层原理"></p>
+<h2 id="IOC（接口）"><a href="#IOC（接口）" class="headerlink" title="IOC（接口）"></a>IOC（接口）</h2><p>IOC思想基于IOC容器完成，IOC容器底层就是对象工厂</p>
+<p>Spring提供IOC容器实现两种方式（两个接口）</p>
+<p>（1）BeanFactory：IOC容器基本实现，是Spring内部的使用接口，一般不提供给开发人员使用。加载配置文件时不会创建对象，在<strong>获取对象</strong>（或使用对象）时才会创建对象。</p>
+<p>（2）ApplicationContext：BeanFactory的子接口，提供更强大的功能，一般由开发人员使用。<strong>加载配置文件</strong>时就会把配置文件<strong>对象进行创建</strong>。</p>
+<h1 id="IOC操作Bean管理"><a href="#IOC操作Bean管理" class="headerlink" title="IOC操作Bean管理"></a>IOC操作Bean管理</h1><p>Bean管理指以下两个操作</p>
+<ul>
+<li>Spring创建对象</li>
+<li>Spring注入属性</li>
+</ul>
+<p>Bean管理操作有两种操作方式</p>
+<ul>
+<li>基于xml配置文件方式实现</li>
+<li>基于注解方式实现</li>
+</ul>
+<h2 id="基于XML方式"><a href="#基于XML方式" class="headerlink" title="基于XML方式"></a>基于XML方式</h2><h3 id="基于XML方式创建对象"><a href="#基于XML方式创建对象" class="headerlink" title="基于XML方式创建对象"></a>基于XML方式创建对象</h3><pre><code class="xml">&lt;!--创建User对象--&gt;
+&lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;&lt;/bean&gt;</code></pre>
+<p>在Spring配置文件中，使用Bean标签，标签里添加对应属性，就可以实现对象创建</p>
+<p>在Bean标签有很多属性，常用属性</p>
+<ul>
+<li>id属性：对象唯一标识</li>
+<li>class属性：对象类全路径（包类属性）</li>
+</ul>
+<blockquote>
+<p>name属性：早期属性，与id属性类型，可添加特殊符号</p>
+</blockquote>
+<p>创建对象时，默认执行无参构造方法，若没有无参构造方法，会报错</p>
+<h3 id="基于XML方式注入属性"><a href="#基于XML方式注入属性" class="headerlink" title="基于XML方式注入属性"></a>基于XML方式注入属性</h3><p>DI：依赖注入（注入属性），DI是IOC一种具体实现</p>
+<p><strong>set方法注入</strong></p>
+<p>需先创建对象，再注入属性</p>
+<p>1.创建user类，定义属性和set方法</p>
+<pre><code class="java">package com.ZJY.Spring5;
+
+public class User {
+    private int user_id;
+    private String user_name;
+
+    public User() {
+    }
+
+    //set方法注入
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
+    public void show(){
+        System.out.println(user_id+&quot;,&quot;+user_name);
+    }
+}
+</code></pre>
+<p>2.在xml文件（Spring配置文件）配置对象创建，配置属性注入</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!--2.创建对象，set方法注入属性--&gt;
+    &lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;
+        &lt;!--使用property进行属性注入
+            name：类里面的属性名称
+            value：向属性注入的值   --&gt;
+        &lt;property name=&quot;user_id&quot; value=&quot;123456&quot;/&gt;
+        &lt;property name=&quot;user_name&quot; value=&quot;用户名&quot;/&gt;
+    &lt;/bean&gt;
+
+&lt;/beans&gt;</code></pre>
+<p>3.写测试类，进行测试</p>
+<pre><code class="java">package com.ZJY.Spring5.Test;
+
+import com.ZJY.Spring5.User;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestUser {
+
+    public void testShow(){
+        //加载Spring配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;UserBean.xml&quot;);
+        //获取配置创建的对象  &quot;user&quot;是xml中id的值
+        User user = context.getBean(&quot;user&quot;, User.class);
+        //输出
+        System.out.println(user);
+        user.show();
+    }
+}
+</code></pre>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/8.png" alt="set注入"></p>
+<p><strong>有参构造注入</strong></p>
+<p>1.创建类、定义属性、创建属性对应的有参构造方法</p>
+<pre><code class="java">package com.ZJY.Spring5;
+
+public class User {
+    private int user_id;
+    private String user_name;
+
+    //有参构造注入
+    public User(int user_id, String user_name) {
+        this.user_id = user_id;
+        this.user_name = user_name;
+    }
+
+    public void show(){
+        System.out.println(user_id+&quot;,&quot;+user_name);
+    }
+}</code></pre>
+<p>2.在Spring配置文件中进行配置</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!--3.使用有参构造创建对象，同时进行属性注入--&gt;
+    &lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;
+        &lt;!--使用constructor-arg传入构造参数
+            name：类里面的属性名称
+            value：向属性注入的值   --&gt;
+        &lt;constructor-arg name=&quot;user_id&quot; value=&quot;12345678&quot;/&gt;
+        &lt;constructor-arg name=&quot;user_name&quot; value=&quot;用户名2&quot;/&gt;
+    &lt;/bean&gt;
+
+&lt;/beans&gt;</code></pre>
+<p>3.测试</p>
+<pre><code class="java">package com.ZJY.Spring5.Test;
+
+import com.ZJY.Spring5.User;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestUser {
+
+    public void testShow(){
+        //加载Spring配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;UserBean.xml&quot;);
+        //获取配置创建的对象  &quot;user&quot;是xml中id的值
+        User user = context.getBean(&quot;user&quot;, User.class);
+        //输出
+        System.out.println(user);
+        user.show();
+    }
+}</code></pre>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/9.png" alt="有参构造注入"></p>
+<p><strong>p名称空间注入</strong></p>
+<p>使用不多，用于简化xml配置方式</p>
+<p>1.在Spring配置文件中添加p名称空间</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!--xml相关约束--&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+&lt;/beans&gt;</code></pre>
+<p>2.在bean标签中，进行属性注入</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!--xml相关约束--&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!--4.p命名空间注入--&gt;
+    &lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot; p:user_id=&quot;1234&quot; p:user_name=&quot;某用户&quot;/&gt;
+
+&lt;/beans&gt;</code></pre>
+<p>3.测试</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/10.png" alt="p名称空间注入"></p>
 
       
     </div>
@@ -783,7 +962,7 @@ public class TestUser {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring概述"><span class="nav-number">1.</span> <span class="nav-text">Spring概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架概述"><span class="nav-number">1.1.</span> <span class="nav-text">Spring框架概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring特点"><span class="nav-number">1.2.</span> <span class="nav-text">Spring特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载Spring"><span class="nav-number">1.3.</span> <span class="nav-text">下载Spring</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring入门实例"><span class="nav-number">2.</span> <span class="nav-text">Spring入门实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IOC控制反转"><span class="nav-number">3.</span> <span class="nav-text">IOC控制反转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC概念"><span class="nav-number">3.1.</span> <span class="nav-text">IOC概念</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring概述"><span class="nav-number">1.</span> <span class="nav-text">Spring概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架概述"><span class="nav-number">1.1.</span> <span class="nav-text">Spring框架概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring特点"><span class="nav-number">1.2.</span> <span class="nav-text">Spring特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载Spring"><span class="nav-number">1.3.</span> <span class="nav-text">下载Spring</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring入门实例"><span class="nav-number">2.</span> <span class="nav-text">Spring入门实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IOC控制反转"><span class="nav-number">3.</span> <span class="nav-text">IOC控制反转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC概念"><span class="nav-number">3.1.</span> <span class="nav-text">IOC概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC底层原理"><span class="nav-number">3.2.</span> <span class="nav-text">IOC底层原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC（接口）"><span class="nav-number">3.3.</span> <span class="nav-text">IOC（接口）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IOC操作Bean管理"><span class="nav-number">4.</span> <span class="nav-text">IOC操作Bean管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基于XML方式"><span class="nav-number">4.1.</span> <span class="nav-text">基于XML方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基于XML方式创建对象"><span class="nav-number">4.1.1.</span> <span class="nav-text">基于XML方式创建对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于XML方式注入属性"><span class="nav-number">4.1.2.</span> <span class="nav-text">基于XML方式注入属性</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -817,7 +996,7 @@ public class TestUser {
     
       <span class="post-meta-item-text">博客总字数&#58;</span>
     
-    <span title="博客总字数">66.8k</span>
+    <span title="博客总字数">68k</span>
   
 </div>
 
