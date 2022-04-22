@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zam9036.gitee.io/2021/12/03/LeetCode-1-two-sum/">
+    <link itemprop="mainEntityOfPage" href="https://zam9036.gitee.io/2022/04/22/45-Spring5-study-notes-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zam9036">
@@ -347,7 +347,258 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2021/12/03/LeetCode-1-two-sum/" itemprop="url">【LeetCode笔记】1.两数之和</a></h1>
+                <a class="post-title-link" href="/2022/04/22/45-Spring5-study-notes-1/" itemprop="url">Spring5框架学习笔记（1）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-04-22T10:42:13+08:00">
+                2022-04-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  583
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Spring概述"><a href="#Spring概述" class="headerlink" title="Spring概述"></a>Spring概述</h1><h2 id="Spring框架概述"><a href="#Spring框架概述" class="headerlink" title="Spring框架概述"></a>Spring框架概述</h2><ul>
+<li>Spring是轻量级的开源的JavaEE框架</li>
+<li>Spring可以解决企业应用开发的复杂性</li>
+<li>Spring有两个核心部门<strong>IOC</strong>和<strong>Aop</strong></li>
+</ul>
+<blockquote>
+<p>IOC：控制反转，把创建对象的过程交给Spring进行管理</p>
+<p>Aop：面向切面，不修改源代码进行功能增强</p>
+</blockquote>
+<h2 id="Spring特点"><a href="#Spring特点" class="headerlink" title="Spring特点"></a>Spring特点</h2><ul>
+<li>方便解耦，简化开发</li>
+<li>Aop编程支持</li>
+<li>方便程序测试</li>
+<li>方便和其他框架进行整合</li>
+<li>方便进行事务操作</li>
+<li>降低API开发难度</li>
+</ul>
+<h2 id="下载Spring"><a href="#下载Spring" class="headerlink" title="下载Spring"></a>下载Spring</h2><p><a href="https://repo.spring.io/ui/native/release/org/springframework/spring/" target="_blank" rel="noopener">Spring所有版本下载链接</a></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/1.png" alt="下载后的Spring目录详解"></p>
+<ul>
+<li>docs：相关文档</li>
+<li>libs：Jar包</li>
+<li>schema：配置文件相关写法</li>
+</ul>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/2.png" alt="libs目录详解"></p>
+<p>自上到下依次为Jar包、文档、源代码</p>
+<p>Spring依赖commons logging，故还需下载commons logging，<a href="http://archive.apache.org/dist/commons/logging/binaries/" target="_blank" rel="noopener">下载链接</a></p>
+<h1 id="Spring入门实例"><a href="#Spring入门实例" class="headerlink" title="Spring入门实例"></a>Spring入门实例</h1><p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/3.png" alt="创建普通Java工程"></p>
+<p>导入入门实例需要的基本包</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/4.png" alt="入门实例需要的基本包"></p>
+<p>创建User类，添加一个add方法</p>
+<pre><code class="Java">package com.ZJY.Spring5;
+
+public class User {
+    public void add(){
+        System.out.println(&quot;正在添加......&quot;);
+    }
+}</code></pre>
+<p>创建UserBean.xml，并<strong>将该xml所在包标记为资源包</strong></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/5.png" alt="标记资源包"></p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!--创建User对象--&gt;
+    &lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;&lt;/bean&gt;
+&lt;/beans&gt;</code></pre>
+<p>创建Test测试类</p>
+<pre><code class="java">package com.ZJY.Spring5.Test;
+
+import com.ZJY.Spring5.User;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestUser {
+    public void testadd(){
+        //加载Spring配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;UserBean.xml&quot;);
+        //获取配置创建的对象  &quot;user&quot;是xml中id的值
+        User user = context.getBean(&quot;user&quot;, User.class);
+        //输出
+        System.out.println(user);
+        user.add();
+    }
+}
+</code></pre>
+<p>最终结果和文件结构</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/45-Spring5-study-notes-1/6.png" alt="最终结果和文件结构"></p>
+<h1 id="IOC控制反转"><a href="#IOC控制反转" class="headerlink" title="IOC控制反转"></a>IOC控制反转</h1><h2 id="IOC概念"><a href="#IOC概念" class="headerlink" title="IOC概念"></a>IOC概念</h2><p>IOC控制反转，把对象创建和对象之间的调用过程，交给Spring进行管理</p>
+<p>使用IOC目的是降低耦合度</p>
+<p>入门实例就是IOC的实现</p>
+<blockquote>
+<p>通过控制反转，对象在被创建的时候，由一个调控系统内所有对象的外界实体（xml配置的Spring容器）将其所依赖的对象的引用传递给它。也可以说，依赖被注入到对象中。通过控制反转，业务端从主动创建对象（new对象）变为被动接收对象，其不必关注对象从何而来，如何创建。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zam9036.gitee.io/2021/12/03/44-LeetCode-1-two-sum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zam9036">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zam9036博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/12/03/44-LeetCode-1-two-sum/" itemprop="url">【LeetCode笔记】1.两数之和</a></h1>
         
 
         <div class="post-meta">
@@ -2139,196 +2390,6 @@ int a[999];        //记录第i个人是否在圈子里：a[i]=1表示在圈子�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zam9036.gitee.io/2020/07/15/35-How-to-use-Google-services-on-mobile-phones/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zam9036">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zam9036博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/15/35-How-to-use-Google-services-on-mobile-phones/" itemprop="url">如何在手机上使用Google服务</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-15T09:17:00+08:00">
-                2020-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9E%81%E5%AE%A2%E7%8E%A9%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">极客玩法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  315
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://zam9036.gitee.io/img/postimg/35-How-to-use-Google-services-on-mobile-phones/wordCloud.png" alt="文章词云"></p>
-<p>[TOC]</p>
-<h1 id="适用平台"><a href="#适用平台" class="headerlink" title="适用平台"></a>适用平台</h1><p>Android</p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于众所周知的原因，Google无法在国内访问。所以国内手机厂商并没有在国产手机上提供Google服务框架，这也导致了安装Google应用变得十分困难，有些游戏在国产手机上因没有Google服务而闪退。</p>
-<p>本文仅介绍如何在手机上安装Google服务，不提供虚拟专用网络（VPN）相关内容</p>
-<h1 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h1><p>本文提供极简安装方法，适用于新手小白。</p>
-<p>首先下载<a href="https://pan.baidu.com/s/1K5aLLVxvcdb7Sthe5Q1V_w" target="_blank" rel="noopener">Google服务安装器</a>（提取码：5oea），然后在手机上安装即可。</p>
-<p>安装完成后根据提示，一键安装Google服务。注意安装过程中会多次启用应用安装程序，请注意点击“安装”按钮</p>
-<p><img src="https://zam9036.gitee.io/img/postimg/35-How-to-use-Google-services-on-mobile-phones/1.png" alt="Google服务安装器"></p>
-<p>所有服务安装完成后，连接国际互联网，然后就可以访问Google Play商店了</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/15/35-How-to-use-Google-services-on-mobile-phones/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2378,7 +2439,7 @@ int a[999];        //记录第i个人是否在圈子里：a[i]=1表示在圈子�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -2400,7 +2461,7 @@ int a[999];        //记录第i个人是否在圈子里：a[i]=1表示在圈子�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2465,7 +2526,7 @@ int a[999];        //记录第i个人是否在圈子里：a[i]=1表示在圈子�
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -2479,7 +2540,7 @@ int a[999];        //记录第i个人是否在圈子里：a[i]=1表示在圈子�
     
       <span class="post-meta-item-text">博客总字数&#58;</span>
     
-    <span title="博客总字数">66.2k</span>
+    <span title="博客总字数">66.8k</span>
   
 </div>
 
