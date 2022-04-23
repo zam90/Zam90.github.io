@@ -1,0 +1,414 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>判断某数是否为同余数-C语言 | Zam9036博客</title><meta name="keywords" content="算法,C"><meta name="author" content="Zam9036"><meta name="copyright" content="Zam9036"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[TOC] 代码语言C语言 前言近期，一个数学系专业的朋友联系我，问我能不能写出一个程序实现“判断一个数是否为整同余数”的功能，他还给了我同余数的定义：同余数是一个三边均为有理数的直角三角形的面积 问题研究对于程序设计来说，仅仅按照这个定义来实现“判断一个数是否为同余数”的功能实在困难，就单纯让计算机来判断一个数是不是有理数就是一门学问。 所以我只好另辟蹊径，找找还有什么方法能验证一个数是同余数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="判断某数是否为同余数-C语言">
+<meta property="og:url" content="https://zam9036.gitee.io/2020/03/06/31-Determine-if-a-number-is-congruent-C-language/index.html">
+<meta property="og:site_name" content="Zam9036博客">
+<meta property="og:description" content="[TOC] 代码语言C语言 前言近期，一个数学系专业的朋友联系我，问我能不能写出一个程序实现“判断一个数是否为整同余数”的功能，他还给了我同余数的定义：同余数是一个三边均为有理数的直角三角形的面积 问题研究对于程序设计来说，仅仅按照这个定义来实现“判断一个数是否为同余数”的功能实在困难，就单纯让计算机来判断一个数是不是有理数就是一门学问。 所以我只好另辟蹊径，找找还有什么方法能验证一个数是同余数">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zam9036.gitee.io/img/cover6.jpg">
+<meta property="article:published_time" content="2020-03-06T10:09:20.000Z">
+<meta property="article:modified_time" content="2021-08-27T17:11:27.288Z">
+<meta property="article:author" content="Zam9036">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="C">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zam9036.gitee.io/img/cover6.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zam9036.gitee.io/2020/03/06/31-Determine-if-a-number-is-congruent-C-language/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?19d3e3b95e9483cad1ea17ab0d349f8e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":100,"languages":{"author":"作者: Zam9036","link":"链接: ","source":"来源: Zam9036博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '判断某数是否为同余数-C语言',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-28 01:11:27'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cover6.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Zam9036博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">判断某数是否为同余数-C语言</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon fas fa-history"></i><span class="post-meta-label">更新于</span><time datetime="2021-08-27T17:11:27.288Z" title="更新于 2021-08-28 01:11:27">2021-08-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AFDemo/">技术Demo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="判断某数是否为同余数-C语言"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="代码语言"><a href="#代码语言" class="headerlink" title="代码语言"></a>代码语言</h1><p>C语言</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>近期，一个数学系专业的朋友联系我，问我能不能写出一个程序实现“判断一个数是否为整同余数”的功能，他还给了我同余数的定义：同余数是一个三边均为有理数的直角三角形的面积</p>
+<h1 id="问题研究"><a href="#问题研究" class="headerlink" title="问题研究"></a>问题研究</h1><p>对于程序设计来说，仅仅按照这个定义来实现“判断一个数是否为同余数”的功能实在困难，就单纯让计算机来判断一个数是不是有理数就是一门学问。</p>
+<p>所以我只好另辟蹊径，找找还有什么方法能验证一个数是同余数。在百度百科上，我看到了数学家给出的一个重要结论，也是验证n是整同余数的充要条件：</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/1.png" alt="重要结论"></p>
+<p>我很敬佩数学家们的智慧，能得出这个重要的结论，这对用程序验证一个数是整同余数指明了思路。</p>
+<a id="more"></a>
+
+<h2 id="四个变量"><a href="#四个变量" class="headerlink" title="四个变量"></a>四个变量</h2><p>首先，我们需要<strong>四个变量：n,a,b,v</strong></p>
+<p>这四个变量的关系是：<strong>需要寻找n，要先确定a,b,v</strong></p>
+<h2 id="四个条件"><a href="#四个条件" class="headerlink" title="四个条件"></a>四个条件</h2><p>然后，这四个变量需要满足以下四个条件</p>
+<ul>
+<li><strong>(a,b)=1</strong></li>
+<li><strong>a,b一奇数一偶数</strong></li>
+<li><strong>a,b为正整数并且a&gt;b</strong></li>
+<li><strong>a,b,n,v需要满足图中等式</strong></li>
+</ul>
+<h3 id="条件一：-a-b-1"><a href="#条件一：-a-b-1" class="headerlink" title="条件一：(a,b)=1"></a>条件一：(a,b)=1</h3><p>我们需要弄清楚这个式子是什么意思。我问了一下数学系的朋友，这式子的意思是说a,b的最大公因数是1，即a,b互质。判断两个数互质的算法我依稀记得是C语言课的练习题，很好解决。在这里我采用<strong>欧几里德算法</strong>来求取两个数的最大公因数。如果最大公因数是1也就是a,b互质的话，则函数<code>huzhi</code>返回值为1；不互质返回值为0，代码如下：</p>
+<pre><code class="c">//条件一：a,b互质
+//若互质返回1,不互质返回0
+int huzhi(int a,int b){
+    int t;
+    if(a&lt;b)
+    {
+        t=a;a=b;b=t;
+    }
+    while(a%b)
+    {
+        t=b;
+        b=a%b;
+        a=t;
+    }
+    if(b==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}</code></pre>
+<h3 id="条件二：a-b一奇数一偶数"><a href="#条件二：a-b一奇数一偶数" class="headerlink" title="条件二：a,b一奇数一偶数"></a>条件二：a,b一奇数一偶数</h3><p>这个条件很简单，只有两种情况：</p>
+<ul>
+<li>a是奇数并且b是偶数</li>
+<li>b是奇数并且a是偶数</li>
+</ul>
+<pre><code class="c">//条件二：a,b一奇数一偶数
+//满足条件返回1，不满足条件返回0
+int jio(int a,int b){
+    if((a%2==0&amp;&amp;b%2!=0)||(a%2!=0&amp;&amp;b%2==0))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}</code></pre>
+<h3 id="条件三：a-b为正整数并且a-gt-b"><a href="#条件三：a-b为正整数并且a-gt-b" class="headerlink" title="条件三：a,b为正整数并且a&gt;b"></a>条件三：a,b为正整数并且a&gt;b</h3><p>这个条件也很简单，可细化为三个条件：</p>
+<ul>
+<li>a,b为整数</li>
+<li>a&gt;0并且b&gt;0</li>
+<li>a&gt;b</li>
+</ul>
+<pre><code class="c">//条件三：a,b正整数并且a&gt;b
+//满足条件返回1，不满足条件返回0
+int tiaojian(int a,int b){
+    if(a&gt;0&amp;&amp;b&gt;0&amp;&amp;a&gt;b)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}</code></pre>
+<h3 id="条件四：a-b-n-v需要满足等式"><a href="#条件四：a-b-n-v需要满足等式" class="headerlink" title="条件四：a,b,n,v需要满足等式"></a>条件四：a,b,n,v需要满足等式</h3><p>来解释一下这个等式，这个等式or的意思是或者，所以这个等式也可以细化为三个等式三个条件：</p>
+<ul>
+<li>$nv^2=6a^2b^2-a^4-b^4$</li>
+<li>$nv^2=-6a^2b^2+a^4+b^4$</li>
+<li>$nv^2=4ab(a^2-b^2)$</li>
+</ul>
+<p>三个等式满足其一即可</p>
+<pre><code class="c">//条件四：满足判断公式
+//满足公式返回1，不满足公式返回0
+int gongshi(int a,int b,int v,int n){
+    int left=n*v*v,right1=4*a*b*(a*a-b*b),right2=6*a*a*b*b-a*a*a*a-b*b*b*b,right3=-6*a*a*b*b+a*a*a*a+b*b*b*b;
+    if(left==right1||left==right2||left==right3)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}</code></pre>
+<p>主函数暂且先用三个内嵌循环来寻找n，详见代码清单。</p>
+<h1 id="程序验证"><a href="#程序验证" class="headerlink" title="程序验证"></a>程序验证</h1><p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/2.png" alt="程序验证1"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/3.png" alt="程序验证2"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/4.png" alt="程序验证3"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/5.png" alt="程序验证4"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/6.png" alt="程序验证5"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/7.png" alt="程序验证6"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/8.png" alt="程序验证7"></p>
+<h1 id="代码清单"><a href="#代码清单" class="headerlink" title="代码清单"></a>代码清单</h1><pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+    //声明函数
+    int huzhi(int a,int b);
+    int jio(int a,int b);
+    int tiaojian(int a,int b);
+    int gongshi(int a,int b,int v,int n);
+    //设置变量
+    int a=2,b=1,v=1,n=0;
+    int t=0;//求解标记，成功求解标记为1
+    int s=2048;//求解精度，即a,b,v的取值上限
+    printf(&quot;请输入需要验证是否为同余数的数字n：&quot;);
+    scanf(&quot;%d&quot;,&amp;n);
+    //在限定范围内循环枚举尝试求解
+    for(a=2;a&lt;=s;a++)
+    {
+        for(b=1;b&lt;a;b++)
+        {
+            for(v=1;v&lt;=s;v++)
+            {
+                //判断是否满足四个条件
+                if(huzhi(a,b)&amp;&amp;jio(a,b)&amp;&amp;tiaojian(a,b)&amp;&amp;gongshi(a,b,v,n))
+                {
+                    printf(&quot;n=%d是同余数\n&quot;,n);
+                    printf(&quot;公式中a=%d,b=%d,v=%d\n&quot;,a,b,v);
+                    t=1;
+                    break;
+                }
+            }
+            //若已求解成功则跳出循环
+            if(t==1)
+            {
+                break;
+            }
+        }
+        //若已求解成功则跳出循环
+        if(t==1)
+        {
+            break;
+        }
+    }
+    //若在精度内未找到解则提示
+    if(t==0)
+    {
+        printf(&quot;n=%d在该精度内不是同余数&quot;,n);
+    }
+    return 0;
+}
+
+//条件一：a,b互质
+//若互质返回1,不互质返回0
+int huzhi(int a,int b){
+    int t;
+    if(a&lt;b)
+    {
+        t=a;a=b;b=t;
+    }
+    while(a%b)
+    {
+        t=b;
+        b=a%b;
+        a=t;
+    }
+    if(b==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+//条件二：a,b一奇数一偶数
+//满足条件返回1，不满足条件返回0
+int jio(int a,int b){
+    if((a%2==0&amp;&amp;b%2!=0)||(a%2!=0&amp;&amp;b%2==0))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+//条件三：a,b正整数并且a&gt;b
+//满足条件返回1，不满足条件返回0
+int tiaojian(int a,int b){
+    if(a&gt;0&amp;&amp;b&gt;0&amp;&amp;a&gt;b)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+//条件四：满足判断公式
+//满足公式返回1，不满足公式返回0
+int gongshi(int a,int b,int v,int n){
+    int left=n*v*v,right1=4*a*b*(a*a-b*b),right2=6*a*a*b*b-a*a*a*a-b*b*b*b,right3=-6*a*a*b*b+a*a*a*a+b*b*b*b;
+    if(left==right1||left==right2||left==right3)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+</code></pre>
+<h1 id="问题说明"><a href="#问题说明" class="headerlink" title="问题说明"></a>问题说明</h1><h2 id="关于精度问题的说明"><a href="#关于精度问题的说明" class="headerlink" title="关于精度问题的说明"></a>关于精度问题的说明</h2><p>因C语言int型变量的取值范围为：-2147483648 ~ 2147483647，而对于数学研究来说，这个范围是远远不够的，所以在程序中有可能会出现超出int精度问题，而导致某些数值判断不正确。比如：1</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/9.png" alt="精度说明1"></p>
+<p>在验证1是否为同余数的过程中，程序找到了a=129,b=64,v=68624这样一组数字，通过调试，可以发现由于这组数字超出了int型的取值范围，导致了错误。公式左边正确数值应为left=$nv^2$=$68624^2$=4709253376，而程序在运行过程中left的错误数值为414286080。所以应<strong>合理调节精度</strong>：精度过高会导致超出int型取值，从而导致某些数值被错误地判定成<strong>是</strong>同余数；精度过低会导致a,b,v取值范围不够，从而导致某些数值被错误的判定成<strong>不是</strong>同余数。</p>
+<p><img src="https://zam9036.gitee.io/img/postimg/31-Determine-if-a-number-is-congruent-C-language/10.png" alt="精度说明2"></p>
+<p>有一种超精度四则运算算法可以利用字符串模拟人类四则运算法则，该算法可以避免精度问题，有兴趣的可以自行研究。</p>
+<h2 id="关于效率问题的说明"><a href="#关于效率问题的说明" class="headerlink" title="关于效率问题的说明"></a>关于效率问题的说明</h2><p>本算法时间复杂度O($n^3$)，算法效率较低，当精度取$10^4$时，预计时间达分钟级</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Zam9036</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zam9036.gitee.io/2020/03/06/31-Determine-if-a-number-is-congruent-C-language/">https://zam9036.gitee.io/2020/03/06/31-Determine-if-a-number-is-congruent-C-language/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zam9036.gitee.io" target="_blank">Zam9036博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><a class="post-meta__tags" href="/tags/C/">C</a></div><div class="post_share"><div class="social-share" data-image="/img/cover6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechatReceivecollection.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatReceivecollection.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipayReceivecollection.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipayReceivecollection.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/03/05/30-Algorithm-Design-and-Analysis-Knowledge-Summary-2/"><img class="prev-cover" src="/img/cover3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">递归算法与分治策略-算法设计与分析知识汇总（二）</div></div></a></div><div class="next-post pull-right"><a href="/2020/03/09/32-Physical-layer-computer-network-knowledge-summary-2/"><img class="next-cover" src="/img/cover7.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">物理层-计算机网络知识汇总（二）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/10/20/43-3to1baoshu-3tuichu/" title="n人围圈报数问题"><img class="cover" src="/img/cover1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-20</div><div class="title">n人围圈报数问题</div></div></a></div><div><a href="/2019/12/03/19-Eight-Queens-Expansion-Using-DFS-Depth-First-Search-Algorithm-to-Solve-N-Queens-Problem/" title="八皇后拓展—利用DFS深度优先搜索算法解决N皇后问题"><img class="cover" src="/img/cover6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-12-03</div><div class="title">八皇后拓展—利用DFS深度优先搜索算法解决N皇后问题</div></div></a></div><div><a href="/2019/11/09/14-Pre-order-mid-order-subsequent-recursion-and-non-recursive-traversal-of-binary-tree-and-left-and-right-subtree-exchange/" title="二叉树的前序中序后续递归与非递归遍历及左右子树交换"><img class="cover" src="/img/cover7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-09</div><div class="title">二叉树的前序中序后续递归与非递归遍历及左右子树交换</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zam9036</div><div class="author-info__description">心之所向 素履以往</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:Zam9036@163.com" target="_blank" title="邮件"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://github.com/zam90" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/weixin_44381143" target="_blank" title="CSDN"><i class="fa-solid fa-c"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问Zam9036博客！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%AF%AD%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">代码语言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">2.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E7%A0%94%E7%A9%B6"><span class="toc-number">3.</span> <span class="toc-text">问题研究</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E4%B8%AA%E5%8F%98%E9%87%8F"><span class="toc-number">3.1.</span> <span class="toc-text">四个变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E4%B8%AA%E6%9D%A1%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">四个条件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E4%B8%80%EF%BC%9A-a-b-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">条件一：(a,b)&#x3D;1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E4%BA%8C%EF%BC%9Aa-b%E4%B8%80%E5%A5%87%E6%95%B0%E4%B8%80%E5%81%B6%E6%95%B0"><span class="toc-number">3.2.2.</span> <span class="toc-text">条件二：a,b一奇数一偶数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E4%B8%89%EF%BC%9Aa-b%E4%B8%BA%E6%AD%A3%E6%95%B4%E6%95%B0%E5%B9%B6%E4%B8%94a-gt-b"><span class="toc-number">3.2.3.</span> <span class="toc-text">条件三：a,b为正整数并且a&gt;b</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E5%9B%9B%EF%BC%9Aa-b-n-v%E9%9C%80%E8%A6%81%E6%BB%A1%E8%B6%B3%E7%AD%89%E5%BC%8F"><span class="toc-number">3.2.4.</span> <span class="toc-text">条件四：a,b,n,v需要满足等式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">程序验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%B8%85%E5%8D%95"><span class="toc-number">5.</span> <span class="toc-text">代码清单</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%AF%B4%E6%98%8E"><span class="toc-number">6.</span> <span class="toc-text">问题说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98%E7%9A%84%E8%AF%B4%E6%98%8E"><span class="toc-number">6.1.</span> <span class="toc-text">关于精度问题的说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%95%88%E7%8E%87%E9%97%AE%E9%A2%98%E7%9A%84%E8%AF%B4%E6%98%8E"><span class="toc-number">6.2.</span> <span class="toc-text">关于效率问题的说明</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/22/45-Spring5-study-notes-1/" title="Spring5框架学习笔记（1）"><img src="/img/cover3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring5框架学习笔记（1）"/></a><div class="content"><a class="title" href="/2022/04/22/45-Spring5-study-notes-1/" title="Spring5框架学习笔记（1）">Spring5框架学习笔记（1）</a><time datetime="2022-04-22T02:42:13.000Z" title="发表于 2022-04-22 10:42:13">2022-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/03/44-LeetCode-1-two-sum/" title="【LeetCode笔记】1.两数之和"><img src="/img/cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【LeetCode笔记】1.两数之和"/></a><div class="content"><a class="title" href="/2021/12/03/44-LeetCode-1-two-sum/" title="【LeetCode笔记】1.两数之和">【LeetCode笔记】1.两数之和</a><time datetime="2021-12-03T11:46:20.000Z" title="发表于 2021-12-03 19:46:20">2021-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/20/43-3to1baoshu-3tuichu/" title="n人围圈报数问题"><img src="/img/cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="n人围圈报数问题"/></a><div class="content"><a class="title" href="/2021/10/20/43-3to1baoshu-3tuichu/" title="n人围圈报数问题">n人围圈报数问题</a><time datetime="2021-10-20T14:19:59.000Z" title="发表于 2021-10-20 22:19:59">2021-10-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/09/42-TCA-study-notes-6/" title="TCA腾讯云开发工程师课程学习笔记（六）"><img src="/img/cover3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCA腾讯云开发工程师课程学习笔记（六）"/></a><div class="content"><a class="title" href="/2021/01/09/42-TCA-study-notes-6/" title="TCA腾讯云开发工程师课程学习笔记（六）">TCA腾讯云开发工程师课程学习笔记（六）</a><time datetime="2021-01-09T04:51:09.000Z" title="发表于 2021-01-09 12:51:09">2021-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/08/41-TCA-study-notes-5/" title="TCA腾讯云开发工程师课程学习笔记（五）"><img src="/img/cover2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCA腾讯云开发工程师课程学习笔记（五）"/></a><div class="content"><a class="title" href="/2021/01/08/41-TCA-study-notes-5/" title="TCA腾讯云开发工程师课程学习笔记（五）">TCA腾讯云开发工程师课程学习笔记（五）</a><time datetime="2021-01-08T08:46:28.000Z" title="发表于 2021-01-08 16:46:28">2021-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By Zam9036</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">心之所向 素履以往</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="心之所向,素履以往,生如逆旅,一苇以航" data-fontsize="16px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
