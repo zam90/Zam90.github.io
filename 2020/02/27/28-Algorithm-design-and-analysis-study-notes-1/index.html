@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>算法概述-算法设计与分析知识汇总（一） | Zam9036博客</title><meta name="keywords" content="算法,课程：算法设计与分析"><meta name="author" content="Zam9036"><meta name="copyright" content="Zam9036"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[TOC] 算法与程序算法概述 算法是解决问题的一种方法或一个过程。 算法是若干指令的有穷序列。 算法是以一步接一步的方式来详细描述计算机如何将输入转化为所要求的输出的过程。 算法是对计算机上执行的计算过程的具体描述。  算法的性质 输入：算法的输入由零个和多个外部量提供。 输出：算法产生至少一个量作为输出。 确定性：组成算法的每条指令清晰、无歧义。 有限性：算法中每条指令的执行次数和执行时间都">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法概述-算法设计与分析知识汇总（一）">
+<meta property="og:url" content="https://zam9036.gitee.io/2020/02/27/28-Algorithm-design-and-analysis-study-notes-1/index.html">
+<meta property="og:site_name" content="Zam9036博客">
+<meta property="og:description" content="[TOC] 算法与程序算法概述 算法是解决问题的一种方法或一个过程。 算法是若干指令的有穷序列。 算法是以一步接一步的方式来详细描述计算机如何将输入转化为所要求的输出的过程。 算法是对计算机上执行的计算过程的具体描述。  算法的性质 输入：算法的输入由零个和多个外部量提供。 输出：算法产生至少一个量作为输出。 确定性：组成算法的每条指令清晰、无歧义。 有限性：算法中每条指令的执行次数和执行时间都">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zam9036.gitee.io/img/cover4.jpg">
+<meta property="article:published_time" content="2020-02-27T09:44:43.000Z">
+<meta property="article:modified_time" content="2021-08-27T17:10:41.266Z">
+<meta property="article:author" content="Zam9036">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="课程：算法设计与分析">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zam9036.gitee.io/img/cover4.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zam9036.gitee.io/2020/02/27/28-Algorithm-design-and-analysis-study-notes-1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?19d3e3b95e9483cad1ea17ab0d349f8e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":100,"languages":{"author":"作者: Zam9036","link":"链接: ","source":"来源: Zam9036博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '算法概述-算法设计与分析知识汇总（一）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-28 01:10:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cover4.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Zam9036博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">算法概述-算法设计与分析知识汇总（一）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon fas fa-history"></i><span class="post-meta-label">更新于</span><time datetime="2021-08-27T17:10:41.266Z" title="更新于 2021-08-28 01:10:41">2021-08-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="算法概述-算法设计与分析知识汇总（一）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="https://zam9036.gitee.io/img/postimg/28-Algorithm-design-and-analysis-study-notes-1/wordCloud.png" alt="文章词云"></p>
+<p>[TOC]</p>
+<h1 id="算法与程序"><a href="#算法与程序" class="headerlink" title="算法与程序"></a>算法与程序</h1><h2 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h2><ul>
+<li>算法是解决问题的一种方法或一个过程。</li>
+<li>算法是若干指令的有穷序列。</li>
+<li>算法是以一步接一步的方式来详细描述计算机如何将输入转化为所要求的输出的过程。</li>
+<li>算法是对计算机上执行的计算过程的具体描述。</li>
+</ul>
+<h2 id="算法的性质"><a href="#算法的性质" class="headerlink" title="算法的性质"></a>算法的性质</h2><ul>
+<li><strong>输入</strong>：算法的输入由零个和多个外部量提供。</li>
+<li><strong>输出</strong>：算法产生至少一个量作为输出。</li>
+<li><strong>确定性</strong>：组成算法的每条指令清晰、无歧义。</li>
+<li><strong>有限性</strong>：算法中<strong>每条指令</strong>的执行次数和执行时间都是有限的。</li>
+</ul>
+<h2 id="程序概述"><a href="#程序概述" class="headerlink" title="程序概述"></a>程序概述</h2><p>程序是算法用某种程序设计语言的具体实现。</p>
+<blockquote>
+<p>注意：程序可以不满足算法的第4条性质“有限性”，即程序可以是无限循环的。</p>
+<p>例如操作系统就是一个在无限循环中执行的程序。</p>
+</blockquote>
+<h2 id="研究算法的必要性"><a href="#研究算法的必要性" class="headerlink" title="研究算法的必要性"></a>研究算法的必要性</h2><p>高效的算法可以节省时间和存储空间</p>
+<h1 id="算法复杂性分析"><a href="#算法复杂性分析" class="headerlink" title="算法复杂性分析"></a>算法复杂性分析</h1><h2 id="算法分析概述"><a href="#算法分析概述" class="headerlink" title="算法分析概述"></a>算法分析概述</h2><p>算法分析是研究算法对计算机资源进行使用的理论，是对算法运行所需要的计算机资源的量的预测。</p>
+<h2 id="算法复杂性"><a href="#算法复杂性" class="headerlink" title="算法复杂性"></a>算法复杂性</h2><p>算法复杂性即算法运行所需要的计算机资源的量。</p>
+<ul>
+<li>需要时间资源的量称为<strong>时间复杂性T(n)</strong>。</li>
+<li>需要空间资源的量称为<strong>空间复杂性S(n)</strong>。</li>
+<li>n为问题的规模，即输入的大小。</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="研究算法的复杂性-性能、效率-的必要性"><a href="#研究算法的复杂性-性能、效率-的必要性" class="headerlink" title="研究算法的复杂性(性能、效率)的必要性"></a>研究算法的复杂性(性能、效率)的必要性</h2><ul>
+<li>性能有时决定系统是否可行。</li>
+</ul>
+<blockquote>
+<p>实时系统中若性能低下，则导致系统不可行。</p>
+</blockquote>
+<ul>
+<li>性能是许多重要特性的基础。</li>
+</ul>
+<blockquote>
+<p>如：用户体验。</p>
+</blockquote>
+<h2 id="算法分析的基本问题"><a href="#算法分析的基本问题" class="headerlink" title="算法分析的基本问题"></a>算法分析的基本问题</h2><ul>
+<li><p>怎样评价一个问题的难易程度？</p>
+</li>
+<li><p>怎样评价一个算法的好与坏？</p>
+</li>
+<li><p>对于一个问题怎样知道哪个算法是最优的？</p>
+</li>
+</ul>
+<blockquote>
+<p>即解同样的问题是否存在其他更好的算法</p>
+</blockquote>
+<h2 id="算法执行时间相关的因素"><a href="#算法执行时间相关的因素" class="headerlink" title="算法执行时间相关的因素"></a>算法执行时间相关的因素</h2><ul>
+<li>问题的规模(N)</li>
+</ul>
+<blockquote>
+<p>排序问题中，需要排序的数：10 vs.  $10^6$</p>
+</blockquote>
+<ul>
+<li>算法的输入(I)</li>
+</ul>
+<blockquote>
+<p>排序问题中，输入已排序、逆序的情况</p>
+</blockquote>
+<ul>
+<li>算法选用的策略(A)</li>
+</ul>
+<p>T(N,I,A)，算法执行时间和问题的规模、算法的输入、算法选用的策略有关</p>
+<h2 id="算法的时间复杂性"><a href="#算法的时间复杂性" class="headerlink" title="算法的时间复杂性"></a>算法的时间复杂性</h2><h3 id="最好情况"><a href="#最好情况" class="headerlink" title="最好情况"></a>最好情况</h3><p>Tmin (n): 输入规模为n时，程序运行可能消耗的最短时间</p>
+<blockquote>
+<p>具有欺骗性，可能只对某些特定输入起作用</p>
+</blockquote>
+<h3 id="最坏情况"><a href="#最坏情况" class="headerlink" title="最坏情况"></a>最坏情况</h3><p>Tmax (n): 输入规模为n时，程序运行可能消耗的最长时间</p>
+<blockquote>
+<p>可视为对用户提供的一种承诺</p>
+</blockquote>
+<h3 id="平均情况"><a href="#平均情况" class="headerlink" title="平均情况"></a>平均情况</h3><p>Tavg(n): 输入规模为n时，所有可能输入的期望时间</p>
+<p>期望时间：$\sum$每种可能出现的输入消耗的时间*出现的概率</p>
+<p>以上三种情况衡量算法的时间复杂性<strong>可操作性最好，具有实际价值</strong>。</p>
+<h3 id="算法的渐进复杂性"><a href="#算法的渐进复杂性" class="headerlink" title="算法的渐进复杂性"></a>算法的渐进复杂性</h3><p><img src="https://zam9036.gitee.io/img/postimg/28-Algorithm-design-and-analysis-study-notes-1/1.png" alt="算法渐进复杂性1"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/28-Algorithm-design-and-analysis-study-notes-1/2.png" alt="算法渐进复杂性2"></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/28-Algorithm-design-and-analysis-study-notes-1/3.png" alt="算法渐进复杂性3"></p>
+<blockquote>
+<p>渐进复杂性：复杂性中的最高阶项</p>
+<p>对算法的分析主要是考虑算法的渐进复杂性</p>
+</blockquote>
+<h1 id="NP完全性理论"><a href="#NP完全性理论" class="headerlink" title="NP完全性理论"></a>NP完全性理论</h1><h2 id="计算模型"><a href="#计算模型" class="headerlink" title="计算模型"></a>计算模型</h2><p>在进行问题的计算复杂性分析之前，首先必须建立求解问题所用的计算模型，包括定义该计算模型中所用的基本运算。</p>
+<p>建立计算模型的目的是为了使问题的计算复杂性分析有一个共同的客观尺度。</p>
+<p>2个基本计算模型：</p>
+<ul>
+<li>随机存取机RAM(Random Access Machine)</li>
+<li>图灵机(Turing Machine)</li>
+</ul>
+<p>这2个计算模型在计算能力上是等价的，但在计算速度上是不同的。</p>
+<h3 id="随机存取机RAM"><a href="#随机存取机RAM" class="headerlink" title="随机存取机RAM"></a>随机存取机RAM</h3><p><strong>RAM的结构</strong></p>
+<p><img src="https://zam9036.gitee.io/img/postimg/28-Algorithm-design-and-analysis-study-notes-1/4.png" alt="RAM的结构"></p>
+<p><strong>RAM程序</strong></p>
+<p>一个RAM程序定义了从输入带到输出带的一个映射。可以对这种映射关系做两种不同的解释。</p>
+<ul>
+<li>解释一：把RAM程序看成是计算一个函数</li>
+</ul>
+<p>若一个RAM程序P总是从输入带前n个方格中读入n个整数x1，x2，…，xn，并且在输出带的第一个方格上输出一个整数y后停机，那么就说程序P计算了函数f(x1，x2，…，xn)=y。</p>
+<ul>
+<li>解释二：把RAM程序当作一个语言接受器</li>
+</ul>
+<p>将字符串S=a1a2…an放在输入带上。在输入带的第一个方格中放入符号a1，第二个方格中放入符号a2，…，第n个方格中放入符号an。然后在第n+1个方格中放入0，作为输入串的结束标志符。如果一个RAM程序P读了字符串S及结束标志符0后，在输出带的第一格输出一个1并停机，就说程序P接受字符串S。</p>
+<h3 id="图灵机"><a href="#图灵机" class="headerlink" title="图灵机"></a>图灵机</h3><p><img src="https://zam9036.gitee.io/img/postimg/28-Algorithm-design-and-analysis-study-notes-1/5.png" alt="图灵机"></p>
+<p>根据有限状态控制器的当前状态及每个读写头读到的带符号，图灵机的一个计算步可实现下面3个操作之一或全部：</p>
+<ul>
+<li><p>改变有限状态控制器中的状态</p>
+</li>
+<li><p>清除当前读写头下的方格中原有带符号并写上新的带符号</p>
+</li>
+<li><p>独立地将任何一个或所有读写头，向左移动一个方格(L)或向右移动一个方格(R)或停在当前单元不动(S)</p>
+</li>
+</ul>
+<p>k带图灵机可形式化地描述为一个7元组(Q，T，I，$\delta$，b，$q_0$，$q_f$)，其中:</p>
+<ul>
+<li><p>Q是有限个状态的集合。  </p>
+</li>
+<li><p>T是有限个带符号的集合。</p>
+</li>
+<li><p>I是输入符号的集合，I$\subseteq$T。</p>
+</li>
+<li><p>b是唯一的空白符，b$\in$T-I。</p>
+</li>
+<li><p>$q_0$是初始状态。   </p>
+</li>
+<li><p>$q_f$是终止(或接受)状态。</p>
+</li>
+<li><p>$\delta$是移动函数。它是从Q$\times$$T^k$的某一子集映射到 Q$\times$(T$\times${L，R，S})$^k$的函数。</p>
+</li>
+</ul>
+<p>与RAM模型类似，图灵机既可作为语言接受器，也可作为计算函数的装置。</p>
+<p>图灵机M的时间复杂性T(n)是它处理所有长度为n的输入所需的最大计算步数。如果对某个长度为n的输入，图灵机不停机，T(n)对这个n值无定义。</p>
+<p>图灵机的空间复杂性S(n)是它处理所有长度为n的输入时，在k条带上所使用过的方格数的总和。如果某个读写头无限地向右移动而不停机，S(n)也无定义。 </p>
+<h2 id="P类与NP类问题"><a href="#P类与NP类问题" class="headerlink" title="P类与NP类问题"></a>P类与NP类问题</h2><p>一般地说，将可由多项式时间算法求解的问题看作是<strong>易处理</strong>的问题(例如排序)，而将需要超多项式时间才能求解的问题看作是<strong>难处理</strong>的问题（例如汉密尔顿回路判定问题和旅行售货商最短路径求解问题）。</p>
+<p>有许多问题，从表面上看似乎并不比排序或图的搜索等问题更困难，然而至今人们还没有找到解决这些问题的多项式时间算法，也没有人能够证明这些问题需要超多项式时间下界。</p>
+<p>在图灵机计算模型下，这类问题的计算复杂性至今未知。</p>
+<p>为了研究这类问题的计算复杂性，人们提出了另一个能力更强的计算模型，即<strong>非确定性图灵机计算模型，简记为NDTM(Nondeterministic Turing Machine)。</strong></p>
+<p>在非确定性图灵机计算模型下，许多问题可以在多项式时间内求解。</p>
+<h3 id="非确定性图灵机"><a href="#非确定性图灵机" class="headerlink" title="非确定性图灵机"></a>非确定性图灵机</h3><p>在图灵机计算模型中，移动函数$\delta$是确定性的值，即对于Q$\times$$T^k$中的每一个值，当它属于$\delta$的定义域时，Q$\times$(T$\times${L，R，S})$^k$中只有唯一的值与之对应，称这种图灵机为<strong>确定性图灵机，简记为DTM(Deterministic Turing Machine)。</strong></p>
+<p>非确定性图灵机（ NDTM ）：一个k带的非确定性图灵机M是一个7元组：(Q，T，I，$\delta$，b，$q_0$，$q_f$)。与确定性图灵机不同的是<strong>非确定性图灵机允许移动函数$\delta$具有不确定性值。</strong></p>
+<p>确定性和非确定性图灵机的区别在于：确定性图灵机的每一步只有一种选择，而非确定性图灵机可以有多种选择。因此，非确定性图灵机的计算能力比确定性图灵机强的多。</p>
+<h3 id="P与NP"><a href="#P与NP" class="headerlink" title="P与NP"></a>P与NP</h3><p>P代表Polynomial，意为在<strong>(确定性)多项式时间内可解的问题。</strong></p>
+<p>NP里面的N，不是Non-Polynomial的N，是Non-Deterministic ，意为是非确定的。</p>
+<p>NP就是Non-deterministic Polynomial-time的问题，也即是<strong>非确定性多项式时间内可解的问题。</strong></p>
+<h3 id="P类与NP类语言"><a href="#P类与NP类语言" class="headerlink" title="P类与NP类语言"></a>P类与NP类语言</h3><p>P类和NP类语言的定义：</p>
+<p>P={L|L是一个能在多项式时间内被一台DTM所接受的语言} </p>
+<p>NP={L|L是一个能在多项式时间内被一台NDTM所接受的语言}</p>
+<p>由于一台确定性图灵机可看作是非确定性图灵机的特例，所以可在多项式时间内被确定性图灵机接受的语言也可在多项式时间内被非确定性图灵机接受。故P$\subseteq$NP。 </p>
+<h3 id="P、NP与NPC问题"><a href="#P、NP与NPC问题" class="headerlink" title="P、NP与NPC问题"></a>P、NP与NPC问题</h3><p><strong>P问题</strong>：可以在多项式时间内<strong>解决</strong>的问题。例如：排序。</p>
+<p><strong>NP问题</strong>：可以在多项式的时间里<strong>验证</strong>一个解的问题。分两步验证: (1) 非确定性的给出一个猜测解；（2）在多项式时间内验证。例如：验证旅行售货商问题中受否存在一个总长度不超过一个上限的路径。</p>
+<p><strong>NPC(NP Complete)问题</strong>: 是NP的一个子集，且其中每一个问题均能由NP中的任何问题在多项式时间内转化而成。</p>
+<h2 id="NP完全-NPC-问题"><a href="#NP完全-NPC-问题" class="headerlink" title="NP完全(NPC)问题"></a>NP完全(NPC)问题</h2><p>P$\subseteq$P</p>
+<p>直观上看，P类问题是确定性计算模型下的<strong>易解问题类</strong>，而NP类问题是非确定性计算模型下的<strong>易验证问题类</strong>。</p>
+<p>解决问题(最短路径)往往比验证问题（验证是否存在一条小于上限的路径）难得多。大多数计算机科学家认为：NP类问题中包含了不属于P类的语言，即P≠NP。</p>
+<p>数学上著名的NP问题，完整的叫法是NP完全问题，简单的写法是 <strong>NP=P？</strong>的问题。</p>
+<p><strong>NP完全问题</strong>的性质:如果一个NP完全问题能在多项式时间内得到解决，那么NP中的每一个问题都可以在多项式时间内求解，即P=NP。</p>
+<p>目前还没有一个NPC问题有多项式时间算法。</p>
+<h3 id="NP完全问题的例子"><a href="#NP完全问题的例子" class="headerlink" title="NP完全问题的例子"></a>NP完全问题的例子</h3><ul>
+<li>哈密尔顿回路问题(所有路径顺次经历一圈)</li>
+<li>旅行售货员问题(所有城市顺次经历一圈，圈最小) </li>
+</ul>
+<h3 id="NP完全问题的近似算法"><a href="#NP完全问题的近似算法" class="headerlink" title="NP完全问题的近似算法"></a>NP完全问题的近似算法</h3><p>迄今为止，所有的NP完全问题都还没有多项式时间算法。对于这类问题，通常可采取以下几种解题策略：</p>
+<ul>
+<li>只对问题的特殊实例求解</li>
+<li>用动态规划法或分支限界法求解 </li>
+<li>用概率算法求解 </li>
+<li>只求近似解</li>
+<li>用启发式方法求解 </li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Zam9036</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zam9036.gitee.io/2020/02/27/28-Algorithm-design-and-analysis-study-notes-1/">https://zam9036.gitee.io/2020/02/27/28-Algorithm-design-and-analysis-study-notes-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zam9036.gitee.io" target="_blank">Zam9036博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><a class="post-meta__tags" href="/tags/%E8%AF%BE%E7%A8%8B%EF%BC%9A%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/">课程：算法设计与分析</a></div><div class="post_share"><div class="social-share" data-image="/img/cover4.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechatReceivecollection.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatReceivecollection.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipayReceivecollection.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipayReceivecollection.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/02/25/27-Linux-system-installation-on-Windows-virtual-machine/"><img class="prev-cover" src="/img/cover6.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Linux系统在Windows虚拟机上的安装</div></div></a></div><div class="next-post pull-right"><a href="/2020/03/03/29-Installation-and-use-of-SQL-Server/"><img class="next-cover" src="/img/cover1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">数据库SQL Server的安装与使用</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/03/05/30-Algorithm-Design-and-Analysis-Knowledge-Summary-2/" title="递归算法与分治策略-算法设计与分析知识汇总（二）"><img class="cover" src="/img/cover3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-03-05</div><div class="title">递归算法与分治策略-算法设计与分析知识汇总（二）</div></div></a></div><div><a href="/2019/12/03/19-Eight-Queens-Expansion-Using-DFS-Depth-First-Search-Algorithm-to-Solve-N-Queens-Problem/" title="八皇后拓展—利用DFS深度优先搜索算法解决N皇后问题"><img class="cover" src="/img/cover6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-12-03</div><div class="title">八皇后拓展—利用DFS深度优先搜索算法解决N皇后问题</div></div></a></div><div><a href="/2019/11/09/14-Pre-order-mid-order-subsequent-recursion-and-non-recursive-traversal-of-binary-tree-and-left-and-right-subtree-exchange/" title="二叉树的前序中序后续递归与非递归遍历及左右子树交换"><img class="cover" src="/img/cover7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-09</div><div class="title">二叉树的前序中序后续递归与非递归遍历及左右子树交换</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zam9036</div><div class="author-info__description">心之所向 素履以往</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:Zam9036@163.com" target="_blank" title="邮件"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://github.com/zam90" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/weixin_44381143" target="_blank" title="CSDN"><i class="fa-solid fa-c"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问Zam9036博客！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E4%B8%8E%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text">算法与程序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">算法概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">1.2.</span> <span class="toc-text">算法的性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E6%A6%82%E8%BF%B0"><span class="toc-number">1.3.</span> <span class="toc-text">程序概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E7%AE%97%E6%B3%95%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="toc-number">1.4.</span> <span class="toc-text">研究算法的必要性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E6%80%A7%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">算法复杂性分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.</span> <span class="toc-text">算法分析概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">算法复杂性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E7%AE%97%E6%B3%95%E7%9A%84%E5%A4%8D%E6%9D%82%E6%80%A7-%E6%80%A7%E8%83%BD%E3%80%81%E6%95%88%E7%8E%87-%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="toc-number">2.3.</span> <span class="toc-text">研究算法的复杂性(性能、效率)的必要性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="toc-number">2.4.</span> <span class="toc-text">算法分析的基本问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%89%A7%E8%A1%8C%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3%E7%9A%84%E5%9B%A0%E7%B4%A0"><span class="toc-number">2.5.</span> <span class="toc-text">算法执行时间相关的因素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E6%80%A7"><span class="toc-number">2.6.</span> <span class="toc-text">算法的时间复杂性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A5%BD%E6%83%85%E5%86%B5"><span class="toc-number">2.6.1.</span> <span class="toc-text">最好情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%9D%8F%E6%83%85%E5%86%B5"><span class="toc-number">2.6.2.</span> <span class="toc-text">最坏情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%9D%87%E6%83%85%E5%86%B5"><span class="toc-number">2.6.3.</span> <span class="toc-text">平均情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E6%B8%90%E8%BF%9B%E5%A4%8D%E6%9D%82%E6%80%A7"><span class="toc-number">2.6.4.</span> <span class="toc-text">算法的渐进复杂性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NP%E5%AE%8C%E5%85%A8%E6%80%A7%E7%90%86%E8%AE%BA"><span class="toc-number">3.</span> <span class="toc-text">NP完全性理论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">计算模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E6%9C%BARAM"><span class="toc-number">3.1.1.</span> <span class="toc-text">随机存取机RAM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%81%B5%E6%9C%BA"><span class="toc-number">3.1.2.</span> <span class="toc-text">图灵机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P%E7%B1%BB%E4%B8%8ENP%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text">P类与NP类问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%9B%BE%E7%81%B5%E6%9C%BA"><span class="toc-number">3.2.1.</span> <span class="toc-text">非确定性图灵机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#P%E4%B8%8ENP"><span class="toc-number">3.2.2.</span> <span class="toc-text">P与NP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#P%E7%B1%BB%E4%B8%8ENP%E7%B1%BB%E8%AF%AD%E8%A8%80"><span class="toc-number">3.2.3.</span> <span class="toc-text">P类与NP类语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#P%E3%80%81NP%E4%B8%8ENPC%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.4.</span> <span class="toc-text">P、NP与NPC问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NP%E5%AE%8C%E5%85%A8-NPC-%E9%97%AE%E9%A2%98"><span class="toc-number">3.3.</span> <span class="toc-text">NP完全(NPC)问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NP%E5%AE%8C%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-number">3.3.1.</span> <span class="toc-text">NP完全问题的例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NP%E5%AE%8C%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%BF%91%E4%BC%BC%E7%AE%97%E6%B3%95"><span class="toc-number">3.3.2.</span> <span class="toc-text">NP完全问题的近似算法</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/22/45-Spring5-study-notes-1/" title="Spring5框架学习笔记（1）"><img src="/img/cover3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring5框架学习笔记（1）"/></a><div class="content"><a class="title" href="/2022/04/22/45-Spring5-study-notes-1/" title="Spring5框架学习笔记（1）">Spring5框架学习笔记（1）</a><time datetime="2022-04-22T02:42:13.000Z" title="发表于 2022-04-22 10:42:13">2022-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/03/44-LeetCode-1-two-sum/" title="【LeetCode笔记】1.两数之和"><img src="/img/cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【LeetCode笔记】1.两数之和"/></a><div class="content"><a class="title" href="/2021/12/03/44-LeetCode-1-two-sum/" title="【LeetCode笔记】1.两数之和">【LeetCode笔记】1.两数之和</a><time datetime="2021-12-03T11:46:20.000Z" title="发表于 2021-12-03 19:46:20">2021-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/20/43-3to1baoshu-3tuichu/" title="n人围圈报数问题"><img src="/img/cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="n人围圈报数问题"/></a><div class="content"><a class="title" href="/2021/10/20/43-3to1baoshu-3tuichu/" title="n人围圈报数问题">n人围圈报数问题</a><time datetime="2021-10-20T14:19:59.000Z" title="发表于 2021-10-20 22:19:59">2021-10-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/09/42-TCA-study-notes-6/" title="TCA腾讯云开发工程师课程学习笔记（六）"><img src="/img/cover3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCA腾讯云开发工程师课程学习笔记（六）"/></a><div class="content"><a class="title" href="/2021/01/09/42-TCA-study-notes-6/" title="TCA腾讯云开发工程师课程学习笔记（六）">TCA腾讯云开发工程师课程学习笔记（六）</a><time datetime="2021-01-09T04:51:09.000Z" title="发表于 2021-01-09 12:51:09">2021-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/08/41-TCA-study-notes-5/" title="TCA腾讯云开发工程师课程学习笔记（五）"><img src="/img/cover2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCA腾讯云开发工程师课程学习笔记（五）"/></a><div class="content"><a class="title" href="/2021/01/08/41-TCA-study-notes-5/" title="TCA腾讯云开发工程师课程学习笔记（五）">TCA腾讯云开发工程师课程学习笔记（五）</a><time datetime="2021-01-08T08:46:28.000Z" title="发表于 2021-01-08 16:46:28">2021-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By Zam9036</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">心之所向 素履以往</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="心之所向,素履以往,生如逆旅,一苇以航" data-fontsize="16px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
