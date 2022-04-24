@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>n人围圈报数问题 | Zam9036博客</title><meta name="keywords" content="算法,C"><meta name="author" content="Zam9036"><meta name="copyright" content="Zam9036"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="[TOC] 代码语言C语言 问题描述n个人围成一圈，从1-n顺序编号。从第1个人开始循环报数，报到3的人退出圈子(1 2 3 1 2 3…)，问最后留下的人编号是多少？ 问题分析n个人围成一圈报数，最后剩下1个人，所以退出的人数为n-1。 探究一下3人围成一圈报数顺序：第1个人报1，第2个人报2，第3个人报3（3号退出圈子），第1个人报1，第2个人报2，第1个人报3（1号退出圈子）。所以3个人循环">
+<meta property="og:type" content="article">
+<meta property="og:title" content="n人围圈报数问题">
+<meta property="og:url" content="https://zam90.github.io/2021/10/20/43-3to1baoshu-3tuichu/index.html">
+<meta property="og:site_name" content="Zam9036博客">
+<meta property="og:description" content="[TOC] 代码语言C语言 问题描述n个人围成一圈，从1-n顺序编号。从第1个人开始循环报数，报到3的人退出圈子(1 2 3 1 2 3…)，问最后留下的人编号是多少？ 问题分析n个人围成一圈报数，最后剩下1个人，所以退出的人数为n-1。 探究一下3人围成一圈报数顺序：第1个人报1，第2个人报2，第3个人报3（3号退出圈子），第1个人报1，第2个人报2，第1个人报3（1号退出圈子）。所以3个人循环">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zam90.github.io/img/cover1.jpg">
+<meta property="article:published_time" content="2021-10-20T14:19:59.000Z">
+<meta property="article:modified_time" content="2022-04-24T02:43:58.708Z">
+<meta property="article:author" content="Zam9036">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="C">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zam90.github.io/img/cover1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zam90.github.io/2021/10/20/43-3to1baoshu-3tuichu/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?19d3e3b95e9483cad1ea17ab0d349f8e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":100,"languages":{"author":"作者: Zam9036","link":"链接: ","source":"来源: Zam9036博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'n人围圈报数问题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-24 10:43:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3353806_nckm7uipqt.css"><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cover1.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Zam9036博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">n人围圈报数问题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon fas fa-history"></i><span class="post-meta-label">更新于</span><time datetime="2022-04-24T02:43:58.708Z" title="更新于 2022-04-24 10:43:58">2022-04-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">820</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="n人围圈报数问题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>[TOC]</p>
+<h1 id="代码语言"><a href="#代码语言" class="headerlink" title="代码语言"></a>代码语言</h1><p>C语言</p>
+<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>n个人围成一圈，从1-n顺序编号。从第1个人开始循环报数，报到3的人退出圈子(1 2 3 1 2 3…)，问最后留下的人编号是多少？</p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>n个人围成一圈报数，最后剩下1个人，所以<strong>退出的人数为n-1</strong>。</p>
+<p>探究一下3人围成一圈报数顺序：第1个人报1，第2个人报2，第3个人报3（3号退出圈子），第1个人报1，第2个人报2，第1个人报3（1号退出圈子）。所以3个人循环报数，最后剩下2号。在这个过程中，需要<strong>有一个变量循环访问圈子里的人</strong>（第i个人报数），还需要<strong>一个变量记录当前报的数</strong>（报到了j），同时需要一个<strong>一维数组记录第i个人是否在圈子里</strong>。</p>
+<pre><code class="c">int n = 0;	//人数n
+int i = 0;	//循环访问圈子里的人
+int j = 0;	//当前报数
+int quit = 0;	//退出圈子的人数
+int a[999];		//记录第i个人是否在圈子里：a[i]=1表示在圈子中，a[i]=0表示已经退出了圈子
+</code></pre>
+<p>初始化以上变量，将a[n]初值都赋为1（起始的时候n个人都在圈子里），从0-n循环遍历i，直到quit&#x3D;n-1（退出圈子的人数等于n-1，即只剩1个人）。在循环过程中，每次循环i和j都加1（第i个人报第j个数）；当i循环到第n个人时，将i赋值为0，重新循环遍历；当j&#x3D;3时，将a[i]置0（该人报到3，退出圈子）。</p>
+<pre><code class="c">while (1) &#123;
+    //quit=n-1，只剩一个人，退出循环
+    if (a[i] == 1 &amp;&amp; quit == n - 1) &#123;
+        printf(&quot;最后1个人编号是%d&quot;, i + 1);
+        break;
+    &#125;
+    //报到的不是3，j++
+    if (a[i] == 1 &amp;&amp; j != 3) &#123;
+        j++;
+    &#125;
+    //报到的是3，该人退出队伍（a[i] = 0），重置j，退出人数quit+1
+    if (a[i] == 1 &amp;&amp; j == 3) &#123;
+        a[i] = 0;
+        j = 0;
+        quit++;
+    &#125;
+    i++;
+    if (i == n) &#123;
+        i = 0;
+    &#125;
+&#125;
+</code></pre>
+<span id="more"></span>
+
+<h1 id="结果运行"><a href="#结果运行" class="headerlink" title="结果运行"></a>结果运行</h1><p><img src="https://zam90.github.io/img/postimg/43-3to1baoshu-3tuichu/1.png" alt="3个人"></p>
+<p><img src="https://zam90.github.io/img/postimg/43-3to1baoshu-3tuichu/2.png" alt="6个人"></p>
+<p><img src="https://zam90.github.io/img/postimg/43-3to1baoshu-3tuichu/3.png" alt="998个人"></p>
+<h1 id="代码清单"><a href="#代码清单" class="headerlink" title="代码清单"></a>代码清单</h1><pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+&#123;
+    int n = 0;	//人数n
+    int i = 0;	//循环访问圈子里的人
+    int j = 0;	//当前报数
+    int quit = 0;	//退出圈子的人数
+    int a[999];		//记录第i个人是否在圈子里：a[i]=1表示在圈子中，a[i]=0表示已经退出了圈子
+
+    //将a[n]初值置1，表示一开始所有人都在圈子里
+    for (i = 0; i &lt; 999; i++) &#123;
+        a[i] = 1;
+    &#125;
+    printf(&quot;问题描述：n个人围成一圈从1到3报数，报到3的人退出圈子，最后留下的人是多少号？\n&quot;);
+    printf(&quot;请输入n：&quot;);
+    scanf_s(&quot;%d&quot;, &amp;n);
+    i = 0;
+
+    while (1) &#123;
+        //quit=n-1，只剩一个人，退出循环
+        if (a[i] == 1 &amp;&amp; quit == n - 1) &#123;
+            printf(&quot;最后留下的人编号是%d\n&quot;, i + 1);
+            break;
+        &#125;
+        //报到的不是3，j++
+        if (a[i] == 1 &amp;&amp; j != 3) &#123;
+            j++;
+        &#125;
+        //报到的是3，该人退出队伍（a[i] = 0），重置j，退出人数quit+1
+        if (a[i] == 1 &amp;&amp; j == 3) &#123;
+            a[i] = 0;
+            j = 0;
+            quit++;
+        &#125;
+        i++;
+        if (i == n) &#123;
+            i = 0;
+        &#125;
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Zam9036</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zam90.github.io/2021/10/20/43-3to1baoshu-3tuichu/">https://zam90.github.io/2021/10/20/43-3to1baoshu-3tuichu/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zam90.github.io" target="_blank">Zam9036博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><a class="post-meta__tags" href="/tags/C/">C</a></div><div class="post_share"><div class="social-share" data-image="/img/cover1.jpg" data-sites="wechat,qq,weibo,facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechatReceivecollection.png" target="_blank"><img class="post-qr-code-img" src="/img/wechatReceivecollection.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipayReceivecollection.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipayReceivecollection.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/01/09/42-TCA-study-notes-6/"><img class="prev-cover" src="/img/cover3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">TCA腾讯云开发工程师课程学习笔记（六）</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/03/44-LeetCode-1-two-sum/"><img class="next-cover" src="/img/cover1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【LeetCode笔记】1.两数之和</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/03/06/31-Determine-if-a-number-is-congruent-C-language/" title="判断某数是否为同余数-C语言"><img class="cover" src="/img/cover6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-03-06</div><div class="title">判断某数是否为同余数-C语言</div></div></a></div><div><a href="/2019/12/03/19-Eight-Queens-Expansion-Using-DFS-Depth-First-Search-Algorithm-to-Solve-N-Queens-Problem/" title="八皇后拓展—利用DFS深度优先搜索算法解决N皇后问题"><img class="cover" src="/img/cover6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-12-03</div><div class="title">八皇后拓展—利用DFS深度优先搜索算法解决N皇后问题</div></div></a></div><div><a href="/2019/11/09/14-Pre-order-mid-order-subsequent-recursion-and-non-recursive-traversal-of-binary-tree-and-left-and-right-subtree-exchange/" title="二叉树的前序中序后续递归与非递归遍历及左右子树交换"><img class="cover" src="/img/cover7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-09</div><div class="title">二叉树的前序中序后续递归与非递归遍历及左右子树交换</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zam9036</div><div class="author-info__description">心之所向 素履以往</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">32</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zam90"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:Zam9036@163.com" target="_blank" title="邮件"><i class="iconfont icon-youjian"></i></a><a class="social-icon" href="https://blog.csdn.net/weixin_44381143" target="_blank" title="CSDN"><i class="iconfont icon-csdn"></i></a><a class="social-icon" href="https://github.com/zam90" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/zam9036" target="_blank" title="码云"><i class="iconfont icon-gitee"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎访问Zam9036博客！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%AF%AD%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">代码语言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E8%BF%90%E8%A1%8C"><span class="toc-number">4.</span> <span class="toc-text">结果运行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%B8%85%E5%8D%95"><span class="toc-number">5.</span> <span class="toc-text">代码清单</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/22/45-Spring5-study-notes-1/" title="Spring5框架学习笔记（1）"><img src="/img/cover3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring5框架学习笔记（1）"/></a><div class="content"><a class="title" href="/2022/04/22/45-Spring5-study-notes-1/" title="Spring5框架学习笔记（1）">Spring5框架学习笔记（1）</a><time datetime="2022-04-22T02:42:13.000Z" title="发表于 2022-04-22 10:42:13">2022-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/03/44-LeetCode-1-two-sum/" title="【LeetCode笔记】1.两数之和"><img src="/img/cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【LeetCode笔记】1.两数之和"/></a><div class="content"><a class="title" href="/2021/12/03/44-LeetCode-1-two-sum/" title="【LeetCode笔记】1.两数之和">【LeetCode笔记】1.两数之和</a><time datetime="2021-12-03T11:46:20.000Z" title="发表于 2021-12-03 19:46:20">2021-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/10/20/43-3to1baoshu-3tuichu/" title="n人围圈报数问题"><img src="/img/cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="n人围圈报数问题"/></a><div class="content"><a class="title" href="/2021/10/20/43-3to1baoshu-3tuichu/" title="n人围圈报数问题">n人围圈报数问题</a><time datetime="2021-10-20T14:19:59.000Z" title="发表于 2021-10-20 22:19:59">2021-10-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/09/42-TCA-study-notes-6/" title="TCA腾讯云开发工程师课程学习笔记（六）"><img src="/img/cover3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCA腾讯云开发工程师课程学习笔记（六）"/></a><div class="content"><a class="title" href="/2021/01/09/42-TCA-study-notes-6/" title="TCA腾讯云开发工程师课程学习笔记（六）">TCA腾讯云开发工程师课程学习笔记（六）</a><time datetime="2021-01-09T04:51:09.000Z" title="发表于 2021-01-09 12:51:09">2021-01-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/08/41-TCA-study-notes-5/" title="TCA腾讯云开发工程师课程学习笔记（五）"><img src="/img/cover2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCA腾讯云开发工程师课程学习笔记（五）"/></a><div class="content"><a class="title" href="/2021/01/08/41-TCA-study-notes-5/" title="TCA腾讯云开发工程师课程学习笔记（五）">TCA腾讯云开发工程师课程学习笔记（五）</a><time datetime="2021-01-08T08:46:28.000Z" title="发表于 2021-01-08 16:46:28">2021-01-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2022 By Zam9036</div><div class="framework-info"><span>Hexo • Butterfly</span></div><div class="footer_custom_text">心之所向 素履以往</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="心之所向,素履以往,生如逆旅,一苇以航" data-fontsize="16px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
