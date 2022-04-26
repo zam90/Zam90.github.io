@@ -5036,8 +5036,7 @@ public class TestUser &#123;
 </blockquote>
 <p>创建对象时，默认执行无参构造方法，若没有无参构造方法，会报错</p>
 <h3 id="基于XML方式注入属性"><a href="#基于XML方式注入属性" class="headerlink" title="基于XML方式注入属性"></a>基于XML方式注入属性</h3><p>DI：依赖注入（注入属性），DI是IOC一种具体实现</p>
-<p><strong>set方法注入</strong></p>
-<p>需先创建对象，再注入属性</p>
+<h4 id="set方法注入"><a href="#set方法注入" class="headerlink" title="set方法注入"></a>set方法注入</h4><p>需先创建对象，再注入属性</p>
 <p>1.创建user类，定义属性和set方法</p>
 <pre><code class="java">package com.ZJY.Spring5;
 
@@ -5100,8 +5099,7 @@ public class TestUser &#123;
 &#125;
 </code></pre>
 <p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/8.png" alt="set注入"></p>
-<p><strong>有参构造注入</strong></p>
-<p>1.创建类、定义属性、创建属性对应的有参构造方法</p>
+<h4 id="有参构造注入"><a href="#有参构造注入" class="headerlink" title="有参构造注入"></a>有参构造注入</h4><p>1.创建类、定义属性、创建属性对应的有参构造方法</p>
 <pre><code class="java">package com.ZJY.Spring5;
 
 public class User &#123;
@@ -5157,8 +5155,7 @@ public class TestUser &#123;
 &#125;
 </code></pre>
 <p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/9.png" alt="有参构造注入"></p>
-<p><strong>p名称空间注入</strong></p>
-<p>使用不多，用于简化xml配置方式</p>
+<h4 id="p名称空间注入"><a href="#p名称空间注入" class="headerlink" title="p名称空间注入"></a>p名称空间注入</h4><p>使用不多，用于简化xml配置方式</p>
 <p>1.在Spring配置文件中添加p名称空间</p>
 <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!--xml相关约束--&gt;
@@ -5184,6 +5181,20 @@ public class TestUser &#123;
 </code></pre>
 <p>3.测试</p>
 <p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/10.png" alt="p名称空间注入"></p>
+<h4 id="xml注入其他类型属性"><a href="#xml注入其他类型属性" class="headerlink" title="xml注入其他类型属性"></a>xml注入其他类型属性</h4><p><strong>null值</strong></p>
+<p>xml配置文件：</p>
+<pre><code class="xml">&lt;!--5.设置空值NULL--&gt;
+&lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;
+    &lt;property name=&quot;user_id&quot; value=&quot;123456&quot;/&gt;
+    &lt;property name=&quot;user_name&quot;&gt;
+        &lt;!--设置空值NULL--&gt;
+        &lt;null/&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre>
+<p><strong>属性值包含特殊符号</strong></p>
+<p>如包含 “&lt;” “&gt;” 等特殊符号</p>
+<p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/11.png" alt="属性值包含特殊符号"></p>
 ]]></content>
       <categories>
         <category>学习笔记</category>
