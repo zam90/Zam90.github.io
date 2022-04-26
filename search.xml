@@ -5194,7 +5194,143 @@ public class TestUser &#123;
 </code></pre>
 <p><strong>属性值包含特殊符号</strong></p>
 <p>如包含 “&lt;” “&gt;” 等特殊符号</p>
+<pre><code class="xml">&lt;!--6.特殊符号--&gt;
+&lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;
+    &lt;property name=&quot;user_id&quot; value=&quot;123456&quot;/&gt;
+    &lt;!--1.转义: &amp;lt; = &lt; || &amp;gt; = &gt; --&gt;
+    &lt;property name=&quot;user_name&quot; value=&quot;&amp;lt;XXX&amp;gt;&quot;/&gt;
+&lt;/bean&gt;
+</code></pre>
+<pre><code class="xml">&lt;!--6.特殊符号--&gt;
+&lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;
+    &lt;property name=&quot;user_id&quot; value=&quot;123456&quot;/&gt;
+    &lt;!--2.使用CDATA--&gt;
+    &lt;property name=&quot;user_name&quot;&gt;
+        &lt;value&gt;&lt;![CDATA[ &lt;XXX&gt; ]]&gt;&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre>
 <p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/11.png" alt="属性值包含特殊符号"></p>
+<h4 id="注入属性——外部Bean"><a href="#注入属性——外部Bean" class="headerlink" title="注入属性——外部Bean"></a>注入属性——外部Bean</h4><p>1.创建DAO类</p>
+<pre><code class="java">package com.ZJY.Spring5.DAO;
+
+public class UserDAO &#123;
+    public void add()&#123;
+        System.out.println(&quot;DAO添加.....&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>2.创建Service类，在Service中调用DAO的方法</p>
+<pre><code class="java">package com.ZJY.Spring5.Service;
+
+import com.ZJY.Spring5.DAO.UserDAO;
+
+public class UserService &#123;
+    //创建UserDAO类型的属性，生成set方法
+    private UserDAO userDAO;
+    public void setUserDAO(UserDAO userDAO) &#123;
+        this.userDAO = userDAO;
+    &#125;
+
+    public void add()&#123;
+        System.out.println(&quot;添加服务.....&quot;);
+        userDAO.add();
+    &#125;
+&#125;
+</code></pre>
+<p>3.在Spring配置文件中进行配置</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!--创建Service和DAO对象--&gt;
+    &lt;bean id=&quot;userService&quot; class=&quot;com.ZJY.Spring5.Service.UserService&quot;&gt;
+        &lt;!--注入userDAO对象
+            name:Service类中的UserDAO属性名称
+            ref:xml中已创建对象的Bean标签的id值
+            --&gt;
+        &lt;property name=&quot;userDAO&quot; ref=&quot;userDAO123&quot;/&gt;
+    &lt;/bean&gt;
+    &lt;bean id=&quot;userDAO123&quot; class=&quot;com.ZJY.Spring5.DAO.UserDAO&quot;/&gt;
+
+&lt;/beans&gt;
+</code></pre>
+<p>4.测试类</p>
+<pre><code class="java">package com.ZJY.Spring5.Test;
+
+import com.ZJY.Spring5.Service.UserService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestServiceUser &#123;
+    public void show()&#123;
+        //加载Spring配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;ServiceBean.xml&quot;);
+        //获取配置创建的对象  &quot;user&quot;是xml中id的值
+        UserService userService = context.getBean(&quot;userService&quot;, UserService.class);
+        //输出
+        userService.add();
+    &#125;
+&#125;
+</code></pre>
+<p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/12.png" alt="注入属性——外部Bean"></p>
+<h4 id="注入属性——内部bean和级联赋值"><a href="#注入属性——内部bean和级联赋值" class="headerlink" title="注入属性——内部bean和级联赋值"></a>注入属性——内部bean和级联赋值</h4><p>以部门和员工一对多的关系为例：一个部门对应多个员工，一个员工对应一个部门</p>
+<p>1.编写部门类和员工类</p>
+<pre><code class="java">package com.ZJY.Spring5.DAO;
+
+//部门类
+public class Dept &#123;
+    private String dept_name;
+
+    public void setDept_name(String dept_name) &#123;
+        this.dept_name = dept_name;
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">package com.ZJY.Spring5.DAO;
+
+//员工类
+public class Emp &#123;
+    private String emp_name,emp_gender;
+    private Dept dept;  //设置员工的部门
+
+    public void setEmp_name(String emp_name) &#123;
+        this.emp_name = emp_name;
+    &#125;
+
+    public void setEmp_gender(String emp_gender) &#123;
+        this.emp_gender = emp_gender;
+    &#125;
+
+    public void setDept(Dept dept) &#123;
+        this.dept = dept;
+    &#125;
+&#125;
+</code></pre>
+<p>2.xml配置文件</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!--内部Bean--&gt;
+    &lt;bean id = &quot;emp&quot; class=&quot;com.ZJY.Spring5.DAO.Emp&quot;&gt;
+        &lt;!--设置两个普通属性--&gt;
+        &lt;property name=&quot;emp_name&quot; value=&quot;京京&quot;/&gt;
+        &lt;property name=&quot;emp_gender&quot; value=&quot;男&quot;/&gt;
+        &lt;property name=&quot;dept&quot;&gt;
+            &lt;!--内部Bean 直接创建Dept对象--&gt;
+            &lt;bean class=&quot;com.ZJY.Spring5.DAO.Dept&quot;&gt;
+                &lt;property name=&quot;dept_name&quot; value=&quot;安保处&quot;/&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+    
+    &lt;!--当然也可以使用外部Bean方法在Emp中创建Dept对象--&gt;
+&lt;/beans&gt;
+</code></pre>
+<p>级联赋值：在对某一对象进行属性注入的同时，实现对另一对象的属性注入（如上代码，对Emp对象进行属性注入，同时创建Dept类进行Dept类的赋值）</p>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -8283,9 +8419,9 @@ int main()
 <p>Welcome to the  <strong>Zam9036’s Blog</strong>, where you’ll find something for life and some demo.</p>
 <h1 id="个人介绍Introduction"><a href="#个人介绍Introduction" class="headerlink" title="个人介绍Introduction"></a>个人介绍Introduction</h1><p>我是Zam9036，是一名<strong>计算机科学与技术专业</strong>的学生</p>
 <p>我的微信公众号：<strong>极客杂货铺Z</strong>；</p>
-<p><img src="https://zam90.github.io/images/OfficialAccountQRCode.png" alt="微信公众号"></p>
+<p><img src="https://zam90.github.io/img/OfficialAccountQRCode.png" alt="微信公众号"></p>
 <p>微信小程序：<strong>极客杂货铺Z</strong>，欢迎大家关注！</p>
-<p><img src="https://zam90.github.io/images/MiniProgramQRCode.png" alt="微信小程序"></p>
+<p><img src="https://zam90.github.io/img/MiniProgramQRCode.png" alt="微信小程序"></p>
 <p>I am Zam9036, and I am a student majoring in computer science and technology.</p>
 <p>My WeChat  Official Accounts : 极客杂货铺Z; </p>
 <p>WeChat mini program : 极客杂货铺Z, welcome everyone to follow and pay attention!</p>
