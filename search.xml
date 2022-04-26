@@ -2626,12 +2626,8 @@ theme: obsidian
 <p>定义域n&#x3D;0一行 称为边界条件<br>定义域$n&gt;0$一行 称为递归方程</p>
 </blockquote>
 <p>边界条件与递归方程是递归函数的2个要素，递归函数只有具备了这2个要素，才能在有限次计算后得出结果。</p>
-<pre><code class="c">int factorial(int n)
-&#123;
-    if (n==0) return 1;
-    return  n*factorial(n-1); 
-&#125;
-</code></pre>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">factorial</span><span class="params">(<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (n==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span>  n*factorial(n<span class="number">-1</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <span id="more"></span>
 
 <h3 id="斐波那契-Fibonacci-序列"><a href="#斐波那契-Fibonacci-序列" class="headerlink" title="斐波那契(Fibonacci)序列"></a>斐波那契(Fibonacci)序列</h3><p>斐波那契(Fibonacci)序列：<br>$$<br>\begin{aligned}<br>&amp;\mathrm{F}<em>{0}&#x3D;\mathrm{F}</em>{1}&#x3D;1\<br>&amp;\mathrm{F}<em>{\mathrm{i}}&#x3D;\mathrm{F}</em>{\mathrm{i}-1}+\mathrm{F}_{\mathrm{i}-2} \quad(\mathrm{i}&gt;1)<br>\end{aligned}<br>$$</p>
@@ -2639,26 +2635,12 @@ theme: obsidian
 <p>第一行为边界条件<br>第二行为递归方程</p>
 </blockquote>
 <p>求斐波那契数</p>
-<pre><code class="c">int fibonacci(int n)
-&#123;
-    if (n &lt;= 1) return 1;
-    return fibonacci(n-1)+fibonacci(n-2);
-&#125;
-</code></pre>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fibonacci</span><span class="params">(<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> fibonacci(n<span class="number">-1</span>)+fibonacci(n<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="Ackerman函数"><a href="#Ackerman函数" class="headerlink" title="Ackerman函数"></a>Ackerman函数</h3><p>双递归函数：函数及它的一个变量是由函数自身定义。</p>
 <p>Ackerman函数A(n，m)定义如下：<br>$$<br>\left{\begin{array}{cc}<br>A(1,0)&#x3D;2 \<br>A(0, m)&#x3D;1 &amp; m \geq 0 \<br>A(n, 0)&#x3D;n+2 &amp; n \geq 2 \<br>A(n, m)&#x3D;A(A(n-1, m), m-1) &amp; n, m \geq 1<br>\end{array}\right.<br>$$</p>
-<pre><code class="c">int Ackerman(int n,int m)
-&#123;
-    if(n==1 &amp;&amp; m==0)
-        return 2;
-    else if(n==0)
-        return 1;
-    else if(m==0)
-        return n+2;
-    else
-        return Ackerman(Ackerman(n-1,m),m-1);
-&#125;
-</code></pre>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">Ackerman</span><span class="params">(<span class="type">int</span> n,<span class="type">int</span> m)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span> &amp;&amp; m==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(n==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(m==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> n+<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> Ackerman(Ackerman(n<span class="number">-1</span>,m),m<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="Hanoi塔问题"><a href="#Hanoi塔问题" class="headerlink" title="Hanoi塔问题"></a>Hanoi塔问题</h3><ul>
 <li>A,B,C是3个塔座。</li>
 <li>塔座A上有一叠共n个圆盘，这些圆盘自下而上，由大到小地叠在一起。</li>
@@ -2673,16 +2655,8 @@ theme: obsidian
 <li>规则3：在满足移动规则1和2的前提下，可将圆盘移至A,B,C中任一塔座上</li>
 </ul>
 <p><img src="https://zam90.github.io/img/postimg/30-Algorithm-Design-and-Analysis-Knowledge-Summary-2/2.png" alt="汉诺塔问题2"></p>
-<pre><code class="c">void hanoi(int n, int a, int b, int c)
-&#123;
-   if (n &gt;=1)
-   &#123;
-      hanoi(n-1, a, c, b);
-      move(a,c);
-      hanoi(n-1, b, a, c);
-   &#125;
-&#125;
-</code></pre>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">hanoi</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">if</span> (n &gt;=<span class="number">1</span>)</span><br><span class="line">   &#123;</span><br><span class="line">      hanoi(n<span class="number">-1</span>, a, c, b);</span><br><span class="line">      move(a,c);</span><br><span class="line">      hanoi(n<span class="number">-1</span>, b, a, c);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>当n&#x3D;1时，问题比较简单。此时，只要将编号为1的圆盘从塔座a直接移至塔座c上即可。</p>
 <p>当n＞1时，需要利用塔座b作为辅助塔座。此时若能设法将n-1个较小的圆盘依照移动规则从塔座a移至塔座b，然后，将剩下的最大圆盘从塔座a移至塔座c，最后，再设法将n-1个较小的圆盘依照移动规则从塔座b移至塔座c。</p>
@@ -2731,15 +2705,8 @@ theme: obsidian
 <li>该问题所分解出的各个子问题是相互独立的，即子问题之间不包含公共的子问题</li>
 </ul>
 <h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><p>实践证明，在用分治法设计算法时，最好使子问题的规模大致相同，即将一个问题分成大小相等的k个子问题。这种使子问题规模大致相等的做法是出自<strong>平衡子问题的思想</strong>，它几乎总是比子问题规模不等的做法要好。</p>
-<pre><code class="c">divide-and-conquer(P)
-&#123;
-    if ( | P | &lt;= n0) solve(P);   //解决小规模的问题
-    divide P into smaller subinstances P1,P2,...,Pk；//分解问题
-    for (i=1;i&lt;=k;i++)
-    yi=divide-and-conquer(Pi);  //递归的解各子问题
-    return merge(y1,...,yk);  //将各子问题的解合并为原问题的解
-&#125;
-</code></pre>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">divide-and-conquer(P)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> ( | P | &lt;= n0) solve(P);   <span class="comment">//解决小规模的问题</span></span><br><span class="line">    divide P into smaller subinstances P1,P2,...,Pk；<span class="comment">//分解问题</span></span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">1</span>;i&lt;=k;i++)</span><br><span class="line">    yi=divide-and-conquer(Pi);  <span class="comment">//递归的解各子问题</span></span><br><span class="line">    <span class="keyword">return</span> merge(y1,...,yk);  <span class="comment">//将各子问题的解合并为原问题的解</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="复杂性分析"><a href="#复杂性分析" class="headerlink" title="复杂性分析"></a>复杂性分析</h2><p>分治法将规模为n的问题分成k个规模为n&#x2F;m的子问题。设分解阀值$n_0$&#x3D;1，且解规模为1的问题耗费1个单位时间。再设将原问题分解为k个子问题以及将k个子问题的解合并为原问题的解需用f(n)个单位时间。用T(n)表示该分治法解规模为|P|&#x3D;n的问题所需的计算时间，则：<br>$$<br>T(n)&#x3D;\left{\begin{array}{cl}<br>O(1) &amp; n&#x3D;1 \<br>k T(n &#x2F; m)+f(n) &amp; n&gt;1<br>\end{array}\right.<br>$$<br>通过迭代法求得方程的解：<br>$$<br>T(n)&#x3D;n^{\log <em>{m} k}+\sum</em>{j&#x3D;0}^{\log _{m} n-1} k^{j} f\left(n &#x2F; m^{j}\right)<br>$$</p>
 ]]></content>
       <categories>
@@ -4958,7 +4925,7 @@ cond(no)-&gt;sub-&gt;io
 <p>导入入门实例需要的基本包</p>
 <p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/4.png" alt="入门实例需要的基本包"></p>
 <p>创建User类，添加一个add方法</p>
-<pre><code class="Java">package com.ZJY.Spring5;
+<pre><code class="java">package com.ZJY.Spring5;
 
 public class User &#123;
     public void add()&#123;
