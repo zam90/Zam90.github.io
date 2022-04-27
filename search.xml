@@ -4892,7 +4892,8 @@ cond(no)-&gt;sub-&gt;io
   <entry>
     <title>Spring5框架学习笔记（1）</title>
     <url>/2022/04/22/45-Spring5-study-notes-1/</url>
-    <content><![CDATA[<h1 id="Spring概述"><a href="#Spring概述" class="headerlink" title="Spring概述"></a>Spring概述</h1><h2 id="Spring框架概述"><a href="#Spring框架概述" class="headerlink" title="Spring框架概述"></a>Spring框架概述</h2><ul>
+    <content><![CDATA[<p>[TOC]</p>
+<h1 id="Spring概述"><a href="#Spring概述" class="headerlink" title="Spring概述"></a>Spring概述</h1><h2 id="Spring框架概述"><a href="#Spring框架概述" class="headerlink" title="Spring框架概述"></a>Spring框架概述</h2><ul>
 <li>Spring是轻量级的开源的JavaEE框架</li>
 <li>Spring可以解决企业应用开发的复杂性</li>
 <li>Spring有两个核心部门<strong>IOC</strong>和<strong>Aop</strong></li>
@@ -5298,6 +5299,211 @@ public class Emp &#123;
 &lt;/beans&gt;
 </code></pre>
 <p>级联赋值：在对某一对象进行属性注入的同时，实现对另一对象的属性注入（如上代码，对Emp对象进行属性注入，同时创建Dept类进行Dept类的赋值）</p>
+<h4 id="注入属性——集合类型"><a href="#注入属性——集合类型" class="headerlink" title="注入属性——集合类型"></a>注入属性——集合类型</h4><ul>
+<li>注入数组类型属性</li>
+<li>注入List集合类型属性</li>
+<li>注入Map集合类型属性</li>
+<li>注入Set集合类型属性</li>
+</ul>
+<p>1.创建实体类，定义数组、List、Map、Set类型属性，生成Set方法</p>
+<pre><code class="java">package com.ZJY.Spring5.DAO;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Student &#123;
+    //1.数组类型属性
+    private String[] courses;
+    public void setCourses(String[] courses)&#123;
+        this.courses = courses;
+    &#125;
+    //2.List集合类型属性
+    private List&lt;String&gt; list;
+    public void setList(List&lt;String&gt; list) &#123;
+        this.list = list;
+    &#125;
+    //3.Map集合类型属性
+    private Map&lt;String,String&gt; maps;
+    public void setMaps(Map&lt;String, String&gt; maps) &#123;
+        this.maps = maps;
+    &#125;
+    //4.Set集合类型属性
+    private Set&lt;String&gt; sets;
+    public void setSets(Set&lt;String&gt; sets) &#123;
+        this.sets = sets;
+    &#125;
+
+    public void test()&#123;
+        System.out.println(Arrays.toString(courses));
+        System.out.println(list);
+        System.out.println(maps);
+        System.out.println(sets);
+    &#125;
+&#125;
+</code></pre>
+<p>2.Spring文件配置</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!--1.集合类型属性注入--&gt;
+    &lt;bean id=&quot;student&quot; class=&quot;com.ZJY.Spring5.DAO.Student&quot;&gt;
+        &lt;property name=&quot;courses&quot;&gt;
+            &lt;!--数组类型属性：array标签或list标签--&gt;
+            &lt;array&gt;
+                &lt;value&gt;高数&lt;/value&gt;
+                &lt;value&gt;线代&lt;/value&gt;
+                &lt;value&gt;概率论&lt;/value&gt;
+                &lt;value&gt;Java&lt;/value&gt;
+                &lt;value&gt;数据库&lt;/value&gt;
+            &lt;/array&gt;
+        &lt;/property&gt;
+        &lt;!--list类型属性注入--&gt;
+        &lt;property name=&quot;list&quot;&gt;
+            &lt;list&gt;
+                &lt;value&gt;张三&lt;/value&gt;
+                &lt;value&gt;ZhangSan&lt;/value&gt;
+            &lt;/list&gt;
+        &lt;/property&gt;
+        &lt;!--Map类型属性注入--&gt;
+        &lt;property name=&quot;maps&quot;&gt;
+            &lt;map&gt;
+                &lt;entry key=&quot;GS&quot; value=&quot;高数&quot;/&gt;
+                &lt;entry key=&quot;XD&quot; value=&quot;线代&quot;/&gt;
+                &lt;entry key=&quot;GLL&quot; value=&quot;概率论&quot;/&gt;
+                &lt;entry key=&quot;Java&quot; value=&quot;Java程序设计&quot;/&gt;
+                &lt;entry key=&quot;DB&quot; value=&quot;数据库&quot;/&gt;
+            &lt;/map&gt;
+        &lt;/property&gt;
+        &lt;!--Set类型属性注入--&gt;
+        &lt;property name=&quot;sets&quot;&gt;
+            &lt;set&gt;
+                &lt;value&gt;MySQL&lt;/value&gt;
+                &lt;value&gt;Oracle&lt;/value&gt;
+                &lt;value&gt;Redis&lt;/value&gt;
+            &lt;/set&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+
+&lt;/beans&gt;
+</code></pre>
+<p>3.编写测试类</p>
+<pre><code class="java">package com.ZJY.Spring5.Test;
+
+import com.ZJY.Spring5.DAO.Student;
+import com.ZJY.Spring5.Service.UserService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestStudent &#123;
+    public void test()&#123;
+        //加载Spring配置文件
+        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;Student.xml&quot;);
+        //获取配置创建的对象  &quot;user&quot;是xml中id的值
+        Student student = context.getBean(&quot;student&quot;, Student.class);
+        //输出
+        student.test();
+    &#125;
+&#125;
+</code></pre>
+<p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/13.png" alt="注入属性——集合类型"></p>
+<h4 id="注入属性——对象集合类型"><a href="#注入属性——对象集合类型" class="headerlink" title="注入属性——对象集合类型"></a>注入属性——对象集合类型</h4><p>1.创建Course类，在Student类中添加Course集合</p>
+<pre><code class="java">package com.ZJY.Spring5.DAO;
+
+public class Course &#123;
+    private String course_name;
+
+    public void setCourse_name(String course_name) &#123;
+        this.course_name = course_name;
+    &#125;
+&#125;
+</code></pre>
+<pre><code class="java">package com.ZJY.Spring5.DAO;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Student &#123;
+    //对象集合
+    private List&lt;Course&gt; courseList;
+    public void setCourseList(List&lt;Course&gt; courseList) &#123;
+        this.courseList = courseList;
+    &#125;
+
+&#125;
+</code></pre>
+<p>2.xml文件配置</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+    &lt;!--1.集合类型属性注入--&gt;
+    &lt;bean id=&quot;student&quot; class=&quot;com.ZJY.Spring5.DAO.Student&quot;&gt;
+        &lt;!--对象集合注入 ref:对象引用--&gt;
+        &lt;property name=&quot;courseList&quot;&gt;
+            &lt;list&gt;
+                &lt;ref bean=&quot;course1&quot;/&gt;
+                &lt;ref bean=&quot;course2&quot;/&gt;
+                &lt;ref bean=&quot;course3&quot;/&gt;
+            &lt;/list&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+
+    &lt;!--创建多个Course对象--&gt;
+    &lt;bean id=&quot;course1&quot; class=&quot;com.ZJY.Spring5.DAO.Course&quot;&gt;
+        &lt;property name=&quot;course_name&quot; value=&quot;Spring5框架&quot;/&gt;
+    &lt;/bean&gt;
+    &lt;bean id=&quot;course2&quot; class=&quot;com.ZJY.Spring5.DAO.Course&quot;&gt;
+        &lt;property name=&quot;course_name&quot; value=&quot;Spring Boot&quot;/&gt;
+    &lt;/bean&gt;
+    &lt;bean id=&quot;course3&quot; class=&quot;com.ZJY.Spring5.DAO.Course&quot;&gt;
+        &lt;property name=&quot;course_name&quot; value=&quot;Spring Cloud&quot;/&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre>
+<h4 id="提取集合属性注入"><a href="#提取集合属性注入" class="headerlink" title="提取集合属性注入"></a>提取集合属性注入</h4><p>1.实体类</p>
+<pre><code class="java">package com.ZJY.Spring5.DAO;
+
+import java.util.List;
+
+public class Book &#123;
+    private List&lt;String&gt; list;
+    public void setList(List&lt;String&gt; list)&#123;
+        this.list = list;
+    &#125;
+    public void test()&#123;
+        System.out.println(list);
+    &#125;
+&#125;
+</code></pre>
+<p>2.xml配置</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;!--添加xmlns:util；xsi:schemaLocation中添加一行，并将其Beans都修改为util--&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:util=&quot;http://www.springframework.org/schema/util&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd&quot;&gt;
+    &lt;!--1.提取List集合属性注入 后用ref引入--&gt;
+    &lt;util:list id = &quot;book_list&quot;&gt;
+        &lt;value&gt;数据库原理&lt;/value&gt;
+        &lt;value&gt;计算机组成原理&lt;/value&gt;
+        &lt;value&gt;计算机网络&lt;/value&gt;
+    &lt;/util:list&gt;
+    &lt;!--2.提取list集合类型属性注入使用--&gt;
+    &lt;bean id=&quot;books&quot; class=&quot;com.ZJY.Spring5.DAO.Book&quot;&gt;
+        &lt;property name=&quot;list&quot; ref=&quot;book_list&quot;/&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre>
+<p><img src="https://zam90.github.io/img/postimg/45-Spring5-study-notes-1/14.png" alt="提取集合属性注入"></p>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -8372,6 +8578,35 @@ int main()
       </categories>
       <tags>
         <tag>课程：计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring5框架学习笔记（2）</title>
+    <url>/2022/04/27/46-Spring5-study-notes-2/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="IOC操作Bean管理（FactoryBean）"><a href="#IOC操作Bean管理（FactoryBean）" class="headerlink" title="IOC操作Bean管理（FactoryBean）"></a>IOC操作Bean管理（FactoryBean）</h1><p>Spring有两种类型Bean，一种普通Bean（详见笔记1），另一种工厂Bean（Factory Bean）</p>
+<p>普通Bean：在xml中定义何种Bean类型，就返回何种对象类型</p>
+<pre><code class="xml">&lt;bean id=&quot;user&quot; class=&quot;com.ZJY.Spring5.User&quot;&gt;
+    &lt;constructor-arg name=&quot;user_id&quot; value=&quot;12345678&quot;/&gt;
+    &lt;constructor-arg name=&quot;user_name&quot; value=&quot;用户名2&quot;/&gt;
+&lt;/bean&gt;
+</code></pre>
+<pre><code class="java">    ApplicationContext context = new ClassPathXmlApplicationContext(&quot;UserBean.xml&quot;);
+    User user = context.getBean(&quot;user&quot;, User.class);
+</code></pre>
+<blockquote>
+<p>xml中定义com.ZJY.Spring5.User类型的对象</p>
+<p>Java中getBean返回的也是User类型的对象</p>
+</blockquote>
+<p>工厂Bean：在xml中定义的Bean类型可以和返回类型不一样</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
